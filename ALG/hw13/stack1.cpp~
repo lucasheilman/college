@@ -1,0 +1,77 @@
+#include <iostream>
+using namespace std;
+
+class Stack{
+private:
+  int pointer = 0;
+  int size;
+public:
+  int *a;
+  
+  Stack(int i){
+    size = i;
+    a = new int[size];
+  }
+  void push(int i){
+    if(pointer > size-1){
+      int temp[size];
+      for(int x = 0; x < pointer; x++){
+	temp[x] = a[x];
+      }
+      a = new int[size+100];
+      for(int y = 0; y < size;y++){
+	a[y] = temp[y];
+      }
+      size = size + 100;
+      cout << "Increased size" << endl;
+    }
+    a[pointer] = i;
+    cout << i << " is now in spot " << pointer << " and the size of the array is: " << size << endl;
+    pointer = pointer+1;
+  }
+  void pop(){
+    if(pointer != 0){
+      cout << "Removed value " << a[pointer-1] << " from spot " << pointer << endl;
+      a[pointer-1] = 0;
+      pointer = pointer - 1;
+    }
+    else{
+      cout << "No value to pop" << endl;
+    }
+  }
+  void print(){
+    if(pointer >=1){
+      cout << '[';
+      for(int i = 0; i < pointer-1; i++){
+	cout << a[i] << ',';
+      }
+      cout << a[pointer-1] << ']' << endl;
+    }
+    else{
+      cout << "Empty" << endl;
+    }
+  }
+  ~Stack(){
+    delete [] a;
+  }
+};
+
+int main(){
+  Stack st = Stack(1);
+  st.print();
+  st.pop();
+  st.print();
+  st.push(3);
+  st.print();
+  st.push(4);
+  st.print();
+  st.push(2);
+  st.print();
+  st.push(3);
+  st.print();
+  st.pop();
+  st.print();
+  st.push(8);
+  st.print();
+}
+  

@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int x = 2;
+
+int great(int y){
+  return y++;
+}
+int main(){
+  int str[3] = {1,2,3};
+  str[x++] = 7;
+  cout << x;
+  x++;
+  x = great(x);
+  cout << str[2] << x << endl;
+}
+  

@@ -1,0 +1,200 @@
+#+1525218606
+git push origin master
+#+1525630711
+vncserver
+#+1525630744
+cd SD
+#+1525630748
+ls -lh
+#+1525630803
+chmod -R 755 projtech/
+#+1525630812
+cd proj
+#+1525630828
+cd projtech/
+#+1525630829
+ll
+#+1525885657
+cd ..
+#+1525905304
+rm chatbot.py
+#+1525905306
+rm chatbot.sqlite
+#+1525905312
+cp ../HW1/* .
+#+1525905411
+gedit script.sh &
+#+1525905440
+which bash
+#+1525907228
+./chatbot.py
+#+1525907238
+python3 chatbot.py
+#+1525907446
+python3 chatbot.py 127.0.0.1 348624
+#+1525907464
+python3 chatbot.py 348624
+#+1525907534
+ps -a | grep chatbot
+#+1525907798
+cd CC
+#+1525907808
+cd HW2/
+#+1525907940
+python3 chatbot.py 34862
+#+1525907943
+python3 chatbot.py 48632
+#+1525908165
+gedit a-iChatbot.py &
+#+1525908270
+cp a-iChatbot.py j-rChatbot.py
+#+1525908281
+cp a-iChatbot.py s-zChatbot.py
+#+1525908292
+gedit j-rChatbot.py &
+#+1525908313
+gedit s-zChatbot.py &
+#+1525908540
+chmod 700 script.sh
+#+1525908900
+gedit chatbot.py &
+#+1525908944
+cp chatbot.py a-iChatbot.py
+#+1525908953
+cp chatbot.py j-rChatbot.py
+#+1525908960
+cp chatbot.py s-zChatbot.py
+#+1525908966
+gedit a-iChatbot.py j-rChatbot.py s-zChatbot.py &
+#+1525908995
+cd CC/
+#+1525908999
+cd HW2
+#+1525909279
+cat j-rpid.txt
+#+1525909285
+kill 15465
+#+1525909308
+kill 15535
+#+1525909310
+kill 15536
+#+1525909312
+kill 15537
+#+1525909385
+kill 15699
+#+1525909388
+kill 15700
+#+1525909389
+kill 15701
+#+1525909566
+rm *pid.txt
+#+1525909806
+kill 15721
+#+1525909809
+kill 15722
+#+1525909811
+kill 15723
+#+1525909915
+kill 15981
+#+1525909917
+kill 15982
+#+1525909918
+kill 15983
+#+1525909961
+kill 16014
+#+1525909963
+kill 16015
+#+1525909964
+kill 16016
+#+1525910047
+kill 16027
+#+1525910049
+kill 16028
+#+1525910050
+kill 16029
+#+1525910147
+cat a-ipid.txt
+#+1525910187
+cat pid.txt
+#+1525910295
+kill 16116
+#+1525910296
+kill 16117
+#+1525910297
+kill 16118
+#+1525910313
+ps -A
+#+1525910326
+kill 16182
+#+1525910327
+kill 16183
+#+1525910374
+kill 16205
+#+1525910376
+kill 16206
+#+1525910383
+ps -A | grep catbot
+#+1525910385
+ps -A | grep chatbot
+#+1525910511
+sudo lsof -i -P -n | grep LISTEN
+#+1525910519
+lsof -i -P -n | grep LISTEN
+#+1525910612
+ps -A | grep python
+#+1525910623
+kill 16340
+#+1525910625
+kill 16341
+#+1525910626
+kill 16342
+#+1525910630
+kill 16383
+#+1525911202
+find . -name *.sh
+#+1525911223
+grep -nr .sh
+#+1525911257
+grep -nr "*.sh"
+#+1525911269
+grep -nr /.sh
+#+1525911342
+grep -nr \.sh
+#+1525911349
+grep -nr "\.sh"
+#+1525911442
+cd PL
+#+1525911444
+cd heilma1/
+#+1525911450
+cd HW
+#+1525911452
+cd HW6
+#+1525911457
+cat HW6script.sh
+#+1525912499
+kill 17177
+#+1525912503
+kill 17178
+#+1525912504
+kill 17179
+#+1525912862
+./script.sh
+#+1525913561
+ps -A | grep script
+#+1525914688
+kill 18655
+#+1525914690
+kill 18656
+#+1525914692
+kill 18657
+#+1525914698
+kill 18670
+#+1525914701
+ps -A | grep python3
+#+1525915925
+cat QA.txt
+#+1525915940
+vim QA.txt
+#+1525916004
+ls

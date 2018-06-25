@@ -1,0 +1,43 @@
+\hypertarget{a0_8cpp}{}\section{hw7/a0.cpp File Reference}
+\label{a0_8cpp}\index{hw7/a0.\+cpp@{hw7/a0.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{a0_8cpp_af5ff2c549be3293a4f50e3d022cab520}{printarray} (int arg\mbox{[}$\,$\mbox{]}, int length)
+\item 
+int \hyperlink{a0_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{a0_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\index{a0.\+cpp@{a0.\+cpp}!main@{main}}
+\index{main@{main}!a0.\+cpp@{a0.\+cpp}}
+\subsubsection[{main()}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{a0_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+10           \{
+11   \textcolor{keywordtype}{int} arr[20];
+12   \hyperlink{a0_8cpp_af5ff2c549be3293a4f50e3d022cab520}{printarray}(arr,20);
+13 \}
+\end{DoxyCode}
+\hypertarget{a0_8cpp_af5ff2c549be3293a4f50e3d022cab520}{}\index{a0.\+cpp@{a0.\+cpp}!printarray@{printarray}}
+\index{printarray@{printarray}!a0.\+cpp@{a0.\+cpp}}
+\subsubsection[{printarray(int arg[], int length)}]{\setlength{\rightskip}{0pt plus 5cm}void printarray (
+\begin{DoxyParamCaption}
+\item[{int}]{arg\mbox{[}$\,$\mbox{]}, }
+\item[{int}]{length}
+\end{DoxyParamCaption}
+)}\label{a0_8cpp_af5ff2c549be3293a4f50e3d022cab520}
+
+\begin{DoxyCode}
+4                                         \{
+5  \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} n=0; n<length; n++)
+6  cout << arg[n] << \textcolor{stringliteral}{" "};
+7  cout << \textcolor{stringliteral}{"\(\backslash\)n"};
+8 \}
+\end{DoxyCode}

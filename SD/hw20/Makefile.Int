@@ -1,0 +1,8 @@
+IntArrayDriver:  IntArrayDriver.o IntArray.o
+	g++ -g -Wall -std=c++11 -o IntArrayDriver IntArray.o IntArrayDriver.o
+
+IntArrayDriver.o:  IntArrayDriver.cpp IntArray.h
+	g++ -g -Wall -std=c++11 -c IntArrayDriver.cpp
+
+IntArray.o:  IntArray.cpp IntArray.h
+	g++ -g -Wall -std=c++11 -c IntArray.cpp

@@ -1,0 +1,71 @@
+\hypertarget{echoer1_8cpp}{}\section{sound/echoer1.cpp File Reference}
+\label{echoer1_8cpp}\index{sound/echoer1.\+cpp@{sound/echoer1.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{echoer1_8cpp_a70e7bb0d2c09aaf7f20ce8a650e861f7}{quieter} (signed short val\mbox{[}$\,$\mbox{]}, signed short val2\mbox{[}$\,$\mbox{]})
+\item 
+int \hyperlink{echoer1_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{echoer1_8cpp_ad67e07841d1233e596e6f822a3c81f6b}{datalen} = 3453884/4
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{echoer1_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\index{echoer1.\+cpp@{echoer1.\+cpp}!main@{main}}
+\index{main@{main}!echoer1.\+cpp@{echoer1.\+cpp}}
+\subsubsection[{main()}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{echoer1_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+21 \{
+22   \textcolor{keywordtype}{signed} \textcolor{keywordtype}{short} val[\hyperlink{echoer1_8cpp_ad67e07841d1233e596e6f822a3c81f6b}{datalen}+100];  \textcolor{comment}{// make an array to hold the data}
+23   \textcolor{keywordtype}{signed} \textcolor{keywordtype}{short} val2[\hyperlink{echoer1_8cpp_ad67e07841d1233e596e6f822a3c81f6b}{datalen}+100];
+24 
+25   cin.read( (\textcolor{keywordtype}{char} *)val, 2*\hyperlink{echoer1_8cpp_ad67e07841d1233e596e6f822a3c81f6b}{datalen}); \textcolor{comment}{// read the data into the array}
+26   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < (\hyperlink{echoer1_8cpp_ad67e07841d1233e596e6f822a3c81f6b}{datalen}+100); i++)\{ 
+27       val2[i] = val[i];
+28   \}
+29 
+30   \hyperlink{echoer1_8cpp_a70e7bb0d2c09aaf7f20ce8a650e861f7}{quieter}(val,val2);  \textcolor{comment}{// modify the array elements}
+31 
+32   cout.write( (\textcolor{keywordtype}{char} *)val, 2*(\hyperlink{echoer1_8cpp_ad67e07841d1233e596e6f822a3c81f6b}{datalen}+100) ); \textcolor{comment}{// write the data back out}
+33   \textcolor{keywordflow}{return} 0;
+34 \}
+\end{DoxyCode}
+\hypertarget{echoer1_8cpp_a70e7bb0d2c09aaf7f20ce8a650e861f7}{}\index{echoer1.\+cpp@{echoer1.\+cpp}!quieter@{quieter}}
+\index{quieter@{quieter}!echoer1.\+cpp@{echoer1.\+cpp}}
+\subsubsection[{quieter(signed short val[], signed short val2[])}]{\setlength{\rightskip}{0pt plus 5cm}void quieter (
+\begin{DoxyParamCaption}
+\item[{signed short}]{val\mbox{[}$\,$\mbox{]}, }
+\item[{signed short}]{val2\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{echoer1_8cpp_a70e7bb0d2c09aaf7f20ce8a650e861f7}
+
+\begin{DoxyCode}
+7 \{
+8 
+9   \textcolor{keywordflow}{for}( \textcolor{keywordtype}{int} i = 100; i < \hyperlink{echoer1_8cpp_ad67e07841d1233e596e6f822a3c81f6b}{datalen}; ++i )\{
+10     val[i+100] = val[i];
+11   \}
+12   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 100; ++i)\{
+13     val[i] = 0;
+14   \}
+15   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \hyperlink{echoer1_8cpp_ad67e07841d1233e596e6f822a3c81f6b}{datalen}; ++i)\{
+16     val[i] = val[i]+val2[i];
+17   \}
+18 \}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\hypertarget{echoer1_8cpp_ad67e07841d1233e596e6f822a3c81f6b}{}\index{echoer1.\+cpp@{echoer1.\+cpp}!datalen@{datalen}}
+\index{datalen@{datalen}!echoer1.\+cpp@{echoer1.\+cpp}}
+\subsubsection[{datalen}]{\setlength{\rightskip}{0pt plus 5cm}int datalen = 3453884/4}\label{echoer1_8cpp_ad67e07841d1233e596e6f822a3c81f6b}

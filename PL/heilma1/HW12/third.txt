@@ -1,0 +1,22 @@
+				val41 --> (vo (var-exp x ) alpha)
+						  (apply-env alpha x)
+						  (num-val 77)
+				val42 --> (vo (const-exp 11) alpha)
+						  (num-val 11)
+				num41 --> (exp-val --> num (num-val 77))
+					77
+				num42 --> (exp-val --> num (num-val 11))
+					11
+				(num-val (- num41 num42)) = (num-val (- 77 11)) = (num-val 66)
+			(apply-procedure proc1 arg1)
+				(vo (diff-exp (var-exp x) (const-exp 11)) (extend-env x (num-val 66) alpha))
+					val51 --> (vo (var-exp x ) alpha)
+							  (apply-env alpha x)
+							  (num-val 66)
+					val52 --> (vo (const-exp 11) alpha)
+							  (num-val 11)
+					num51 --> (exp-val --> num (num-val 66))
+						66
+					num52 --> (exp-val --> num (num-val 11))
+						11
+					(num-val (- num51 num52)) = (num-val (- 66 11)) = (num-val 55)

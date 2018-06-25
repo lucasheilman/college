@@ -1,0 +1,3 @@
+# This file is created by ibus-daemon, please do not modify it
+IBUS_ADDRESS=unix:abstract=/tmp/dbus-fk53288q,guid=15ea0b9c549cab67749e48b7566e4d54
+IBUS_DAEMON_PID=32419

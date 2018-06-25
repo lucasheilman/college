@@ -1,0 +1,35 @@
+
+Xvnc TigerVNC 1.6.0 - built Jan  4 2016 15:11:13
+Copyright (C) 1999-2015 TigerVNC Team and many others (see README.txt)
+See http://www.tigervnc.org for information on TigerVNC.
+Underlying X server release 11704000, The X.Org Foundation
+
+
+Mon May 16 16:38:28 2016
+ vncext:      VNC extension running!
+ vncext:      Listening for VNC connections on all interface(s), port 5936
+ vncext:      created VNC server for screen 0
+
+Mon May 16 16:38:35 2016
+ Connections: accepted: 130.71.243.120::50500
+ SConnection: Client needs protocol version 3.8
+ SConnection: Client requests security type VncAuth(2)
+
+Mon May 16 16:38:40 2016
+ VNCSConnST:  Server default pixel format depth 24 (32bpp) little-endian rgb888
+ VNCSConnST:  Client pixel format depth 8 (8bpp) color-map
+
+Mon May 16 16:48:14 2016
+ Connections: closed: 130.71.243.120::50500 (Clean disconnection)
+ EncodeManager: Framebuffer updates: 7
+ EncodeManager:   RRE:
+ EncodeManager:     Solid: 10 rects, 655.36 kpixels
+ EncodeManager:            170 B (1:3855.76 ratio)
+ EncodeManager:   ZRLE:
+ EncodeManager:     Bitmap RLE: 11 rects, 76.37 kpixels
+ EncodeManager:                 598 B (1:127.93 ratio)
+ EncodeManager:     Indexed RLE: 8 rects, 82.934 kpixels
+ EncodeManager:                  1.00195 KiB (1:80.9259 ratio)
+ EncodeManager:   Total: 29 rects, 814.664 kpixels
+ EncodeManager:          1.75195 KiB (1:454.299 ratio)
+Warning: VNC extension does not support -reset, terminating instead. Use -noreset to prevent termination.

@@ -1,0 +1,55 @@
+
+Xvnc TigerVNC 1.6.0 - built Jan  4 2016 15:11:13
+Copyright (C) 1999-2015 TigerVNC Team and many others (see README.txt)
+See http://www.tigervnc.org for information on TigerVNC.
+Underlying X server release 11704000, The X.Org Foundation
+
+
+Thu May 19 22:53:58 2016
+ vncext:      VNC extension running!
+ vncext:      Listening for VNC connections on all interface(s), port 5940
+ vncext:      created VNC server for screen 0
+
+Thu May 19 22:54:05 2016
+ Connections: accepted: 130.71.243.120::54326
+ SConnection: Client needs protocol version 3.8
+ SConnection: Client requests security type VncAuth(2)
+
+Thu May 19 22:54:10 2016
+ VNCSConnST:  Server default pixel format depth 24 (32bpp) little-endian rgb888
+ VNCSConnST:  Client pixel format depth 8 (8bpp) color-map
+
+Thu May 19 22:54:33 2016
+ VNCSConnST:  Client pixel format depth 24 (32bpp) little-endian rgb888
+
+Fri May 20 08:39:43 2016
+ Connections: accepted: 130.71.243.120::62685
+ SConnection: Client needs protocol version 3.8
+ SConnection: Client requests security type VncAuth(2)
+ VNCSConnST:  Server default pixel format depth 24 (32bpp) little-endian rgb888
+ VNCSConnST:  Client pixel format depth 8 (8bpp) color-map
+
+Fri May 20 09:53:27 2016
+ Connections: accepted: 130.71.243.120::51749
+ SConnection: Client needs protocol version 3.8
+ SConnection: Client requests security type VncAuth(2)
+ VNCSConnST:  Server default pixel format depth 24 (32bpp) little-endian rgb888
+ VNCSConnST:  Client pixel format depth 8 (8bpp) color-map
+
+Fri May 20 09:53:30 2016
+ VNCSConnST:  Client pixel format depth 24 (32bpp) little-endian rgb888
+
+Fri May 20 09:53:31 2016
+ Connections: closed: 130.71.243.120::51749 (Clean disconnection)
+ EncodeManager: Framebuffer updates: 6
+ EncodeManager:   RRE:
+ EncodeManager:     Solid: 15 rects, 803.248 kpixels
+ EncodeManager:            255 B (1:3150.7 ratio)
+ EncodeManager:   Hextile:
+ EncodeManager:     Full Colour: 12 rects, 786.432 kpixels
+ EncodeManager:                  2.08277 MiB (1:1.44046 ratio)
+ EncodeManager:   ZRLE:
+ EncodeManager:     Indexed RLE: 11 rects, 516.744 kpixels
+ EncodeManager:                  37.0088 KiB (1:13.639 ratio)
+ EncodeManager:   Total: 38 rects, 2.10642 Mpixels
+ EncodeManager:          2.11915 MiB (1:2.0099 ratio)

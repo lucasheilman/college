@@ -1,0 +1,47 @@
+
+Xvnc TigerVNC 1.6.0 - built Jan  4 2016 15:11:13
+Copyright (C) 1999-2015 TigerVNC Team and many others (see README.txt)
+See http://www.tigervnc.org for information on TigerVNC.
+Underlying X server release 11704000, The X.Org Foundation
+
+
+Mon Feb 15 16:50:46 2016
+ vncext:      VNC extension running!
+ vncext:      Listening for VNC connections on all interface(s), port 5921
+ vncext:      created VNC server for screen 0
+
+Mon Feb 15 16:51:14 2016
+ Connections: accepted: 130.71.243.120::50924
+ SConnection: Client needs protocol version 3.8
+ SConnection: Client requests security type VncAuth(2)
+
+Mon Feb 15 16:51:18 2016
+ VNCSConnST:  Server default pixel format depth 24 (32bpp) little-endian rgb888
+ VNCSConnST:  Client pixel format depth 8 (8bpp) color-map
+
+Mon Feb 15 16:51:21 2016
+ VNCSConnST:  Client pixel format depth 24 (32bpp) little-endian rgb888
+
+Mon Feb 15 22:33:36 2016
+ Connections: closed: 130.71.243.120::50924 (Clean disconnection)
+ EncodeManager: Framebuffer updates: 23010
+ EncodeManager:   CopyRect:
+ EncodeManager:     Copies: 1.41 krects, 103.47 Mpixels
+ EncodeManager:             22.0312 KiB (1:18345 ratio)
+ EncodeManager:   RRE:
+ EncodeManager:     Solid: 1.138 krects, 10.1631 Mpixels
+ EncodeManager:            22.1738 KiB (1:1651.19 ratio)
+ EncodeManager:   Hextile:
+ EncodeManager:     Bitmap RLE: 1.494 krects, 3.06485 Mpixels
+ EncodeManager:                 62.3555 KiB (1:192.278 ratio)
+ EncodeManager:     Indexed RLE: 11.29 krects, 47.3847 Mpixels
+ EncodeManager:                  18.8472 MiB (1:9.59755 ratio)
+ EncodeManager:     Full Colour: 22.534 krects, 549.926 Mpixels
+ EncodeManager:                  432.655 MiB (1:4.84926 ratio)
+ EncodeManager:   ZRLE:
+ EncodeManager:     Bitmap RLE: 3 rects, 132.096 kpixels
+ EncodeManager:                 238 B (1:555.176 ratio)
+ EncodeManager:     Indexed RLE: 35 rects, 1.98783 Mpixels
+ EncodeManager:                  54.6357 KiB (1:35.538 ratio)
+ EncodeManager:   Total: 37.904 krects, 716.128 Mpixels
+ EncodeManager:          451.66 MiB (1:6.02914 ratio)

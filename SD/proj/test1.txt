@@ -1,0 +1,23 @@
+Trip Name: ColoradoTrip
+Author: Michael
+
+Playlist: 
+
+Songs: 
+
+Cars: 
+1: Car name: Ford, mpg: 400, passengers: 
+Participant Name: Michael, Destination: Denver, Distance: 200
+Participant Name: Yiming, Destination: Denver, Distance: 200
+Participant Name: , Destination: , Distance: 0
+Participant Name: Jiahao, Destination: Denver, Distance: 200
+
+Participants: 
+1: Participant Name: Michael, Destination: Denver, Distance: 200
+2: Participant Name: Jiahao, Destination: Denver, Distance: 200
+3: Participant Name: Yiming, Destination: Denver, Distance: 200
+4: Participant Name: , Destination: , Distance: 200
+
+Calendar: 
+
+Events: 

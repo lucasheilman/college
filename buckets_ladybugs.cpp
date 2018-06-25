@@ -1,0 +1,108 @@
+#include <string>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+
+using namespace std;
+
+bool ladybugs_happy(string s)
+{
+	if(s.size() == 1)
+	{
+		return (s[0] == '_');
+	}
+	for(int i = 0; i < s.size(); i++)
+	{
+		if(s[i] == '_')
+		{
+			continue;
+		}
+		else if(i == 0)
+		{
+			if(s[i] != s[i+1])
+			{
+				return false;
+			}
+		}
+		else if(i == s.size()-1)
+		{
+			if(s[i] != s[i-1])
+			{
+				return false;
+			}
+		}
+		else
+		{
+			if((s[i] != s[i-1]) && (s[i] != s[i+1]))
+			{
+				return false;
+			}
+		}
+	}
+	return true;
+}
+
+bool in_visited(string s, vector <string> visited)
+{
+	for(int i = 0; i < visited.size();i++)
+	{
+		if(s == visited[i])
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool ladybug_dfs(vector <string> visited, string current)
+{
+    visited.push_back(current);
+	if(ladybugs_happy(current))
+	{
+		return true;
+	}
+	else
+	{
+		int num_underscores = count(current.begin(), current.end(), '_');
+		int prev_index = -1;
+		for(int underscore = 0; underscore < num_underscores; underscore++)
+		{
+			int under_index = current.find("_", prev_index + 1);
+			for(int chara = 0; chara < current.size(); chara++)
+		    {
+			     string next = current;
+			     next[under_index] = current[chara];
+			     next[chara] = '_';
+		         if(!in_visited(next,visited))
+                 {
+			         return (false || ladybug_dfs(visited, next));
+		         }
+	        }
+	     prev_index = under_index;
+         }
+    }
+	return false;
+}
+
+int main()
+{
+    int Q;
+    cin >> Q;
+    for(int a0 = 0; a0 < Q; a0++)
+    {
+        int n;
+        cin >> n;
+        string b;
+        cin >> b;
+        vector <string> visited;
+        if(ladybug_dfs(visited, b))
+        {
+           cout << "YES" << endl;
+        }
+        else
+        {
+            cout << "NO" << endl;
+        }
+    }
+    return 0;
+}

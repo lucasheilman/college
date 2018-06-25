@@ -1,0 +1,9 @@
+split([],P,N).
+
+split([H|T],P,N):-
+	H>=0,
+	split(T,[H|P],N).
+
+split([H|T],P,N):-
+	H<0,
+	split(T,P,[H|N]).

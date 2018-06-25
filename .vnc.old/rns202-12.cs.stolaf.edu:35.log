@@ -1,0 +1,74 @@
+
+Xvnc TigerVNC 1.6.0 - built Jan  4 2016 15:11:13
+Copyright (C) 1999-2015 TigerVNC Team and many others (see README.txt)
+See http://www.tigervnc.org for information on TigerVNC.
+Underlying X server release 11704000, The X.Org Foundation
+
+
+Mon May 16 16:31:35 2016
+ vncext:      VNC extension running!
+ vncext:      Listening for VNC connections on all interface(s), port 5935
+ vncext:      created VNC server for screen 0
+
+Mon May 16 16:31:44 2016
+ Connections: accepted: 130.71.243.120::50439
+ SConnection: Client needs protocol version 3.8
+ SConnection: Client requests security type VncAuth(2)
+
+Mon May 16 16:31:47 2016
+ VNCSConnST:  Server default pixel format depth 24 (32bpp) little-endian rgb888
+ VNCSConnST:  Client pixel format depth 8 (8bpp) color-map
+
+Mon May 16 16:37:40 2016
+ Connections: closed: 130.71.243.120::50439 (Clean disconnection)
+ EncodeManager: Framebuffer updates: 116
+ EncodeManager:   RRE:
+ EncodeManager:     Solid: 22 rects, 1.26976 Mpixels
+ EncodeManager:            374 B (1:3395.79 ratio)
+ EncodeManager:   ZRLE:
+ EncodeManager:     Bitmap RLE: 1 rects, 65.536 kpixels
+ EncodeManager:                 111 B (1:590.523 ratio)
+ EncodeManager:     Indexed RLE: 118 rects, 678.504 kpixels
+ EncodeManager:                  13.4219 KiB (1:49.4703 ratio)
+ EncodeManager:   Total: 141 rects, 2.0138 Mpixels
+ EncodeManager:          13.8955 KiB (1:141.647 ratio)
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+Warning: VNC extension does not support -reset, terminating instead. Use -noreset to prevent termination.

@@ -1,0 +1,30 @@
+===== Begin iteration 1 =====
+Register 0:  progress on a 43-item cart.
+Register 1:  no carts remain.
+Register 2:  completed 36-item cart;  no carts remain.
+Register 3:  no carts remain.
+Register 4:  progress on a 42-item cart.
+===== Begin iteration 2 =====
+Register 0:  completed 43-item cart;  completed 27-item cart;  no carts remain.
+Register 1:  completed 13-item cart;  no carts remain.
+Register 2:  no carts remain.
+Register 3:  no carts remain.
+Register 4:  completed 42-item cart;  no carts remain.
+===== Begin iteration 3 =====
+Register 0:  no carts remain.
+Register 1:  completed 22-item cart;  no carts remain.
+Register 2:  no carts remain.
+Register 3:  no carts remain.
+Register 4:  no carts remain.
+===== Begin iteration 4 =====
+Register 0:  completed 17-item cart;  no carts remain.
+Register 1:  no carts remain.
+Register 2:  completed 30-item cart;  progress on a 2-item cart.
+Register 3:  no carts remain.
+Register 4:  completed 17-item cart;  no carts remain.
+===== Begin iteration 5 =====
+Register 0:  completed 24-item cart;  no carts remain.
+Register 1:  completed 23-item cart;  no carts remain.
+Register 2:  completed 2-item cart;  completed 19-item cart;  progress on a 11-item cart.
+Register 3:  no carts remain.
+Register 4:  no carts remain.

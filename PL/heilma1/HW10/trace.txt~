@@ -1,0 +1,33 @@
+if zero? (-(x,11)) then -(i,2) else -(v,4):
+(vop (if-exp (zero?-exp (diff-exp (var-exp x) (const-exp 11))) (diff-exp (var-exp i) (const-exp 2)) (diff-exp (var-exp v) (const-exp 4))))
+(vo (if-exp (zero?-exp (diff-exp (var-exp x) (const-exp 11))) (diff-exp (var-exp i) (const-exp 2)) (diff-exp (var-exp v) (const-exp 4))) ie)
+    val1 --> (vo (zero?-exp (diff-exp (var-exp x) (const-exp 11))) ie)
+        val11 --> (vo (diff-exp (var-exp x) (const-exp 11)) ie)
+            val111 --> (vo (var-exp x) ie)
+                       (apply-env ie x)
+                       (num-val 10)
+            val112 --> (vo (const-ext 11) ie)
+                       (num-val 11)
+                num111 --> (exp-val --> num (num-val 10))
+                           10
+                num112 --> (exp-val --> num (num-val 11))
+                           11
+            (num-val (- num111 num112)) = (num-val (- 10 11)) = (num-val -1)
+        (if (zero? -1)
+        (bool-val #f))
+    (if (exp->bool (bool-val #f)))
+    #f
+    val13 --> (vo (diff-exp (var-exp v) (const-exp 4)) ie)
+            val131 --> (vo (var-exp v) ie)
+                       (apply-env ie v)
+                       (num-val 5)
+            val132 --> (vo (const-ext 4) ie)
+                       (num-val 4)
+                num131 --> (exp-val --> num (num-val 5))
+                           5
+                num132 --> (exp-val --> num (num-val 4))
+                           4
+            (num-val (- num111 num112)) = (num-val (- 5 4)) = (num-val 1)
+    1
+			
+		

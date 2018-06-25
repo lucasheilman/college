@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+struct name {
+  char **tok;
+  int count;
+  int status;
+};
+
+int read_name(struct name &n)
+{
+  char *line = NULL;
+  size_t size;
+  size_t ret;
+  ssize_t nread;
+  if((nread = getline(&line, &size, stdin)) == -1)
+    {
+      printf("Error\n");
+    }
+  printf("%zu characters read: %s", nread, line);
+}
+
+
+int main()
+{
+  struct name n;
+  read_name(n);
+}

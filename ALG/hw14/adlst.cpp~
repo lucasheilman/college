@@ -1,0 +1,29 @@
+#include <iostream>
+#include <vector>
+#include <string>
+using namespace std;
+
+int main(){
+  string junk;
+  cin >> junk;
+  int vertice_count;
+  cin >> vertice_count;
+  int edge_count;
+  cin >> edge_count;
+  int first_vert;
+  int second_vert;
+  vector <vector> adlst;
+  for(int i = 0; i < vertice_count; i++){
+    cin >> junk;
+    cin >> first_vert;
+    cin >> second_vert;
+    vector <int> edge;
+    edge.push_back(first_vert);
+    edge.push_back(second_vert);
+    adlst.push_back(edge);
+  }
+  for(int i = 0; i< vertice_count; i++){
+    cout << adlst[i][0] << " " << adlst[i][1] << endl;
+  }
+}
+      

@@ -1,0 +1,76 @@
+rns202-12.cs.stolaf.edu% time ./trap_omp 3 
+OMP defined, threadct = 3
+With n = 1048576 trapezoids, our estimate of the integral from 0 to 3.14159 is 2
+0.124u 0.001s 0:00.04 300.0%	0+0k 0+0io 0pf+0w
+rns202-12.cs.stolaf.edu% time ./trap_omp 8
+OMP defined, threadct = 8
+With n = 1048576 trapezoids, our estimate of the integral from 0 to 3.14159 is 2
+0.115u 0.002s 0:00.04 275.0%	0+0k 0+0io 0pf+0w
+rns202-12.cs.stolaf.edu% time ./trap_omp 4
+OMP defined, threadct = 4
+With n = 1048576 trapezoids, our estimate of the integral from 0 to 3.14159 is 2
+0.127u 0.002s 0:00.04 300.0%	0+0k 0+0io 0pf+0w
+rns202-12.cs.stolaf.edu% time ./trap_omp 5
+OMP defined, threadct = 5
+With n = 1048576 trapezoids, our estimate of the integral from 0 to 3.14159 is 2
+0.118u 0.001s 0:00.04 275.0%	0+0k 0+0io 0pf+0w
+rns202-12.cs.stolaf.edu% time ./trap_omp 100
+OMP defined, threadct = 100
+With n = 1048576 trapezoids, our estimate of the integral from 0 to 3.14159 is 2
+0.119u 0.006s 0:00.03 366.6%	0+0k 0+0io 0pf+0w
+heilma1@thing4:~/PDC/lab5$ time ./trap_omp 4
+OMP not defined
+With n = 1048576 trapezoids, our estimate of the integral from 0 to 3.14159 is 2
+
+real 0m0.051s
+user 0m0.046s
+sys  0m0.004s
+heilma1@thing4:~/PDC/lab5$ time ./trap_omp 6
+OMP not defined
+With n = 1048576 trapezoids, our estimate of the integral from 0 to 3.14159 is 2
+
+real 0m0.047s
+user 0m0.047s
+sys  0m0.000s
+heilma1@thing4:~/PDC/lab5$ time ./trap_omp 8
+OMP not defined
+With n = 1048576 trapezoids, our estimate of the integral from 0 to 3.14159 is 2
+
+real 0m0.048s
+user 0m0.043s
+sys  0m0.008s
+heilma1@thing4:~/PDC/lab5$ time ./trap_omp 2
+OMP not defined
+With n = 1048576 trapezoids, our estimate of the integral from 0 to 3.14159 is 2
+
+real 0m0.047s
+user 0m0.046s
+sys  0m0.000s
+heilma1@thing4:~/PDC/lab5$ time ./trap_omp 1
+OMP not defined
+With n = 1048576 trapezoids, our estimate of the integral from 0 to 3.14159 is 2
+
+real 0m0.044s
+user 0m0.043s
+sys  0m0.000s
+
+Nothing changed in the output.
+
+heilma1@thing4:~/PDC/lab5$ ./trap2
+OMP not defined
+With n = 1048576 trapezoids, our estimate of the integral from 0 to 3.14159 is 2
+
+The values are different and the spacing is off
+
+rns202-12.cs.stolaf.edu% ./sections
+Threads: 02 0  
+At end, val = 1001
+rns202-12.cs.stolaf.edu% ./sections 5
+Threads: 22  3 
+At end, val = 4007
+rns202-12.cs.stolaf.edu% ./sections 100
+Threads: 0 12  
+At end, val = 4
+rns202-12.cs.stolaf.edu% ./sections 1
+Threads: 01 2  
+At end, val = 1001

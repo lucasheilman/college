@@ -1,0 +1,15 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+bool is_leaf(vector <int> vec, int i)
+{
+  return (i*2 >= vec.size());
+}
+
+
+int main()
+{
+  vector <int> vec = {2,3,5,8,4,2,4,7,0,1,5};
+  cout << is_leaf(vec, 10) << endl;
+}

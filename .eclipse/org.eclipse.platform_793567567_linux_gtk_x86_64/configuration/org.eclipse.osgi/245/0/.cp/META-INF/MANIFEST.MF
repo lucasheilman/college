@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.jdt; singleton:=true
+Bundle-Name: %pluginName
+Bundle-Version: 3.12.1.v20160915-0852
+Archiver-Version: Plexus Archiver
+Bundle-Localization: plugin
+Built-By: mockbuild
+Require-Bundle: org.eclipse.ui.intro;bundle-version="[3.2.0,4.0.0)",or
+ g.eclipse.ui.cheatsheets;bundle-version="[3.2.0,4.0.0)"
+Bundle-ManifestVersion: 2
+Bundle-Vendor: %providerName
+Created-By: Apache Maven
+Build-Jdk: 1.8.0_111
+

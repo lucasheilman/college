@@ -1,0 +1,127 @@
+[ 1518202148.265700]: IMSettings-Daemon[21312]: INFO: Starting imsettings-daemon...
+[ 1518202148.267284]: IMSettings-Daemon[21312]: INFO:   [HOME=/home/users/heilma1/.config/imsettings]
+[ 1518202148.268115]: IMSettings-Daemon[21312]: INFO:   [XINPUTRCDIR=/etc/X11/xinit/]
+[ 1518202148.269195]: IMSettings-Daemon[21312]: INFO:   [XINPUTDIR=/etc/X11/xinit/xinput.d/]
+
+[ 1518202148.270893]: IMSettings-Daemon[21312]: INFO:   [MODULEDIR=/usr/lib64/imsettings]
+
+[ 1518202148.272078]: IMSettings-Daemon[21312]: INFO:   [MODULES=gsettings]
+
+imsettings information
+==========================
+XINPUTRC: /etc/X11/xinit/xinput.d//none.conf
+	  File: ‘/etc/X11/xinit/xinput.d//none.conf’
+	  Size: 110       	Blocks: 8          IO Block: 4096   regular file
+	Device: 801h/2049d	Inode: 793502      Links: 1
+	Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+	Access: 2018-02-09 12:49:08.054465263 -0600
+	Modify: 2014-06-10 02:52:06.000000000 -0500
+	Change: 2017-09-01 12:44:49.277492738 -0500
+	 Birth: -
+Is DBus enabled: yes
+Is imsettings enabled: yes
+Is GTK+ supported: yes
+Is Qt supported: no
+DESKTOP: gnome
+GUESS_DESKTOP: $GDMSESSION
+DISABLE_IMSETTINGS: 
+IMSETTINGS_DISABLE_DESKTOP_CHECK: 
+DBUS_SESSION_BUS_ADDRESS: unix:abstract=/tmp/dbus-nAkQLZTqxh,guid=f223d18c5e70084da68bcf455a7ded23
+GTK_IM_MODULE: 
+QT_IM_MODULE: xim
+XMODIFIERS: @im=none
+IMSETTINGS_MODULE: none
+IMSETTINGS_INTEGRATE_DESKTOP: yes
+
+[ 1518202154.869689]: IMSettings-Daemon[21312]: INFO: Attempting to switch IM to none [lang=en_US.UTF-8, update=false]
+org.gnome.settings-daemon.plugins.keyboard.active is true. imsettings is going to be disabled.
+
+[ 1518202155.152875]: IMSettings-Daemon[21312]: WARNING **: Current desktop isn't targeted by IMSettings.
+
+[ 1518202155.159302]: GLib-GIO[21312]: CRITICAL **: g_dbus_method_invocation_return_value_internal: assertion '(parameters == NULL) || g_variant_is_of_type (parameters, G_VARIANT_TYPE_TUPLE)' failed
+[ 1518202155.188464]: IMSettings-Daemon[21312]: INFO: Unloading imesttings module: gsettings
+[ 1518202155.189741]: IMSettings-Daemon[21312]: INFO: imsettings-daemon is shut down.
+[ 1518402356.651230]: IMSettings-Daemon[9913]: INFO: Starting imsettings-daemon...
+[ 1518402356.654122]: IMSettings-Daemon[9913]: INFO:   [HOME=/home/users/heilma1/.config/imsettings]
+[ 1518402356.655078]: IMSettings-Daemon[9913]: INFO:   [XINPUTRCDIR=/etc/X11/xinit/]
+[ 1518402356.656091]: IMSettings-Daemon[9913]: INFO:   [XINPUTDIR=/etc/X11/xinit/xinput.d/]
+
+[ 1518402356.656884]: IMSettings-Daemon[9913]: INFO:   [MODULEDIR=/usr/lib64/imsettings]
+
+[ 1518402356.657689]: IMSettings-Daemon[9913]: INFO:   [MODULES=gsettings]
+
+[ 1518402356.834257]: IMSettings-Daemon[9913]: INFO: Attempting to switch IM to IBus [lang=en_US.UTF-8, update=false]
+[ 1518402357.927904]: IMSettings-Daemon[9913]: INFO:   no need to invoke any auxiliary process for IBus
+[ 1518402357.928943]: IMSettings-Daemon[9913]: INFO:   Starting the main process for IBus [lang:en_US.UTF-8]
+[ 1518402357.932290]: IMSettings-Daemon[9913]: INFO:   Started IBus: [process: /usr/bin/ibus-daemon -r --xim, lang: en_US.UTF-8, pid: 10202, id: 11, time: 2018-02-12T02:25:57.932197Z
+[ 1518402357.933305]: IMSettings-GSettings backend[9913]: INFO: Setting up ibus:xim as gtk+ immodule
+[ 1519271928.649422]: IMSettings-Daemon[10265]: INFO: Starting imsettings-daemon...
+[ 1519271928.666474]: IMSettings-Daemon[10265]: INFO:   [HOME=/home/users/heilma1/.config/imsettings]
+[ 1519271928.667260]: IMSettings-Daemon[10265]: INFO:   [XINPUTRCDIR=/etc/X11/xinit/]
+[ 1519271928.668551]: IMSettings-Daemon[10265]: INFO:   [XINPUTDIR=/etc/X11/xinit/xinput.d/]
+
+[ 1519271928.669657]: IMSettings-Daemon[10265]: INFO:   [MODULEDIR=/usr/lib64/imsettings]
+
+[ 1519271928.672605]: IMSettings-Daemon[10265]: INFO:   [MODULES=gsettings]
+
+[ 1519271929.268132]: IMSettings-Daemon[10265]: INFO: Attempting to switch IM to IBus [lang=en_US.UTF-8, update=false]
+[ 1519271930.132012]: IMSettings-Daemon[10265]: INFO:   no need to invoke any auxiliary process for IBus
+[ 1519271930.133151]: IMSettings-Daemon[10265]: INFO:   Starting the main process for IBus [lang:en_US.UTF-8]
+[ 1519271930.136953]: IMSettings-Daemon[10265]: INFO:   Started IBus: [process: /usr/bin/ibus-daemon -r --xim, lang: en_US.UTF-8, pid: 10565, id: 11, time: 2018-02-22T03:58:50.136830Z
+[ 1519271930.139075]: IMSettings-GSettings backend[10265]: INFO: Setting up ibus:xim as gtk+ immodule
+[ 1521423502.085726]: IMSettings-Daemon[25736]: INFO: Starting imsettings-daemon...
+[ 1521423502.098929]: IMSettings-Daemon[25736]: INFO:   [HOME=/home/users/heilma1/.config/imsettings]
+[ 1521423502.099829]: IMSettings-Daemon[25736]: INFO:   [XINPUTRCDIR=/etc/X11/xinit/]
+[ 1521423502.100803]: IMSettings-Daemon[25736]: INFO:   [XINPUTDIR=/etc/X11/xinit/xinput.d/]
+
+[ 1521423502.101901]: IMSettings-Daemon[25736]: INFO:   [MODULEDIR=/usr/lib64/imsettings]
+
+[ 1521423502.103422]: IMSettings-Daemon[25736]: INFO:   [MODULES=gsettings]
+
+[ 1521423502.368553]: IMSettings-Daemon[25736]: INFO: Attempting to switch IM to IBus [lang=en_US.UTF-8, update=false]
+[ 1521423503.315374]: IMSettings-Daemon[25736]: INFO:   no need to invoke any auxiliary process for IBus
+[ 1521423503.317753]: IMSettings-Daemon[25736]: INFO:   Starting the main process for IBus [lang:en_US.UTF-8]
+[ 1521423503.324135]: IMSettings-Daemon[25736]: INFO:   Started IBus: [process: /usr/bin/ibus-daemon -r --xim, lang: en_US.UTF-8, pid: 26020, id: 11, time: 2018-03-19T01:38:23.323970Z
+[ 1521423503.325650]: IMSettings-GSettings backend[25736]: INFO: Setting up ibus:xim as gtk+ immodule
+[ 1522730769.677429]: IMSettings-Daemon[6664]: INFO: Starting imsettings-daemon...
+[ 1522730769.680734]: IMSettings-Daemon[6664]: INFO:   [HOME=/home/users/heilma1/.config/imsettings]
+[ 1522730769.681600]: IMSettings-Daemon[6664]: INFO:   [XINPUTRCDIR=/etc/X11/xinit/]
+[ 1522730769.684175]: IMSettings-Daemon[6664]: INFO:   [XINPUTDIR=/etc/X11/xinit/xinput.d/]
+
+[ 1522730769.684973]: IMSettings-Daemon[6664]: INFO:   [MODULEDIR=/usr/lib64/imsettings]
+
+[ 1522730769.685893]: IMSettings-Daemon[6664]: INFO:   [MODULES=gsettings]
+
+[ 1522730770.046129]: IMSettings-Daemon[6664]: INFO: Attempting to switch IM to IBus [lang=en_US.UTF-8, update=false]
+[ 1522730771.501759]: IMSettings-Daemon[6664]: INFO:   no need to invoke any auxiliary process for IBus
+[ 1522730771.502725]: IMSettings-Daemon[6664]: INFO:   Starting the main process for IBus [lang:en_US.UTF-8]
+[ 1522730771.507195]: IMSettings-Daemon[6664]: INFO:   Started IBus: [process: /usr/bin/ibus-daemon -r --xim, lang: en_US.UTF-8, pid: 6947, id: 11, time: 2018-04-03T04:46:11.506967Z
+[ 1522730771.511795]: IMSettings-GSettings backend[6664]: INFO: Setting up ibus:xim as gtk+ immodule
+[ 1523753824.978110]: IMSettings-Daemon[10798]: INFO: Starting imsettings-daemon...
+[ 1523753824.980789]: IMSettings-Daemon[10798]: INFO:   [HOME=/home/users/heilma1/.config/imsettings]
+[ 1523753824.981776]: IMSettings-Daemon[10798]: INFO:   [XINPUTRCDIR=/etc/X11/xinit/]
+[ 1523753824.982914]: IMSettings-Daemon[10798]: INFO:   [XINPUTDIR=/etc/X11/xinit/xinput.d/]
+
+[ 1523753824.984279]: IMSettings-Daemon[10798]: INFO:   [MODULEDIR=/usr/lib64/imsettings]
+
+[ 1523753824.985242]: IMSettings-Daemon[10798]: INFO:   [MODULES=gsettings]
+
+[ 1523753825.219341]: IMSettings-Daemon[10798]: INFO: Attempting to switch IM to IBus [lang=en_US.UTF-8, update=false]
+[ 1523753826.288018]: IMSettings-Daemon[10798]: INFO:   no need to invoke any auxiliary process for IBus
+[ 1523753826.289578]: IMSettings-Daemon[10798]: INFO:   Starting the main process for IBus [lang:en_US.UTF-8]
+[ 1523753826.295536]: IMSettings-Daemon[10798]: INFO:   Started IBus: [process: /usr/bin/ibus-daemon -r --xim, lang: en_US.UTF-8, pid: 11045, id: 11, time: 2018-04-15T00:57:06.295377Z
+[ 1523753826.297010]: IMSettings-GSettings backend[10798]: INFO: Setting up ibus:xim as gtk+ immodule
+[ 1525630718.346697]: IMSettings-Daemon[18127]: INFO: Starting imsettings-daemon...
+[ 1525630718.350989]: IMSettings-Daemon[18127]: INFO:   [HOME=/home/users/heilma1/.config/imsettings]
+[ 1525630718.352339]: IMSettings-Daemon[18127]: INFO:   [XINPUTRCDIR=/etc/X11/xinit/]
+[ 1525630718.353517]: IMSettings-Daemon[18127]: INFO:   [XINPUTDIR=/etc/X11/xinit/xinput.d/]
+
+[ 1525630718.354402]: IMSettings-Daemon[18127]: INFO:   [MODULEDIR=/usr/lib64/imsettings]
+
+[ 1525630718.356102]: IMSettings-Daemon[18127]: INFO:   [MODULES=gsettings]
+
+[ 1525630718.695374]: IMSettings-Daemon[18127]: INFO: Attempting to switch IM to IBus [lang=en_US.UTF-8, update=false]
+[ 1525630719.965593]: IMSettings-Daemon[18127]: INFO:   no need to invoke any auxiliary process for IBus
+[ 1525630719.966619]: IMSettings-Daemon[18127]: INFO:   Starting the main process for IBus [lang:en_US.UTF-8]
+[ 1525630719.976842]: IMSettings-Daemon[18127]: INFO:   Started IBus: [process: /usr/bin/ibus-daemon -r --xim, lang: en_US.UTF-8, pid: 18467, id: 11, time: 2018-05-06T18:18:39.976692Z
+[ 1525630719.979693]: IMSettings-GSettings backend[18127]: INFO: Setting up ibus:xim as gtk+ immodule

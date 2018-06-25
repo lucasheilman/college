@@ -1,0 +1,177 @@
+/* print square roots in C++ language.  R. Brown, 9/2010 */
+
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+main()
+{
+  cout << "sqrt(n)" << endl << "--------" << endl;
+  for (int n=0;  n<=5;  n++)
+    cout << sqrt(n) << endl;
+  return 0;
+}
+
+sqrt(n)
+--------
+0
+1
+1.41421
+1.73205
+2
+2.23607
+
+
+/* print square roots in C language.  R. Brown, 9/2010 */
+
+#include <stdio.h>
+#include <math.h>
+
+main()
+{
+  int n;
+  printf("sqrt(n)\n--------\n");
+  for (n=0;  n<=5;  n++)
+    printf("%f\n", sqrt(n));
+  return 0;
+}
+
+sqrt(n)
+--------
+0.000000
+1.000000
+1.414214
+1.732051
+2.000000
+2.236068
+Script started on Sun 13 Sep 2015 05:58:40 PM CDT
+rns202-8.cs.stolaf.edu% ([Ksource ?[K~cs241/setup
+rns202-8.cs.stolaf.edu% mc[Kzschem,e[K[Ke
+Welcome to Racket v5.3.
+> (+ 7 2)
+9
+> (- 3 1  )
+2
+> (- 3 1000 )
+-97
+> (*1  1 2 3 4   5)
+120
+> (exit)
+rns202-8.cs.stolaf.edu% exit
+exit
+
+Script done on Sun 13 Sep 2015 06:01:00 PM CDT
+Script started on Sun 13 Sep 2015 06:01:55 PM CDT
+rns202-8.cs.stolaf.edu% cp ~cs241/hw/sqrts.scm .
+rns202-8.cs.stolaf.edu% cat sqrts.scm
+;;; print square roots in Scheme language.  R. Brown, 9/2010
+
+(define print-sqrts
+  (lambda (n) ; print square roots from n to 5
+    (if (>  n 5) 'done
+	(begin 
+	  (display (sqrt n))
+	  (newline)
+	  (print-sqrts (+ n 1))))))
+
+(display "(sqrt n)")
+(newline)
+(display "----------")
+(newline)
+(print-sqrts 0)
+
+rns202-8.cs.stolaf.edu% si[Kource ~cs241/setup
+rns202-8.cs.stolaf.edu% mzscheme
+Welcome to Racket v5.3.
+> ;;; print square roots in Scheme language. R. Brown, 9/2/  2010
+
+(define la  [pr   print-sqrte s
+	  (lambda (n);  ; print square roots from n to 5
+    (if (> n 5    5 n 5) 'done
+        (begin
+          (display (sqrt m n((  ))
+          (newlibne   ne)
+          (print-sqrts (+ n 1))))))
+> (display "(sqrt n)")
+(sqrt n)> (newline)
+
+> di  (dp isplay "----------')   -' ")
+----------> (newline)
+
+> (print-sqrts 0)
+0
+1
+1.4142135623730951
+1.7320508075688772
+2
+2.23606797749979
+done
+> cp  (exit)
+rns202-8.cs.stolaf.edu% cp ~cs241/hw/Sqrts.javca[K[Ka .
+rns202-8.cs.stolaf.edu% cat Sqrts.java
+/* print square roots in Java language.  R. Brown, 9/2010 */
+
+class Sqrts {
+  public static void main(String args[]) {
+    System.out.println("sqrt(n)");
+    System.out.println("--------");
+    int n;
+    for (n=0;  n<=5;  n++)
+      System.out.println(Math.sqrt(n));
+    return;
+
+  }
+}rns202-8.cs.stolaf.edu% javac Sqrts,[K.java
+/home/mscs/bin64/javac
+rns202-8.cs.stolaf.edu% java Sqrts
+/home/mscs/bin64/java
+sqrt(n)
+--------
+0.0
+1.0
+1.4142135623730951
+1.7320508075688772
+2.0
+2.23606797749979
+rns202-8.cs.stolaf.edu% 1[Kls
+[0m[38;5;33mDesktop[0m    hw1       [38;5;33mPictures[0m  [38;5;40msqrts2[0m   Sqrts.class  [38;5;33mTemplates[0m
+[38;5;33mDocuments[0m  hw1A.out  [38;5;33mPublic[0m    sqrts.c  Sqrts.java   [38;5;33mVideos[0m
+[38;5;33mDownloads[0m  [38;5;33mMusic[0m     [38;5;40msqrts1[0m    sqrts.C  sqrts.scm
+rns202-8.cs.stolaf.edu% cp ~cs241/hw/sqrts.py .
+rns202-8.cs.stolaf.edu% cat sqrts.py
+# print square roots in Python language.  R. Brown, 9/2010 
+
+from math import sqrt
+
+print("sqrt(n)\n--------")
+
+for n in range(0, 6):
+    print(sqrt(n))
+rns202-8.cs.stolaf.edu% python3 sqrts.py
+sqrt(n)
+--------
+0.0
+1.0
+1.41421356237
+1.73205080757
+2.0
+2.2360679775
+rns202-8.cs.stolaf.edu% python3 -m py_compile sqrts.py
+rns202-8.cs.stolaf.edu% ls
+[0m[38;5;33mDesktop[0m    hw1       [38;5;33mPictures[0m  [38;5;40msqrts2[0m   Sqrts.class  sqrts.pyc  [38;5;33mVideos[0m
+[38;5;33mDocuments[0m  hw1A.out  [38;5;33mPublic[0m    sqrts.c  Sqrts.java   sqrts.scm
+[38;5;33mDownloads[0m  [38;5;33mMusic[0m     [38;5;40msqrts1[0m    sqrts.C  sqrts.py     [38;5;33mTemplates[0m
+rns202-8.cs.stolaf.edu% python3 sqrts.pyx[Kc
+sqrt(n)
+--------
+0.0
+1.0
+1.41421356237
+1.73205080757
+2.0
+2.2360679775
+rns202-8.cs.stolaf.edu% exit
+exit
+
+Script done on Sun 13 Sep 2015 06:17:22 PM CDT

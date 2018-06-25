@@ -1,0 +1,66 @@
+def main():
+    x=int(bin(int(input("Enter a 16 bit hexadecimal number"),16)),2)
+    maskforpar1=int(bin(int("dab5",16)),2)
+    maskforpar2=int(bin(int("b66c",16)),2)
+    maskforpar4=int(bin(int("71e3",16)),2)
+    maskforpar8=int(bin(int("0fe0",16)),2)
+    maskforpar16=int(bin(int("001f",16)),2)
+    par1nums=x&maskforpar1
+    par2nums=x&maskforpar2
+    par4nums=x&maskforpar4
+    par8nums=x&maskforpar8
+    par16nums=x&maskforpar16
+    count=0
+    for a in bin(par1nums):
+        if a == "1":
+            count = count+1
+        if count%2==0:
+            parity1=0
+        else:
+            parity1=int(bin(int("100000",16)),2)
+    count=0
+    for a in bin(par2nums):
+        if a == "1":
+            count = count+1
+        if count%2==0:
+            parity2=0
+        else:
+            parity2=int(bin(int("80000",16)),2)
+    count=0
+    for a in bin(par4nums):
+        if a == "1":
+            count = count+1
+        if count%2==0:
+            parity4=0
+        else:
+            parity4=int(bin(int("20000",16)),2)
+    count=0
+    for a in bin(par8nums):
+        if a == "1":
+            count = count+1
+        if count%2==0:
+            parity8=0
+        else:
+            parity8=int(bin(int("2000",16)),2)
+    count=0
+    for a in bin(par16nums):
+        if a == "1":
+            count = count+1
+        if count%2==0:
+            parity16=0
+        else:
+            parity16=int(bin(int("20",16)),2)
+    maskforbit3=int(bin(int("8000",16)),2)
+    maskforbits5to7=int(bin(int("3800",16)),2)
+    maskforbits9to15=int(bin(int("fe0",16)),2)
+    maskforbits17to21=int(bin(int("1f",16)),2)
+    bit3spot=x&maskforbit3
+    bit5to7spot=x&maskforbits5to7
+    bit9to15spot=x&maskforbits9to15
+    bit17to21spot=x&maskforbits17to21
+    bit3spot=bit3spot<<3
+    bit5to7spot=bit5to7spot<<2
+    bit9to15spot=bit9to15spot<<1
+    finaloutput=hex(parity1+parity2+bit3spot+parity4+bit5to7spot+parity8+bit9to15spot+parity16+bit17to21spot)
+    print(finaloutput[2:])
+main()

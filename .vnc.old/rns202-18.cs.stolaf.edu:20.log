@@ -1,0 +1,48 @@
+
+Xvnc TigerVNC 1.7.1 - built Jan 19 2017 13:19:18
+Copyright (C) 1999-2016 TigerVNC Team and many others (see README.txt)
+See http://www.tigervnc.org for information on TigerVNC.
+Underlying X server release 11804000, The X.Org Foundation
+
+
+Wed Oct  4 09:09:16 2017
+ vncext:      VNC extension running!
+ vncext:      Listening for VNC connections on all interface(s), port 5920
+ vncext:      created VNC server for screen 0
+
+Wed Oct  4 09:09:21 2017
+ Connections: accepted: 130.71.250.232::52298
+ SConnection: Client needs protocol version 3.8
+ SConnection: Client requests security type VncAuth(2)
+
+Wed Oct  4 09:09:25 2017
+ VNCSConnST:  Server default pixel format depth 24 (32bpp) little-endian rgb888
+ VNCSConnST:  Client pixel format depth 8 (8bpp) color-map
+
+Wed Oct  4 09:09:32 2017
+ VNCSConnST:  Client pixel format depth 24 (32bpp) little-endian rgb888
+
+Wed Oct  4 09:35:19 2017
+ Connections: closed: 130.71.250.232::52298 (Clean disconnection)
+ EncodeManager: Framebuffer updates: 3078
+ EncodeManager:   CopyRect:
+ EncodeManager:     Copies: 26 rects, 389.808 kpixels
+ EncodeManager:             416 B (1:3748.9 ratio)
+ EncodeManager:   RRE:
+ EncodeManager:     Solid: 47 rects, 921.658 kpixels
+ EncodeManager:            937 B (1:3934.34 ratio)
+ EncodeManager:   Hextile:
+ EncodeManager:     Bitmap RLE: 67 rects, 110.573 kpixels
+ EncodeManager:                 2.66113 KiB (1:162.604 ratio)
+ EncodeManager:     Indexed RLE: 1.428 krects, 6.3711 Mpixels
+ EncodeManager:                  2.59527 MiB (1:9.37095 ratio)
+ EncodeManager:     Full Colour: 3.246 krects, 102.267 Mpixels
+ EncodeManager:                  122.038 MiB (1:3.19698 ratio)
+ EncodeManager:   ZRLE:
+ EncodeManager:     Bitmap RLE: 1 rects, 16.384 kpixels
+ EncodeManager:                 310 B (1:52.8903 ratio)
+ EncodeManager:     Indexed RLE: 34 rects, 1.85021 Mpixels
+ EncodeManager:                  46.3721 KiB (1:38.9727 ratio)
+ EncodeManager:   Total: 4.849 krects, 111.927 Mpixels
+ EncodeManager:          124.683 MiB (1:3.38202 ratio)
+Warning: VNC extension does not support -reset, terminating instead. Use -noreset to prevent termination.

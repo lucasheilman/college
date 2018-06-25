@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.pde;singleton:=true
+Bundle-Name: %pluginName
+Bundle-Version: 3.12.1.v20160915-0852
+Archiver-Version: Plexus Archiver
+Bundle-Localization: plugin
+Built-By: mockbuild
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: J2SE-1.4
+Bundle-Vendor: %providerName
+Created-By: Apache Maven
+Build-Jdk: 1.8.0_111
+

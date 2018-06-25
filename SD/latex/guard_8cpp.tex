@@ -1,0 +1,34 @@
+\hypertarget{guard_8cpp}{}\section{hw3/guard.cpp File Reference}
+\label{guard_8cpp}\index{hw3/guard.\+cpp@{hw3/guard.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{guard_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{guard_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\index{guard.\+cpp@{guard.\+cpp}!main@{main}}
+\index{main@{main}!guard.\+cpp@{guard.\+cpp}}
+\subsubsection[{main()}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{guard_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+5 \{
+6   \textcolor{keywordtype}{int} a = 3;
+7   \textcolor{keywordtype}{int} b = 3;
+8   cout << \textcolor{stringliteral}{"a is assigned to be "} << a << endl;
+9   cout << \textcolor{stringliteral}{"b is assigned to be "} << b << endl;
+10   \textcolor{keywordtype}{bool} c = a==b;
+11   cout << \textcolor{stringliteral}{"a == b is "} << c << endl;
+12   \textcolor{keywordtype}{bool} d = a>b;
+13   cout << \textcolor{stringliteral}{"a > b is "} << d << endl;
+14   \textcolor{keywordtype}{bool} e = c && d;
+15   cout << \textcolor{stringliteral}{"(a==b) and (a>b) is "} << e << endl;
+16   \textcolor{keywordflow}{return} 0;
+17 \}
+\end{DoxyCode}

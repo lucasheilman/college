@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+int func(int n){
+  if(n <= 0){
+    return n;
+  }
+  else{
+    return func(n-2)+func(n-4)+func(n-6);
+  }
+}
+int main(){
+  cout << func(10) << endl;
+}

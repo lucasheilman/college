@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE QtCreatorSession>
+<!-- Written by QtCreator 3.6.0, 2016-05-08T21:20:46. -->
+<qtcreator>
+ <data>
+  <variable>CascadeSetActive</variable>
+  <value type="bool">false</value>
+ </data>
+ <data>
+  <variable>Color</variable>
+  <value type="QString">#666666</value>
+ </data>
+ <data>
+  <variable>EditorSettings</variable>
+  <value type="QByteArray">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</value>
+ </data>
+ <data>
+  <variable>ProjectDependencies</variable>
+  <valuemap type="QVariantMap"/>
+ </data>
+ <data>
+  <variable>ProjectList</variable>
+  <valuelist type="QVariantList">
+   <value type="QString">/home/users/heilma1/SD/proj/RoadTrip/RoadTrip.pro</value>
+  </valuelist>
+ </data>
+ <data>
+  <variable>StartupProject</variable>
+  <value type="QString">/home/users/heilma1/SD/proj/RoadTrip/RoadTrip.pro</value>
+ </data>
+ <data>
+  <variable>value-ActiveMode</variable>
+  <value type="QString">Design</value>
+ </data>
+ <data>
+  <variable>value-Breakpoints</variable>
+  <valuelist type="QVariantList"/>
+ </data>
+ <data>
+  <variable>value-DefaultFormats</variable>
+  <valuemap type="QVariantMap"/>
+ </data>
+ <data>
+  <variable>value-IndividualFormats</variable>
+  <valuemap type="QVariantMap"/>
+ </data>
+ <data>
+  <variable>value-ProjectTree.ExpandData</variable>
+  <valuelist type="QVariantList">
+   <valuelist type="QVariantList">
+    <value type="QString">session</value>
+    <value type="QString">session</value>
+   </valuelist>
+   <valuelist type="QVariantList">
+    <value type="QString">/home/users/heilma1/SD/proj/RoadTrip/RoadTrip.pro</value>
+    <value type="QString">RoadTrip</value>
+   </valuelist>
+   <valuelist type="QVariantList">
+    <value type="QString">/home/users/heilma1/SD/proj/RoadTrip</value>
+    <value type="QString">Headers</value>
+   </valuelist>
+   <valuelist type="QVariantList">
+    <value type="QString">/home/users/heilma1/SD/proj/RoadTrip</value>
+    <value type="QString">Sources</value>
+   </valuelist>
+   <valuelist type="QVariantList">
+    <value type="QString">/home/users/heilma1/SD/proj/RoadTrip</value>
+    <value type="QString">Forms</value>
+   </valuelist>
+  </valuelist>
+ </data>
+ <data>
+  <variable>value-TaskWindow.Categories</variable>
+  <valuelist type="QVariantList">
+   <value type="QString">Task.Category.QmlAnalysis</value>
+  </valuelist>
+ </data>
+ <data>
+  <variable>value-TaskWindow.IncludeWarnings</variable>
+  <value type="bool">true</value>
+ </data>
+ <data>
+  <variable>value-Watchers</variable>
+  <valuelist type="QVariantList"/>
+ </data>
+ <data>
+  <variable>valueKeys</variable>
+  <valuelist type="QVariantList">
+   <value type="QString">ActiveMode</value>
+   <value type="QString">Breakpoints</value>
+   <value type="QString">DefaultFormats</value>
+   <value type="QString">IndividualFormats</value>
+   <value type="QString">ProjectTree.ExpandData</value>
+   <value type="QString">TaskWindow.Categories</value>
+   <value type="QString">TaskWindow.IncludeWarnings</value>
+   <value type="QString">Watchers</value>
+  </valuelist>
+ </data>
+</qtcreator>

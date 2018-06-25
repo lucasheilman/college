@@ -1,0 +1,268 @@
+
+Xvnc TigerVNC 1.6.0 - built Jan  4 2016 15:11:13
+Copyright (C) 1999-2015 TigerVNC Team and many others (see README.txt)
+See http://www.tigervnc.org for information on TigerVNC.
+Underlying X server release 11704000, The X.Org Foundation
+
+
+Mon May 16 21:33:23 2016
+ vncext:      VNC extension running!
+ vncext:      Listening for VNC connections on all interface(s), port 5923
+ vncext:      created VNC server for screen 0
+
+Mon May 16 21:33:32 2016
+ Connections: accepted: 130.71.243.120::54561
+ SConnection: Client needs protocol version 3.8
+ SConnection: Client requests security type VncAuth(2)
+
+Mon May 16 21:33:35 2016
+ VNCSConnST:  Server default pixel format depth 24 (32bpp) little-endian rgb888
+ VNCSConnST:  Client pixel format depth 8 (8bpp) color-map
+
+Mon May 16 21:34:07 2016
+ VNCSConnST:  Client pixel format depth 24 (32bpp) little-endian rgb888
+
+Mon May 16 22:06:56 2016
+ Connections: closed: 130.71.243.120::54561 (Clean disconnection)
+ EncodeManager: Framebuffer updates: 6428
+ EncodeManager:   CopyRect:
+ EncodeManager:     Copies: 236 rects, 21.9438 Mpixels
+ EncodeManager:             3.6875 KiB (1:23237.4 ratio)
+ EncodeManager:   RRE:
+ EncodeManager:     Solid: 203 rects, 1.51013 Mpixels
+ EncodeManager:            3.91211 KiB (1:723.042 ratio)
+ EncodeManager:   Hextile:
+ EncodeManager:     Bitmap RLE: 256 rects, 592.618 kpixels
+ EncodeManager:                 11.9941 KiB (1:193.254 ratio)
+ EncodeManager:     Indexed RLE: 2.611 krects, 17.9687 Mpixels
+ EncodeManager:                  5.91349 MiB (1:11.5964 ratio)
+ EncodeManager:     Full Colour: 6.659 krects, 152.235 Mpixels
+ EncodeManager:                  127.224 MiB (1:4.56521 ratio)
+ EncodeManager:   ZRLE:
+ EncodeManager:     Bitmap RLE: 3 rects, 134.144 kpixels
+ EncodeManager:                 239 B (1:561.423 ratio)
+ EncodeManager:     Indexed RLE: 31 rects, 1.84984 Mpixels
+ EncodeManager:                  41.8643 KiB (1:43.1597 ratio)
+ EncodeManager:   Total: 9.999 krects, 196.234 Mpixels
+ EncodeManager:          133.198 MiB (1:5.55547 ratio)
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrFreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Regular.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Italic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-BoldItalic.ttf: 1
+FreeType: couldn't open face /usr/share/fonts/liberation/LiberationSansNarrow-Bold.ttf: 1

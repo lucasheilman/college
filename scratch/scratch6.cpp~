@@ -1,0 +1,11 @@
+#include "math.h"
+#include <iostream>
+using namespace std;
+
+int main(){
+  cout << "alg1: " << 1/21 << endl;
+  cout << "alg2: " << pow(1,2)/450 << endl;
+  cout << "alg3: " << sqrt(14)/sqrt(45) << endl;
+  cout << "alg4: " << .5*log2(4) << endl;
+  cout << "alg5: " << pow(1.2,1)/50 << endl;
+}

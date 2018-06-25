@@ -1,0 +1,26 @@
+
+Xvnc TigerVNC 1.7.1 - built Jan 19 2017 13:19:18
+Copyright (C) 1999-2016 TigerVNC Team and many others (see README.txt)
+See http://www.tigervnc.org for information on TigerVNC.
+Underlying X server release 11804000, The X.Org Foundation
+
+
+Tue Sep 19 10:57:24 2017
+ vncext:      VNC extension running!
+ vncext:      Listening for VNC connections on all interface(s), port 5921
+ vncext:      created VNC server for screen 0
+
+Tue Sep 19 10:57:54 2017
+ Connections: accepted: 130.71.250.232::55697
+ SConnection: Client needs protocol version 3.8
+ SConnection: Client requests security type VncAuth(2)
+
+Tue Sep 19 10:57:57 2017
+ VNCSConnST:  Server default pixel format depth 24 (32bpp) little-endian rgb888
+ VNCSConnST:  Client pixel format depth 8 (8bpp) color-map
+
+Tue Sep 19 10:57:59 2017
+ VNCSConnST:  Client pixel format depth 24 (32bpp) little-endian rgb888
+XIO:  fatal IO error 11 (Resource temporarily unavailable) on X server ":21"
+      after 207 requests (207 known processed) with 1 events remaining.
+Warning: VNC extension does not support -reset, terminating instead. Use -noreset to prevent termination.

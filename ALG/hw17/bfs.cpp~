@@ -1,0 +1,33 @@
+#include <iostream>
+#include <vector>
+#include <string>
+#include <algorithm>
+using namespace std;
+    
+int main(){
+  string junk;
+  cin >> junk;
+  cin >> junk;
+  int vertice_count;
+  cin >> vertice_count;
+  int edge_count;
+  cin >> edge_count;
+  int first_vert;
+  int second_vert;
+  vector <vector <int>> adlst;
+  adlst.resize(vertice_count);
+  for(int i = 0; i < edge_count; i++){
+    cin >> junk;
+    cin >> first_vert;
+    cin >> second_vert;
+    adlst[first_vert].push_back(second_vert);
+    adlst[second_vert].push_back(first_vert);
+  }
+  for(int i = 0; i < adlst.size(); i++){
+    sort(adlst[i].begin(), adlst[i].end(), myfunction);
+  }
+  int start;
+  cin >> start;
+  for(int i = 0; i < vertice_count; 
+}
+      

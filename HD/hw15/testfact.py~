@@ -1,0 +1,6 @@
+def factorial(n):
+    if n<=10:
+        n=n*factorial(n-1)
+def main():
+    print(factorial(10))
+main()

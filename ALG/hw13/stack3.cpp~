@@ -1,0 +1,67 @@
+#include <iostream>
+using namespace std;
+
+struct Node {
+  int x;
+  Node *next;
+};
+
+class linkedStack{
+private:
+  Node * head;
+public:
+  linkedStack(){
+    head = NULL;
+  }
+  void push(Node * newNode){
+    head = newNode;
+  }
+    
+
+  void pop(){
+    if(head  == NULL){
+      cout << "Nothing to remove" << endl;
+    }
+    Node *new_pointer = head;
+    head = head -> next;
+    delete new_pointer;
+  }
+  void print(){
+    Node * p = head;
+    Node * q = head;
+    while(q){
+      p = q;
+      cout << "Value: " << p -> x << endl;
+      q = p -> next;
+    }
+  }
+};
+
+int main(){
+  Node * A = new Node;
+  A -> x = 1;
+  Node * B = new Node;
+  B -> x = 2;   
+  Node * C = new Node;
+  C -> x = 3; 
+  Node * D = new Node;
+  D -> x = 4; 
+  Node * E = new Node;
+  E -> x = 5;
+  Node * F = new Node;
+  F -> x = 6;  
+  linkedStack myList;
+  myList.push(A);
+  myList.print();
+  myList.push(B);
+  myList.print();
+  myList.push(C);
+  myList.print();
+  myList.push(D);
+  myList.print();
+  myList.pop();
+  myList.print();
+    
+  return 0;
+}
+  

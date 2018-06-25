@@ -1,0 +1,15 @@
+Trip Name: ok
+Author: ok
+
+Playlist: 
+
+Songs: 
+
+Cars: 
+
+Participants: 
+1: Participant Name: lucas, Destination: newyork, Distance: 90
+
+Calendar: 
+
+Events: 

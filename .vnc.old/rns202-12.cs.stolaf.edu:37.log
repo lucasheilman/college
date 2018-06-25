@@ -1,0 +1,12 @@
+
+Xvnc TigerVNC 1.6.0 - built Jan  4 2016 15:11:13
+Copyright (C) 1999-2015 TigerVNC Team and many others (see README.txt)
+See http://www.tigervnc.org for information on TigerVNC.
+Underlying X server release 11704000, The X.Org Foundation
+
+
+Mon May 16 16:48:19 2016
+ vncext:      VNC extension running!
+ vncext:      Listening for VNC connections on all interface(s), port 5937
+ vncext:      created VNC server for screen 0
+Warning: VNC extension does not support -reset, terminating instead. Use -noreset to prevent termination.

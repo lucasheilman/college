@@ -1,0 +1,49 @@
+
+Xvnc TigerVNC 1.6.0 - built Jun  2 2016 07:21:55
+Copyright (C) 1999-2015 TigerVNC Team and many others (see README.txt)
+See http://www.tigervnc.org for information on TigerVNC.
+Underlying X server release 11803000, The X.Org Foundation
+
+
+Thu Sep 22 23:38:56 2016
+ vncext:      VNC extension running!
+ vncext:      Listening for VNC connections on all interface(s), port 5929
+ vncext:      created VNC server for screen 0
+
+Thu Sep 22 23:39:01 2016
+ Connections: accepted: 130.71.250.247::56054
+ SConnection: Client needs protocol version 3.8
+
+Thu Sep 22 23:39:03 2016
+ SConnection: Client requests security type VncAuth(2)
+
+Thu Sep 22 23:39:06 2016
+ VNCSConnST:  Server default pixel format depth 24 (32bpp) little-endian rgb888
+ VNCSConnST:  Client pixel format depth 8 (8bpp) color-map
+
+Thu Sep 22 23:39:31 2016
+ VNCSConnST:  Client pixel format depth 24 (32bpp) little-endian rgb888
+
+Thu Sep 22 23:43:35 2016
+ Connections: closed: 130.71.250.247::56054 (Clean disconnection)
+ EncodeManager: Framebuffer updates: 1402
+ EncodeManager:   CopyRect:
+ EncodeManager:     Copies: 2 rects, 656.352 kpixels
+ EncodeManager:             32 B (1:82044.8 ratio)
+ EncodeManager:   RRE:
+ EncodeManager:     Solid: 58 rects, 1.13398 Mpixels
+ EncodeManager:            1.0918 KiB (1:1902.89 ratio)
+ EncodeManager:   Hextile:
+ EncodeManager:     Bitmap RLE: 60 rects, 418.515 kpixels
+ EncodeManager:                 4.50781 KiB (1:362.821 ratio)
+ EncodeManager:     Indexed RLE: 775 rects, 4.71954 Mpixels
+ EncodeManager:                  632.013 KiB (1:29.1842 ratio)
+ EncodeManager:     Full Colour: 2.076 krects, 73.2204 Mpixels
+ EncodeManager:                  39.0637 MiB (1:7.15082 ratio)
+ EncodeManager:   ZRLE:
+ EncodeManager:     Bitmap RLE: 1 rects, 9.216 kpixels
+ EncodeManager:                 62 B (1:148.839 ratio)
+ EncodeManager:     Indexed RLE: 26 rects, 1.56389 Mpixels
+ EncodeManager:                  36.3643 KiB (1:42.0066 ratio)
+ EncodeManager:   Total: 2.998 krects, 81.7219 Mpixels
+ EncodeManager:          39.722 MiB (1:7.67788 ratio)

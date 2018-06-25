@@ -1,0 +1,22 @@
+Trip Name: ok
+Author: ok
+
+Playlist: 
+Playlist Name1: play/ Playlist author: lucas/ Songs: 
+1. steven/kesha/cannibal
+
+Songs: 
+1: steven/kesha/cannibal
+
+Cars: 
+1: Car name: ford, mpg: 100, passengers: 
+Participant Name: ok, Destination: ok, Distance: 199
+
+Participants: 
+1: Participant Name: ok, Destination: ok, Distance: 199
+
+Calendar: 
+1: Calendar Name: noob, Author: lucas, Events: 
+
+Events: 
+1: Event Name: switch, Time 1:00, Place: austin, Note: plzdosomething

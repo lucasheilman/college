@@ -1,0 +1,20 @@
+import cImage
+def main():
+    img = cImage.Image("LutherBellPic.jpg")
+    newimg = cImage.EmptyImage(img.getWidth(),img.getHeight())
+    win = cImage.ImageWin()
+    for col in range(img.getWidth()):
+        for row in range(img.getHeight()):
+            p = img.getPixel(col,row)
+            green = p.getGreen()
+            blue = p.getBlue()
+            red = p.getRed()
+            newR = int((red*.393 + green*.769 + blue*.189))
+            newG = int((red*.349 + green*.686 + blue*.168))
+            newB = int((red*.272 + green*.534 + blue*.131))
+            newpixel = cImage.Pixel(newR,newG,newB)
+            newimg.setPixel(col,row,newpixel)
+    newimg.draw(win)
+    win.exitonclick()
+main()
+            

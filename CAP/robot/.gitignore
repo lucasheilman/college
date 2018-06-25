@@ -1,0 +1,11 @@
+# Operating System
+.DS_Store
+
+# Language Files
+*.class
+*.java~
+*.html
+*.css
+
+# Folders
+ev3dev-lang-java/leJOS_EV3

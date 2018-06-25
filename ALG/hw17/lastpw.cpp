@@ -1,0 +1,100 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+struct node
+{
+  int contents[5];
+  int sz [5] = {23, 29, 31, 37, 41};
+  int buckets = 5;
+  node(int a, int b, int c, int d, int e){
+    contents[0] = a;
+    contents[1] = b;
+    contents[2] = c;
+    contents[3] = d;
+    contents[4] = e;
+  }
+  bool operator == (const node n)
+  {
+    return (n.contents[0] == contents[0] && n.contents[1] == contents[1] && n.contents[2] == contents[2] && n.contents[3] == contents[3] && n.contents[4] == contents[4]);
+  }
+};
+
+/* Returns the possible paths from a certain combination of containers */
+vector <node> pour (node & n, vector <node> & visited) {
+  vector <node> combos;
+  int current, target;
+  for(int initial = 0; initial < n.buckets; initial++)
+    for(int next = 0; next < n.buckets; next++)
+      {
+	node newNode = n;
+	if(initial != next && n.contents[initial] != 0 && n.contents[next] != n.sz[next])
+	  {
+	    current = n.contents[initial];
+	    target = n.contents[next];
+
+	    newNode.contents[next] = target + current;
+	    target = target + current;
+	    if(target > n.sz[next])
+	      {
+		newNode.contents[initial] = target - n.sz[next];
+		newNode.contents[next] = n.sz[next];
+
+	      }
+	    else
+	      {
+		newNode.contents[initial] = 0;
+	      }
+	  }
+	bool inVisited = false;
+	for(int check = 0; check < visited.size(); check++)
+	  {
+	    if(newNode == visited[check]){
+	      inVisited = true;
+	    }
+	  }
+	if(inVisited == false){
+	  visited.push_back(newNode);
+	  combos.push_back(newNode);
+	}
+      }
+  return combos;
+}
+/* Recursive function that performs DFS to find first possible path
+   from current node n that satisfies the criteria */
+bool search (node start) {
+  vector <node> visited;
+  vector <node> queue;
+  queue.push_back(start);
+  bool notYetFound = true;
+  int level = 0;
+  while(notYetFound)
+    {
+      for(int x = 0; x < queue.size(); x++)
+	{
+	  if (queue[x].contents[2] == 4 && queue[x].contents[3] == 4 && queue[x].contents[4] == 4) {
+	    for(int display = 0; display < 5; display++)
+	      cout << queue[x].contents[display] << ' ';
+	    cout << endl;
+	    cout << "Shortest distance = " << level << endl;
+	    notYetFound = false;
+	    return true;
+	  }
+	}
+      int queueSize = queue.size();
+      for(int count = 0; count < queueSize; count++)
+	{
+	  vector <node> combos;
+	  combos = pour(queue.front(), visited);
+	  queue.erase(queue.begin());
+	  queue.insert(queue.end(), combos.begin(), combos.end());
+	}
+      level++;
+    }
+}
+
+int main () {
+  node first(23,0,0,0,41);
+  bool check;
+  check = search(first);
+}

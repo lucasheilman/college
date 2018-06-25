@@ -1,0 +1,32 @@
+import cImage
+def convertBlackWhite(input_image):
+    grayscale_image = cImage.EmptyImage(input_image.getWidth(), input_image.getHeight())
+    for col in range(input_image.getWidth()):
+        for row in range(input_image.getHeight()):
+            p = input_image.getPixel(col, row)
+            red = p.getRed()
+            green = p.getGreen()
+            blue = p.getBlue()
+            avg = int((red + green + blue)/3)
+            newpixel = cImage.Pixel(avg, avg, avg)
+            grayscale_image.setPixel(col, row, newpixel)
+    blackwhite_image = cImage.EmptyImage(input_image.getWidth(), input_image.getHeight())
+    for col in range(input_image.getWidth()):
+        for row in range(input_image.getHeight()):
+            p = grayscale_image.getPixel(col, row)
+            red = p.getRed()
+            if red > 140:
+                val = 255
+            else:
+                val = 0
+            newpixel = cImage.Pixel(val, val, val)
+            blackwhite_image.setPixel(col, row, newpixel)
+    return blackwhite_image
+def main():
+    win = cImage.ImageWin()
+    img = cImage.Image("LutherBellPic.jpg")
+    bw_img = convertBlackWhite(img)
+    bw_img.draw(win)
+    win.exitonclick()
+main()
+            

@@ -1,0 +1,4 @@
+To run our program, you just have to put these lines into the command prompt:
+
+% make
+% ./RoadTrip_driver

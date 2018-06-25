@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+  int times;
+  cout<< "Enter a non-negative integer: ";
+  cin  >> times;
+  float arr[times];
+  int i;
+  cout<<"Enter " << times << " floating point values: "<< endl;
+  for (i=0;i<times;i++){
+    cout<< "";
+    cin>> arr[i];
+  }
+  cout<<"In reverse order, your input is: "<<endl;
+  int a;
+  for (a=times-1;a>=0;a=a-1){
+    cout<< arr[a]<< endl;
+  }
+  return 0;
+}
+    
+  

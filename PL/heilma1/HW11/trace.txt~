@@ -1,0 +1,11 @@
+(scan&parse "let z = 5 in let x = 3 in let y = -(x,1) in let x = 4 in -(z,-(x,y))")
+(vop (let-exp (var-exp z) (const-exp 5) (let-exp (var-exp x) (const-exp 3) (let-exp (var-exp y) (const-exp (diff-exp (var-exp x) (const-exp 1))) (let-exp (var-exp x) (const-exp 4) (diff-exp (var-exp x) (const-exp (diff-exp (var-exp x) (var-exp y)))))))))
+(vo (let-exp (var-exp z) (const-exp 5) (let-exp (var-exp x) (const-exp 3) (let-exp (var-exp y) (const-exp (diff-exp (var-exp x) (const-exp 1))) (let-exp (var-exp x) (const-exp 4) (diff-exp (var-exp x) (const-exp (diff-exp (var-exp x) (var-exp y)))))))) ie)
+    val1 --> (vo (let-exp (var-exp z) (const-exp 5)) ie)
+        val11 --> (vo (const-exp 5) ie)
+            (num-val 5)
+        (vo (let-exp (var-exp x) (const-exp 3) (let-exp (var-exp y) (const-exp (diff-exp (var-exp x) (const-exp 1))) (let-exp (var-exp x) (const-exp 4) (diff-exp (var-exp x) (const-exp (diff-exp (var-exp x) (var-exp y))))))))
+            
+    extend-env1 --> ((var-exp z) (const-exp 5) ie)
+        
+         

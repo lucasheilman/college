@@ -1,0 +1,44 @@
+#include <iostream>
+using namespace std;
+
+class Queue{
+private:
+  int pointer = 0;
+public:
+  int size;
+  int a[];
+  
+  Queue(int i){
+    size = i;
+    int a[i];
+  }
+  
+  void inject(int i){
+    a[pointer] = i;
+    cout << i << " is now in spot " << pointer << endl;
+    pointer = pointer+1;
+  }
+
+  void eject(){
+    cout << "Removed front val: " << a[0]<< endl;
+    a[0] = 0;
+    pointer = pointer - 1;
+    for(int i = 0; i < size-1; i++){
+      a[i] = a[i+1];
+    }
+    a[pointer] = 0;
+    for(int i = 0; i < size; i++){
+      cout << a[i] << endl;
+    }
+  }
+};
+
+int main(){
+  Queue st = Queue(5);
+  st.inject(3);
+  st.inject(4);
+  st.eject();
+  st.inject(5);
+  st.inject(6);
+  st.eject();
+}

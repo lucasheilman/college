@@ -1,0 +1,35 @@
+\hypertarget{miscOperators_8cpp}{}\section{hw3/misc\+Operators.cpp File Reference}
+\label{miscOperators_8cpp}\index{hw3/misc\+Operators.\+cpp@{hw3/misc\+Operators.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include \char`\"{}/home/users/cs251/binary.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{miscOperators_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{miscOperators_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\index{misc\+Operators.\+cpp@{misc\+Operators.\+cpp}!main@{main}}
+\index{main@{main}!misc\+Operators.\+cpp@{misc\+Operators.\+cpp}}
+\subsubsection[{main()}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{miscOperators_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+6 \{
+7   \textcolor{keywordtype}{char} a = 3;
+8   \textcolor{keywordtype}{char} b = 3;
+9   cout << \textcolor{stringliteral}{"a is assigned to be "} << binary(a) << endl;
+10   cout << \textcolor{stringliteral}{"b is assigned to be "} << binary(b) << endl;
+11   \textcolor{keywordtype}{char} c = a | b;
+12   cout << \textcolor{stringliteral}{"a | b is "} << binary(c) << endl;
+13   \textcolor{keywordtype}{int} d = int (a) ;
+14   cout << \textcolor{stringliteral}{"int of a is  "} << d << endl;
+15   \textcolor{keywordtype}{int} e = \textcolor{keyword}{sizeof}(b);
+16   cout << \textcolor{stringliteral}{"sizeof(b) is "} << e << endl;
+17   \textcolor{keywordflow}{return} 0;
+18 \}
+\end{DoxyCode}

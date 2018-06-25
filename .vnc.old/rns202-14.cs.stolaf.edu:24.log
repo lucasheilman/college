@@ -1,0 +1,46 @@
+
+Xvnc TigerVNC 1.7.0 - built Sep 12 2016 08:29:39
+Copyright (C) 1999-2016 TigerVNC Team and many others (see README.txt)
+See http://www.tigervnc.org for information on TigerVNC.
+Underlying X server release 11804000, The X.Org Foundation
+
+
+Sat Nov 12 19:42:53 2016
+ vncext:      VNC extension running!
+ vncext:      Listening for VNC connections on all interface(s), port 5924
+ vncext:      created VNC server for screen 0
+
+Sat Nov 12 19:43:02 2016
+ Connections: accepted: 130.71.250.247::50479
+ SConnection: Client needs protocol version 3.8
+ SConnection: Client requests security type VncAuth(2)
+
+Sat Nov 12 19:43:07 2016
+ VNCSConnST:  Server default pixel format depth 24 (32bpp) little-endian rgb888
+ VNCSConnST:  Client pixel format depth 8 (8bpp) color-map
+
+Sat Nov 12 19:43:38 2016
+ VNCSConnST:  Client pixel format depth 24 (32bpp) little-endian rgb888
+
+Sat Nov 12 20:07:44 2016
+ Connections: closed: 130.71.250.247::50479 (Clean disconnection)
+ EncodeManager: Framebuffer updates: 8240
+ EncodeManager:   CopyRect:
+ EncodeManager:     Copies: 8 rects, 751.814 kpixels
+ EncodeManager:             128 B (1:23494.9 ratio)
+ EncodeManager:   RRE:
+ EncodeManager:     Solid: 225 rects, 4.17465 Mpixels
+ EncodeManager:            4.34766 KiB (1:3206.66 ratio)
+ EncodeManager:   Hextile:
+ EncodeManager:     Bitmap RLE: 538 rects, 2.59106 Mpixels
+ EncodeManager:                 31.0566 KiB (1:326.102 ratio)
+ EncodeManager:     Indexed RLE: 7.002 krects, 87.8986 Mpixels
+ EncodeManager:                  5.96864 MiB (1:56.1915 ratio)
+ EncodeManager:     Full Colour: 19.016 krects, 673.329 Mpixels
+ EncodeManager:                  275.17 MiB (1:9.33519 ratio)
+ EncodeManager:   ZRLE:
+ EncodeManager:     Indexed RLE: 38 rects, 2.22524 Mpixels
+ EncodeManager:                  36.4912 KiB (1:59.563 ratio)
+ EncodeManager:   Total: 26.827 krects, 770.971 Mpixels
+ EncodeManager:          281.209 MiB (1:10.4287 ratio)
+Warning: VNC extension does not support -reset, terminating instead. Use -noreset to prevent termination.

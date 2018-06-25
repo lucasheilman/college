@@ -1,0 +1,359 @@
+\hypertarget{proto-multiplayer_8cpp}{}\section{sound/proto-\/multiplayer.cpp File Reference}
+\label{proto-multiplayer_8cpp}\index{sound/proto-\/multiplayer.\+cpp@{sound/proto-\/multiplayer.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$G\+L/glut.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$math.\+h$>$}\\*
+{\ttfamily \#include $<$sys/types.\+h$>$}\\*
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}network.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{proto-multiplayer_8cpp_a069c398f6dfe642eceb7c72a566a390c}{draw\+Box} (double x, double y, double width=\hyperlink{proto-multiplayer_8cpp_a62f8a3bc5feeb19a0bffdc85d657c0cd}{default\+Size}, double height=\hyperlink{proto-multiplayer_8cpp_a62f8a3bc5feeb19a0bffdc85d657c0cd}{default\+Size})
+\item 
+void \hyperlink{proto-multiplayer_8cpp_a6885b83febd9588a71c5d5458dfe180c}{choose\+Color} (int n)
+\item 
+void \hyperlink{proto-multiplayer_8cpp_a40c8660a304830add6a8d281c7bc2813}{draw\+Window} ()
+\item 
+void \hyperlink{proto-multiplayer_8cpp_a349ed9ac7f18536c63d4b10d41b9138a}{exit\+All} ()
+\item 
+void \hyperlink{proto-multiplayer_8cpp_a6e07312b3a723a9e37e9c5df2a065f2e}{keyboard} (unsigned char c, int x, int y)
+\item 
+void \hyperlink{proto-multiplayer_8cpp_afd34ae2cff2075bf4f03835a55204592}{special\+\_\+keyboard} (int key, int x, int y)
+\item 
+void \hyperlink{proto-multiplayer_8cpp_a2bf3e92f6c0f829ebb38f7b32accf2b0}{receive\+Multicast} (const char $\ast$msg)
+\item 
+void \hyperlink{proto-multiplayer_8cpp_a318b84167b4ec81faed01f07d4a99bfa}{at\+Time} (int tmp)
+\item 
+void \hyperlink{proto-multiplayer_8cpp_acc1ffe65e6869931318610cae7210078}{reshape} (int w, int h)
+\item 
+void \hyperlink{proto-multiplayer_8cpp_a2858154e2009b0e6e616f313177762bc}{init} (void)
+\item 
+void \hyperlink{proto-multiplayer_8cpp_a5fd5da323be71ae7b0e03ee058f47181}{init\+\_\+gl\+\_\+window} ()
+\item 
+int \hyperlink{proto-multiplayer_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{proto-multiplayer_8cpp_a59c3bba4b17cd5e19f149ea175fa6989}{W\+I\+D\+T\+H} = 240
+\item 
+int \hyperlink{proto-multiplayer_8cpp_a4e81322eb1085aca9cd7c5527f5e4c6b}{H\+E\+I\+G\+H\+T} = 200
+\item 
+char \hyperlink{proto-multiplayer_8cpp_a4a3baa5c0e8f5553a62f84603f526cc7}{program\+Name} \mbox{[}$\,$\mbox{]} = \char`\"{}proto-\/multiplayer\char`\"{}
+\item 
+double \hyperlink{proto-multiplayer_8cpp_a62f8a3bc5feeb19a0bffdc85d657c0cd}{default\+Size} = 10
+\item 
+double \hyperlink{proto-multiplayer_8cpp_afd5edd7c260eb3a2dd007708cda14f89}{position\+\_\+x} \mbox{[}1000\mbox{]}
+\item 
+double \hyperlink{proto-multiplayer_8cpp_aeb5d357ef9347eb510c38c7d82ea359b}{position\+\_\+y} \mbox{[}1000\mbox{]}
+\item 
+int \hyperlink{proto-multiplayer_8cpp_ad23eaaef84b2dc9fe1eed228c009ef4e}{my\+P\+I\+D}
+\item 
+int \hyperlink{proto-multiplayer_8cpp_a7b0a475cd0c1239e1900f559b2facf9c}{pid} \mbox{[}1000\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{proto-multiplayer_8cpp_a318b84167b4ec81faed01f07d4a99bfa}{}\index{proto-\/multiplayer.\+cpp@{proto-\/multiplayer.\+cpp}!at\+Time@{at\+Time}}
+\index{at\+Time@{at\+Time}!proto-\/multiplayer.\+cpp@{proto-\/multiplayer.\+cpp}}
+\subsubsection[{at\+Time(int tmp)}]{\setlength{\rightskip}{0pt plus 5cm}void at\+Time (
+\begin{DoxyParamCaption}
+\item[{int}]{tmp}
+\end{DoxyParamCaption}
+)}\label{proto-multiplayer_8cpp_a318b84167b4ec81faed01f07d4a99bfa}
+
+\begin{DoxyCode}
+143 \{
+144   \textcolor{keyword}{const} \textcolor{keywordtype}{int} bufMaxLen = 1000;  \textcolor{comment}{// choose a max size for messages}
+145   \textcolor{keywordtype}{char} buffer[bufMaxLen];
+146   \hyperlink{network_8cpp_a826d4954b5939427a0b19ee082204fe1}{listen}(buffer, bufMaxLen);
+147   glutTimerFunc(1000/60., \hyperlink{proto-multiplayer_8cpp_a318b84167b4ec81faed01f07d4a99bfa}{atTime}, 0);  \textcolor{comment}{// make it happen again!}
+148 \}
+\end{DoxyCode}
+\hypertarget{proto-multiplayer_8cpp_a6885b83febd9588a71c5d5458dfe180c}{}\index{proto-\/multiplayer.\+cpp@{proto-\/multiplayer.\+cpp}!choose\+Color@{choose\+Color}}
+\index{choose\+Color@{choose\+Color}!proto-\/multiplayer.\+cpp@{proto-\/multiplayer.\+cpp}}
+\subsubsection[{choose\+Color(int n)}]{\setlength{\rightskip}{0pt plus 5cm}void choose\+Color (
+\begin{DoxyParamCaption}
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}\label{proto-multiplayer_8cpp_a6885b83febd9588a71c5d5458dfe180c}
+
+\begin{DoxyCode}
+40 \{
+41   \textcolor{keywordtype}{float} col[3];
+42   \textcolor{keywordtype}{int} val[] = \{ 34972, 43982, 69202, 498056, 349082, 43958 \};
+43   \textcolor{keywordflow}{for} ( \textcolor{keywordtype}{int} i=0; i<3; ++i ) \{
+44     col[i] = ((val[i]*n + val[i+3])%256)/256.;  \textcolor{comment}{//  as if random }
+45     \textcolor{keywordflow}{if} ( col[i] < .5 ) col[i] += .5;  \textcolor{comment}{// use just brighter colors}
+46   \}
+47   glColor3f(col[0], col[1], col[2]);  \textcolor{comment}{// dark gray}
+48 \}
+\end{DoxyCode}
+\hypertarget{proto-multiplayer_8cpp_a069c398f6dfe642eceb7c72a566a390c}{}\index{proto-\/multiplayer.\+cpp@{proto-\/multiplayer.\+cpp}!draw\+Box@{draw\+Box}}
+\index{draw\+Box@{draw\+Box}!proto-\/multiplayer.\+cpp@{proto-\/multiplayer.\+cpp}}
+\subsubsection[{draw\+Box(double x, double y, double width=default\+Size, double height=default\+Size)}]{\setlength{\rightskip}{0pt plus 5cm}void draw\+Box (
+\begin{DoxyParamCaption}
+\item[{double}]{x, }
+\item[{double}]{y, }
+\item[{double}]{width = {\ttfamily {\bf default\+Size}}, }
+\item[{double}]{height = {\ttfamily {\bf default\+Size}}}
+\end{DoxyParamCaption}
+)}\label{proto-multiplayer_8cpp_a069c398f6dfe642eceb7c72a566a390c}
+
+\begin{DoxyCode}
+29 \{
+30   glBegin(GL\_POLYGON);
+31     glVertex2f(x, y);  \textcolor{comment}{// upper left}
+32     glVertex2f(x, y + height);  \textcolor{comment}{// lower left}
+33     glVertex2f(x + width, y + height);  \textcolor{comment}{// lower right}
+34     glVertex2f(x + width, y);  \textcolor{comment}{// upper right}
+35   glEnd();
+36 \}
+\end{DoxyCode}
+\hypertarget{proto-multiplayer_8cpp_a40c8660a304830add6a8d281c7bc2813}{}\index{proto-\/multiplayer.\+cpp@{proto-\/multiplayer.\+cpp}!draw\+Window@{draw\+Window}}
+\index{draw\+Window@{draw\+Window}!proto-\/multiplayer.\+cpp@{proto-\/multiplayer.\+cpp}}
+\subsubsection[{draw\+Window()}]{\setlength{\rightskip}{0pt plus 5cm}void draw\+Window (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{proto-multiplayer_8cpp_a40c8660a304830add6a8d281c7bc2813}
+
+\begin{DoxyCode}
+51 \{
+52   \textcolor{comment}{// clear the buffer}
+53   glClear(GL\_COLOR\_BUFFER\_BIT);
+54 
+55   \textcolor{comment}{// draw a box with "my" color at the top}
+56   \hyperlink{proto-multiplayer_8cpp_a6885b83febd9588a71c5d5458dfe180c}{chooseColor}(\hyperlink{proto-multiplayer_8cpp_ad23eaaef84b2dc9fe1eed228c009ef4e}{myPID});
+57   \hyperlink{proto-multiplayer_8cpp_a069c398f6dfe642eceb7c72a566a390c}{drawBox}( 0, 0, \hyperlink{proto-multiplayer_8cpp_a59c3bba4b17cd5e19f149ea175fa6989}{WIDTH}, 5 );
+58 
+59   \textcolor{comment}{// draw all the currently existing players}
+60   \textcolor{keywordflow}{for} ( \textcolor{keywordtype}{int} i=0; i<1000; ++i ) \{
+61     \textcolor{keywordflow}{if} ( -1 != \hyperlink{proto-multiplayer_8cpp_a7b0a475cd0c1239e1900f559b2facf9c}{pid}[i] ) \{
+62       \hyperlink{proto-multiplayer_8cpp_a6885b83febd9588a71c5d5458dfe180c}{chooseColor}(\hyperlink{proto-multiplayer_8cpp_a7b0a475cd0c1239e1900f559b2facf9c}{pid}[i]);
+63       \hyperlink{proto-multiplayer_8cpp_a069c398f6dfe642eceb7c72a566a390c}{drawBox}( \hyperlink{proto-multiplayer_8cpp_afd5edd7c260eb3a2dd007708cda14f89}{position\_x}[i], \hyperlink{proto-multiplayer_8cpp_aeb5d357ef9347eb510c38c7d82ea359b}{position\_y}[i] );
+64     \}
+65   \}
+66 
+67   \textcolor{comment}{// tell the graphics card that we're done-- go ahead and draw!}
+68   \textcolor{comment}{//   (technically, we are switching between two color buffers...)}
+69   glutSwapBuffers();
+70 \}
+\end{DoxyCode}
+\hypertarget{proto-multiplayer_8cpp_a349ed9ac7f18536c63d4b10d41b9138a}{}\index{proto-\/multiplayer.\+cpp@{proto-\/multiplayer.\+cpp}!exit\+All@{exit\+All}}
+\index{exit\+All@{exit\+All}!proto-\/multiplayer.\+cpp@{proto-\/multiplayer.\+cpp}}
+\subsubsection[{exit\+All()}]{\setlength{\rightskip}{0pt plus 5cm}void exit\+All (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{proto-multiplayer_8cpp_a349ed9ac7f18536c63d4b10d41b9138a}
+
+\begin{DoxyCode}
+74 \{
+75   \textcolor{keywordtype}{int} win = glutGetWindow();
+76   glutDestroyWindow(win);
+77   exit(0);
+78 \}
+\end{DoxyCode}
+\hypertarget{proto-multiplayer_8cpp_a2858154e2009b0e6e616f313177762bc}{}\index{proto-\/multiplayer.\+cpp@{proto-\/multiplayer.\+cpp}!init@{init}}
+\index{init@{init}!proto-\/multiplayer.\+cpp@{proto-\/multiplayer.\+cpp}}
+\subsubsection[{init(void)}]{\setlength{\rightskip}{0pt plus 5cm}void init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{proto-multiplayer_8cpp_a2858154e2009b0e6e616f313177762bc}
+
+\begin{DoxyCode}
+164 \{
+165   \textcolor{comment}{// clear the window to black}
+166   glClearColor(0.0, 0.0, 0.0, 1.0);
+167   glClear(GL\_COLOR\_BUFFER\_BIT);
+168 
+169   \textcolor{comment}{// set up the coordinate system:  number of pixels along x and y}
+170   glMatrixMode(GL\_PROJECTION);
+171   glLoadIdentity();
+172   glOrtho(0., \hyperlink{proto-multiplayer_8cpp_a59c3bba4b17cd5e19f149ea175fa6989}{WIDTH}-1, \hyperlink{proto-multiplayer_8cpp_a4e81322eb1085aca9cd7c5527f5e4c6b}{HEIGHT}-1, 0., -1.0, 1.0);
+173 
+174   \textcolor{comment}{// welcome message}
+175   cout << \textcolor{stringliteral}{"Welcome to "} << \hyperlink{proto-multiplayer_8cpp_a4a3baa5c0e8f5553a62f84603f526cc7}{programName} << \textcolor{stringliteral}{". Try running several of these, and use the arrow
+       keys."} << endl;
+176 \}
+\end{DoxyCode}
+\hypertarget{proto-multiplayer_8cpp_a5fd5da323be71ae7b0e03ee058f47181}{}\index{proto-\/multiplayer.\+cpp@{proto-\/multiplayer.\+cpp}!init\+\_\+gl\+\_\+window@{init\+\_\+gl\+\_\+window}}
+\index{init\+\_\+gl\+\_\+window@{init\+\_\+gl\+\_\+window}!proto-\/multiplayer.\+cpp@{proto-\/multiplayer.\+cpp}}
+\subsubsection[{init\+\_\+gl\+\_\+window()}]{\setlength{\rightskip}{0pt plus 5cm}void init\+\_\+gl\+\_\+window (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{proto-multiplayer_8cpp_a5fd5da323be71ae7b0e03ee058f47181}
+
+\begin{DoxyCode}
+186 \{
+187   \textcolor{keywordtype}{char} *argv[] = \{ \hyperlink{proto-multiplayer_8cpp_a4a3baa5c0e8f5553a62f84603f526cc7}{programName} \};
+188   \textcolor{keywordtype}{int} argc = \textcolor{keyword}{sizeof}(argv) / \textcolor{keyword}{sizeof}(argv[0]);
+189   glutInit(&argc, argv);
+190   glutInitDisplayMode( GLUT\_RGBA | GLUT\_DOUBLE );
+191   glutInitWindowSize(\hyperlink{proto-multiplayer_8cpp_a59c3bba4b17cd5e19f149ea175fa6989}{WIDTH},\hyperlink{proto-multiplayer_8cpp_a4e81322eb1085aca9cd7c5527f5e4c6b}{HEIGHT});
+192   glutInitWindowPosition(100,100);
+193   glutCreateWindow(\hyperlink{proto-multiplayer_8cpp_a4a3baa5c0e8f5553a62f84603f526cc7}{programName});
+194   \hyperlink{proto-multiplayer_8cpp_a2858154e2009b0e6e616f313177762bc}{init}();
+195 
+196   glutDisplayFunc(\hyperlink{proto-multiplayer_8cpp_a40c8660a304830add6a8d281c7bc2813}{drawWindow});
+197   glutReshapeFunc(\hyperlink{proto-multiplayer_8cpp_acc1ffe65e6869931318610cae7210078}{reshape});
+198   glutKeyboardFunc(\hyperlink{proto-multiplayer_8cpp_a6e07312b3a723a9e37e9c5df2a065f2e}{keyboard});
+199   glutSpecialFunc(\hyperlink{proto-multiplayer_8cpp_afd34ae2cff2075bf4f03835a55204592}{special\_keyboard});
+200   glutTimerFunc(1000/60., \hyperlink{proto-multiplayer_8cpp_a318b84167b4ec81faed01f07d4a99bfa}{atTime}, 0);
+201   glutMainLoop();
+202 \}
+\end{DoxyCode}
+\hypertarget{proto-multiplayer_8cpp_a6e07312b3a723a9e37e9c5df2a065f2e}{}\index{proto-\/multiplayer.\+cpp@{proto-\/multiplayer.\+cpp}!keyboard@{keyboard}}
+\index{keyboard@{keyboard}!proto-\/multiplayer.\+cpp@{proto-\/multiplayer.\+cpp}}
+\subsubsection[{keyboard(unsigned char c, int x, int y)}]{\setlength{\rightskip}{0pt plus 5cm}void keyboard (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{c, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\label{proto-multiplayer_8cpp_a6e07312b3a723a9e37e9c5df2a065f2e}
+
+\begin{DoxyCode}
+82 \{
+83   \textcolor{keywordflow}{switch}(c) \{
+84     \textcolor{keywordflow}{case} \textcolor{charliteral}{'q'}:
+85     \textcolor{keywordflow}{case} \textcolor{charliteral}{'Q'}:
+86     \textcolor{keywordflow}{case} 27:
+87       \hyperlink{proto-multiplayer_8cpp_a349ed9ac7f18536c63d4b10d41b9138a}{exitAll}();
+88       \textcolor{keywordflow}{break};
+89     \textcolor{keywordflow}{default}:
+90       \textcolor{keywordflow}{break};
+91   \}
+92 \}
+\end{DoxyCode}
+\hypertarget{proto-multiplayer_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\index{proto-\/multiplayer.\+cpp@{proto-\/multiplayer.\+cpp}!main@{main}}
+\index{main@{main}!proto-\/multiplayer.\+cpp@{proto-\/multiplayer.\+cpp}}
+\subsubsection[{main()}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{proto-multiplayer_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+205 \{
+206   \hyperlink{network_8cpp_a956de99c38b2e000a5fc16d607449930}{initNetwork}(25100);
+207   \hyperlink{proto-multiplayer_8cpp_ad23eaaef84b2dc9fe1eed228c009ef4e}{myPID} = getpid();
+208   \textcolor{keywordflow}{for} ( \textcolor{keywordtype}{int} i=0; i<1000; ++i ) \hyperlink{proto-multiplayer_8cpp_a7b0a475cd0c1239e1900f559b2facf9c}{pid}[i] = -1;  \textcolor{comment}{// initialize as unused}
+209   \hyperlink{proto-multiplayer_8cpp_afd34ae2cff2075bf4f03835a55204592}{special\_keyboard}(-1, 0, 0);                \textcolor{comment}{// initialize movement}
+210   \hyperlink{proto-multiplayer_8cpp_a5fd5da323be71ae7b0e03ee058f47181}{init\_gl\_window}();
+211 \}
+\end{DoxyCode}
+\hypertarget{proto-multiplayer_8cpp_a2bf3e92f6c0f829ebb38f7b32accf2b0}{}\index{proto-\/multiplayer.\+cpp@{proto-\/multiplayer.\+cpp}!receive\+Multicast@{receive\+Multicast}}
+\index{receive\+Multicast@{receive\+Multicast}!proto-\/multiplayer.\+cpp@{proto-\/multiplayer.\+cpp}}
+\subsubsection[{receive\+Multicast(const char $\ast$msg)}]{\setlength{\rightskip}{0pt plus 5cm}void receive\+Multicast (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{msg}
+\end{DoxyParamCaption}
+)}\label{proto-multiplayer_8cpp_a2bf3e92f6c0f829ebb38f7b32accf2b0}
+
+\begin{DoxyCode}
+125 \{
+126   istringstream ss(msg);
+127   \textcolor{keywordtype}{int} id, x, y;
+128   ss >> \textcolor{keywordtype}{id} >> x >> y;
+129   \textcolor{comment}{// cout << "got multicast " << id << ' ' << x << ' ' << y << endl;}
+130 
+131   \textcolor{comment}{// store this info in our global arrays}
+132   \hyperlink{proto-multiplayer_8cpp_a7b0a475cd0c1239e1900f559b2facf9c}{pid}[ \textcolor{keywordtype}{id}%1000 ] = id;
+133   \hyperlink{proto-multiplayer_8cpp_afd5edd7c260eb3a2dd007708cda14f89}{position\_x}[ \textcolor{keywordtype}{id}%1000 ] = x;
+134   \hyperlink{proto-multiplayer_8cpp_aeb5d357ef9347eb510c38c7d82ea359b}{position\_y}[ \textcolor{keywordtype}{id}%1000 ] = y;
+135 
+136   glutPostRedisplay();
+137 \}
+\end{DoxyCode}
+\hypertarget{proto-multiplayer_8cpp_acc1ffe65e6869931318610cae7210078}{}\index{proto-\/multiplayer.\+cpp@{proto-\/multiplayer.\+cpp}!reshape@{reshape}}
+\index{reshape@{reshape}!proto-\/multiplayer.\+cpp@{proto-\/multiplayer.\+cpp}}
+\subsubsection[{reshape(int w, int h)}]{\setlength{\rightskip}{0pt plus 5cm}void reshape (
+\begin{DoxyParamCaption}
+\item[{int}]{w, }
+\item[{int}]{h}
+\end{DoxyParamCaption}
+)}\label{proto-multiplayer_8cpp_acc1ffe65e6869931318610cae7210078}
+
+\begin{DoxyCode}
+154 \{
+155    glViewport(0, 0, (GLsizei) w, (GLsizei) h);
+156    \hyperlink{proto-multiplayer_8cpp_a59c3bba4b17cd5e19f149ea175fa6989}{WIDTH} = w;  \hyperlink{proto-multiplayer_8cpp_a4e81322eb1085aca9cd7c5527f5e4c6b}{HEIGHT} = h;
+157    glMatrixMode(GL\_PROJECTION);
+158    glLoadIdentity();
+159    glOrtho(0., \hyperlink{proto-multiplayer_8cpp_a59c3bba4b17cd5e19f149ea175fa6989}{WIDTH}-1, \hyperlink{proto-multiplayer_8cpp_a4e81322eb1085aca9cd7c5527f5e4c6b}{HEIGHT}-1, 0., -1.0, 1.0);
+160 \}
+\end{DoxyCode}
+\hypertarget{proto-multiplayer_8cpp_afd34ae2cff2075bf4f03835a55204592}{}\index{proto-\/multiplayer.\+cpp@{proto-\/multiplayer.\+cpp}!special\+\_\+keyboard@{special\+\_\+keyboard}}
+\index{special\+\_\+keyboard@{special\+\_\+keyboard}!proto-\/multiplayer.\+cpp@{proto-\/multiplayer.\+cpp}}
+\subsubsection[{special\+\_\+keyboard(int key, int x, int y)}]{\setlength{\rightskip}{0pt plus 5cm}void special\+\_\+keyboard (
+\begin{DoxyParamCaption}
+\item[{int}]{key, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\label{proto-multiplayer_8cpp_afd34ae2cff2075bf4f03835a55204592}
+
+\begin{DoxyCode}
+96 \{
+97   \textcolor{comment}{// update my current position}
+98   \textcolor{keyword}{static} \textcolor{keywordtype}{int} shape\_position\_x = \hyperlink{proto-multiplayer_8cpp_a59c3bba4b17cd5e19f149ea175fa6989}{WIDTH}/2, move\_x = \hyperlink{proto-multiplayer_8cpp_a62f8a3bc5feeb19a0bffdc85d657c0cd}{defaultSize};
+99   \textcolor{keyword}{static} \textcolor{keywordtype}{int} shape\_position\_y = \hyperlink{proto-multiplayer_8cpp_a4e81322eb1085aca9cd7c5527f5e4c6b}{HEIGHT}/2, move\_y = \hyperlink{proto-multiplayer_8cpp_a62f8a3bc5feeb19a0bffdc85d657c0cd}{defaultSize};
+100   \textcolor{keywordflow}{switch} (key) \{
+101     \textcolor{keywordflow}{case} GLUT\_KEY\_LEFT:
+102       shape\_position\_x -= move\_x;
+103       \textcolor{keywordflow}{break};
+104     \textcolor{keywordflow}{case} GLUT\_KEY\_RIGHT:
+105       shape\_position\_x += move\_x;
+106       \textcolor{keywordflow}{break};
+107     \textcolor{keywordflow}{case} GLUT\_KEY\_UP:
+108       shape\_position\_y -= move\_y;
+109       \textcolor{keywordflow}{break};
+110     \textcolor{keywordflow}{case} GLUT\_KEY\_DOWN:
+111       shape\_position\_y += move\_y;
+112       \textcolor{keywordflow}{break};
+113   \}
+114 
+115   \textcolor{comment}{// send my position off to whoever is listening on the network}
+116   ostringstream toSend;
+117   toSend << \hyperlink{proto-multiplayer_8cpp_ad23eaaef84b2dc9fe1eed228c009ef4e}{myPID} << \textcolor{charliteral}{' '} << shape\_position\_x << \textcolor{charliteral}{' '} << shape\_position\_y;
+118   toSend.flush();
+119   \textcolor{comment}{// cout << "toSend has " << toSend.str() << endl;}
+120   \hyperlink{network_8cpp_ad45031e656caa6c2f3336fd3f575ef60}{multicast}(toSend.str().c\_str());
+121 \}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\hypertarget{proto-multiplayer_8cpp_a62f8a3bc5feeb19a0bffdc85d657c0cd}{}\index{proto-\/multiplayer.\+cpp@{proto-\/multiplayer.\+cpp}!default\+Size@{default\+Size}}
+\index{default\+Size@{default\+Size}!proto-\/multiplayer.\+cpp@{proto-\/multiplayer.\+cpp}}
+\subsubsection[{default\+Size}]{\setlength{\rightskip}{0pt plus 5cm}double default\+Size = 10}\label{proto-multiplayer_8cpp_a62f8a3bc5feeb19a0bffdc85d657c0cd}
+\hypertarget{proto-multiplayer_8cpp_a4e81322eb1085aca9cd7c5527f5e4c6b}{}\index{proto-\/multiplayer.\+cpp@{proto-\/multiplayer.\+cpp}!H\+E\+I\+G\+H\+T@{H\+E\+I\+G\+H\+T}}
+\index{H\+E\+I\+G\+H\+T@{H\+E\+I\+G\+H\+T}!proto-\/multiplayer.\+cpp@{proto-\/multiplayer.\+cpp}}
+\subsubsection[{H\+E\+I\+G\+H\+T}]{\setlength{\rightskip}{0pt plus 5cm}int H\+E\+I\+G\+H\+T = 200}\label{proto-multiplayer_8cpp_a4e81322eb1085aca9cd7c5527f5e4c6b}
+\hypertarget{proto-multiplayer_8cpp_ad23eaaef84b2dc9fe1eed228c009ef4e}{}\index{proto-\/multiplayer.\+cpp@{proto-\/multiplayer.\+cpp}!my\+P\+I\+D@{my\+P\+I\+D}}
+\index{my\+P\+I\+D@{my\+P\+I\+D}!proto-\/multiplayer.\+cpp@{proto-\/multiplayer.\+cpp}}
+\subsubsection[{my\+P\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}int my\+P\+I\+D}\label{proto-multiplayer_8cpp_ad23eaaef84b2dc9fe1eed228c009ef4e}
+\hypertarget{proto-multiplayer_8cpp_a7b0a475cd0c1239e1900f559b2facf9c}{}\index{proto-\/multiplayer.\+cpp@{proto-\/multiplayer.\+cpp}!pid@{pid}}
+\index{pid@{pid}!proto-\/multiplayer.\+cpp@{proto-\/multiplayer.\+cpp}}
+\subsubsection[{pid}]{\setlength{\rightskip}{0pt plus 5cm}int pid\mbox{[}1000\mbox{]}}\label{proto-multiplayer_8cpp_a7b0a475cd0c1239e1900f559b2facf9c}
+\hypertarget{proto-multiplayer_8cpp_afd5edd7c260eb3a2dd007708cda14f89}{}\index{proto-\/multiplayer.\+cpp@{proto-\/multiplayer.\+cpp}!position\+\_\+x@{position\+\_\+x}}
+\index{position\+\_\+x@{position\+\_\+x}!proto-\/multiplayer.\+cpp@{proto-\/multiplayer.\+cpp}}
+\subsubsection[{position\+\_\+x}]{\setlength{\rightskip}{0pt plus 5cm}double position\+\_\+x\mbox{[}1000\mbox{]}}\label{proto-multiplayer_8cpp_afd5edd7c260eb3a2dd007708cda14f89}
+\hypertarget{proto-multiplayer_8cpp_aeb5d357ef9347eb510c38c7d82ea359b}{}\index{proto-\/multiplayer.\+cpp@{proto-\/multiplayer.\+cpp}!position\+\_\+y@{position\+\_\+y}}
+\index{position\+\_\+y@{position\+\_\+y}!proto-\/multiplayer.\+cpp@{proto-\/multiplayer.\+cpp}}
+\subsubsection[{position\+\_\+y}]{\setlength{\rightskip}{0pt plus 5cm}double position\+\_\+y\mbox{[}1000\mbox{]}}\label{proto-multiplayer_8cpp_aeb5d357ef9347eb510c38c7d82ea359b}
+\hypertarget{proto-multiplayer_8cpp_a4a3baa5c0e8f5553a62f84603f526cc7}{}\index{proto-\/multiplayer.\+cpp@{proto-\/multiplayer.\+cpp}!program\+Name@{program\+Name}}
+\index{program\+Name@{program\+Name}!proto-\/multiplayer.\+cpp@{proto-\/multiplayer.\+cpp}}
+\subsubsection[{program\+Name}]{\setlength{\rightskip}{0pt plus 5cm}char program\+Name\mbox{[}$\,$\mbox{]} = \char`\"{}proto-\/multiplayer\char`\"{}}\label{proto-multiplayer_8cpp_a4a3baa5c0e8f5553a62f84603f526cc7}
+\hypertarget{proto-multiplayer_8cpp_a59c3bba4b17cd5e19f149ea175fa6989}{}\index{proto-\/multiplayer.\+cpp@{proto-\/multiplayer.\+cpp}!W\+I\+D\+T\+H@{W\+I\+D\+T\+H}}
+\index{W\+I\+D\+T\+H@{W\+I\+D\+T\+H}!proto-\/multiplayer.\+cpp@{proto-\/multiplayer.\+cpp}}
+\subsubsection[{W\+I\+D\+T\+H}]{\setlength{\rightskip}{0pt plus 5cm}int W\+I\+D\+T\+H = 240}\label{proto-multiplayer_8cpp_a59c3bba4b17cd5e19f149ea175fa6989}

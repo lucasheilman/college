@@ -1,0 +1,70 @@
+#include <iostream>
+using namespace std;
+#include <vector>
+#include <string>
+#include <algorithm>
+
+
+int diff(string firstword, string secondword, int i, int j){
+   cout << firstword[j] << " " << secondword[i] << endl;
+  if(firstword[j] == secondword[i]){
+    // cout << firstword[j] << " " << secondword[i] << endl;
+    cout << "returning 0" << endl;
+        return 0;
+    }
+    else {
+      cout << "returning 1" << endl;
+        return 1;
+    }
+}
+
+vector <vector <int>> minimum (vector <vector <int>> fin_t, string firstword, string secondword ){
+  cout << "here1" << endl;
+    for(int i = 0; i < fin_t[0].size(); i++) {
+        fin_t[0][i] = i;
+      cout << "here2" << endl;
+    }
+    for (int j = 1; j < fin_t.size(); j++) {
+        cout << "here3" << endl;
+        fin_t[j][0] = j;
+    }
+    for (int j = 1; j < fin_t[0].size(); j++) {
+        for (int i = 0; i < fin_t.size()-1; i++) {
+        cout << "here4" << endl;
+            fin_t[j][i] = min(min(fin_t[j][i-1]+1,fin_t[j-1][i]+1), diff(firstword, secondword, i, j)+fin_t[j-1][i-1]);
+        }
+    }
+    return fin_t;
+}
+
+
+
+
+int main() {
+
+    cout << "Enter the first word: ";
+    string firstword;
+    cin >> firstword;
+    cout << "Enter the second word: ";
+    string secondword;
+    cin >> secondword;
+
+       vector <vector <int>> fin_t(secondword.size()+1, vector<int> (firstword.size()+1, secondword.size()+1));
+       cout << "construccted" << endl;
+    /* 
+    for(int j = 0; j < firstword.size()+1; j++){
+        fin_t[j].push_back(0);
+        for(int i = 0; i < secondword.size()+1; i++){
+            fin_t[j][i].push_back(0);
+        }
+    }*/
+    vector <vector <int>> bin_t = minimum(fin_t,firstword, secondword);
+    cout << "after" << endl;
+    cout << "Edit distance: " << bin_t[secondword.size()-1][firstword.size()-1] << endl;
+
+
+return 0;
+}
+
+
+

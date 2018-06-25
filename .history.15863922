@@ -1,0 +1,98 @@
+#+1474226543
+ssh-copy-id -i ~/.ssh/id_rsa.pub localhost
+#+1474230109
+scp cumulus.cs.stolaf.edu:PDC/lab1/trap2.cpp ~PDC/lab1
+#+1474230114
+scp cumulus.cs.stolaf.edu:PDC/lab1/trap2.cpp ~/PDC/lab1
+#+1474230160
+cp trap2.cpp standalone.cpp
+#+1474230167
+emacs standalone.cpp &
+#+1474230484
+g++ -c standalone.cpp
+#+1474230502
+g++ -o standalone standalone.o
+#+1474230506
+./standalone
+#+1474230664
+git add standalone.cpp
+#+1474230677
+git commit -m "lab1: standalone.cpp"
+#+1474230783
+ssh localhost
+#+1474234221
+git -a
+#+1474234227
+git --a
+#+1474234285
+git config --global user.name "Lucas Heilman"
+#+1474234308
+git config --global user.email "heilma1@stolaf.edu"
+#+1474234322
+git config --global core.editor "emacs"
+#+1474234336
+git add lab1
+#+1474234352
+git commit -m "lab1: standalone"
+#+1474234402
+git init
+#+1474234436
+git remote add origin git@stogit.cs.stolaf.edu:pdc-f16/heilma1.git
+#+1474234524
+git commit -a -m "lab1:standalone"
+#+1474234554
+sudo git pull origin master
+#+1474234750
+stogit_wd pdc-f16/heilma1 ~PDC
+#+1474234755
+stogit_wd pdc-f16/heilma1 ~/PDC
+#+1474234881
+cd allen
+#+1474234920
+cd mscs
+#+1474234924
+cd cs300
+#+1474234933
+cd share
+#+1474234936
+cd doc
+#+1474234943
+cd man
+#+1474234947
+cd man1
+#+1474234992
+cd ~
+#+1474235015
+source ~/cs300/setup
+#+1474235030
+source ~cs300/setup
+#+1474235064
+sudo source ~cs300/allen/setup
+#+1474235070
+root source ~cs300/allen/setup
+#+1474235073
+source ~cs300/allen/setup
+#+1474235089
+source /home/cs300/setup
+#+1474235097
+source cs300/setup
+#+1474235100
+source /cs300/setup
+#+1474235169
+cd lab1
+#+1474235194
+git add --a
+#+1474235198
+git status
+#+1474235213
+git branch
+#+1474235220
+git remote -v
+#+1474243700
+cd
+#+1474243705
+cd SD
+#+1474243865
+./story
+#+1474246132
+mkdir HW3

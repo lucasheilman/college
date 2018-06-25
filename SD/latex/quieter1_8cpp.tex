@@ -1,0 +1,57 @@
+\hypertarget{quieter1_8cpp}{}\section{sound/quieter1.cpp File Reference}
+\label{quieter1_8cpp}\index{sound/quieter1.\+cpp@{sound/quieter1.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{quieter1_8cpp_af04eca6115b476f10b3110b73431da72}{quieter} (signed short val\mbox{[}$\,$\mbox{]})
+\item 
+int \hyperlink{quieter1_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \hyperlink{quieter1_8cpp_a3fa2b9fb503114df691822429c970f25}{datalen} = 3453884
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{quieter1_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\index{quieter1.\+cpp@{quieter1.\+cpp}!main@{main}}
+\index{main@{main}!quieter1.\+cpp@{quieter1.\+cpp}}
+\subsubsection[{main()}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{quieter1_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+13 \{
+14   \textcolor{keywordtype}{signed} \textcolor{keywordtype}{short} val[\hyperlink{quieter1_8cpp_a3fa2b9fb503114df691822429c970f25}{datalen}];  \textcolor{comment}{// make an array to hold the data}
+15   cin.read( (\textcolor{keywordtype}{char} *)val, 2*\hyperlink{quieter1_8cpp_a3fa2b9fb503114df691822429c970f25}{datalen} ); \textcolor{comment}{// read the data into the array}
+16 
+17   \hyperlink{quieter1_8cpp_af04eca6115b476f10b3110b73431da72}{quieter}(val);  \textcolor{comment}{// modify the array elements}
+18 
+19   cout.write( (\textcolor{keywordtype}{char} *)val, 2*\hyperlink{quieter1_8cpp_a3fa2b9fb503114df691822429c970f25}{datalen} ); \textcolor{comment}{// write the data back out}
+20   \textcolor{keywordflow}{return} 0;
+21 \}
+\end{DoxyCode}
+\hypertarget{quieter1_8cpp_af04eca6115b476f10b3110b73431da72}{}\index{quieter1.\+cpp@{quieter1.\+cpp}!quieter@{quieter}}
+\index{quieter@{quieter}!quieter1.\+cpp@{quieter1.\+cpp}}
+\subsubsection[{quieter(signed short val[])}]{\setlength{\rightskip}{0pt plus 5cm}void quieter (
+\begin{DoxyParamCaption}
+\item[{signed short}]{val\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{quieter1_8cpp_af04eca6115b476f10b3110b73431da72}
+
+\begin{DoxyCode}
+7 \{
+8   \textcolor{keywordflow}{for}( \textcolor{keywordtype}{int} i = 0; i < \hyperlink{quieter1_8cpp_a3fa2b9fb503114df691822429c970f25}{datalen}; ++i )
+9     val[i] /= 5;
+10 \}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\hypertarget{quieter1_8cpp_a3fa2b9fb503114df691822429c970f25}{}\index{quieter1.\+cpp@{quieter1.\+cpp}!datalen@{datalen}}
+\index{datalen@{datalen}!quieter1.\+cpp@{quieter1.\+cpp}}
+\subsubsection[{datalen}]{\setlength{\rightskip}{0pt plus 5cm}const int datalen = 3453884}\label{quieter1_8cpp_a3fa2b9fb503114df691822429c970f25}

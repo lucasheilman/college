@@ -1,0 +1,65 @@
+\hypertarget{octavedown1_8cpp}{}\section{sound/octavedown1.cpp File Reference}
+\label{octavedown1_8cpp}\index{sound/octavedown1.\+cpp@{sound/octavedown1.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{octavedown1_8cpp_ac3085d7eceddb3446ddda905e7aa09d9}{octavedown} (signed short val\mbox{[}$\,$\mbox{]}, signed short bigval\mbox{[}$\,$\mbox{]})
+\item 
+int \hyperlink{octavedown1_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \hyperlink{octavedown1_8cpp_a3fa2b9fb503114df691822429c970f25}{datalen} = 3453884/4
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{octavedown1_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\index{octavedown1.\+cpp@{octavedown1.\+cpp}!main@{main}}
+\index{main@{main}!octavedown1.\+cpp@{octavedown1.\+cpp}}
+\subsubsection[{main()}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{octavedown1_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+19 \{
+20   \textcolor{keywordtype}{signed} \textcolor{keywordtype}{short} bigval[\hyperlink{octavedown1_8cpp_a3fa2b9fb503114df691822429c970f25}{datalen}*2];
+21   \textcolor{keywordtype}{signed} \textcolor{keywordtype}{short} val[\hyperlink{octavedown1_8cpp_a3fa2b9fb503114df691822429c970f25}{datalen}];  \textcolor{comment}{// make an array to hold the data}
+22   cin.read( (\textcolor{keywordtype}{char} *)val, 2*\hyperlink{octavedown1_8cpp_a3fa2b9fb503114df691822429c970f25}{datalen} ); \textcolor{comment}{// read the data into the array}
+23 
+24   \hyperlink{octavedown1_8cpp_ac3085d7eceddb3446ddda905e7aa09d9}{octavedown}(val,bigval);  \textcolor{comment}{// modify the array elements}
+25 
+26   cout.write( (\textcolor{keywordtype}{char} *)bigval, 4*\hyperlink{octavedown1_8cpp_a3fa2b9fb503114df691822429c970f25}{datalen} ); \textcolor{comment}{// write the data back out}
+27   \textcolor{keywordflow}{return} 0;
+28 \}
+\end{DoxyCode}
+\hypertarget{octavedown1_8cpp_ac3085d7eceddb3446ddda905e7aa09d9}{}\index{octavedown1.\+cpp@{octavedown1.\+cpp}!octavedown@{octavedown}}
+\index{octavedown@{octavedown}!octavedown1.\+cpp@{octavedown1.\+cpp}}
+\subsubsection[{octavedown(signed short val[], signed short bigval[])}]{\setlength{\rightskip}{0pt plus 5cm}void octavedown (
+\begin{DoxyParamCaption}
+\item[{signed short}]{val\mbox{[}$\,$\mbox{]}, }
+\item[{signed short}]{bigval\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{octavedown1_8cpp_ac3085d7eceddb3446ddda905e7aa09d9}
+
+\begin{DoxyCode}
+7 \{
+8   \textcolor{keywordtype}{int} j=0;
+9   \textcolor{keywordflow}{for}( \textcolor{keywordtype}{int} i = 0; i < \hyperlink{octavedown1_8cpp_a3fa2b9fb503114df691822429c970f25}{datalen}; i+=2 )\{
+10     bigval[j]=val[i];
+11     bigval[j+1]=val[i+1];
+12     bigval[j+2]=val[i];
+13     bigval[j+3]=val[i+1];
+14     j=j+4;
+15   \}
+16 \}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\hypertarget{octavedown1_8cpp_a3fa2b9fb503114df691822429c970f25}{}\index{octavedown1.\+cpp@{octavedown1.\+cpp}!datalen@{datalen}}
+\index{datalen@{datalen}!octavedown1.\+cpp@{octavedown1.\+cpp}}
+\subsubsection[{datalen}]{\setlength{\rightskip}{0pt plus 5cm}const int datalen = 3453884/4}\label{octavedown1_8cpp_a3fa2b9fb503114df691822429c970f25}

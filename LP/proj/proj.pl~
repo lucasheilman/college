@@ -1,0 +1,314 @@
+%%To start the game, type 'start.'
+
+start :-
+    write('You wake up in a dimly lit room near a small desk with a single drawer. You have no idea where you are or how you got there.'), nl,
+    loop_entry([]).
+
+read :-
+    %%read in input into the Variable
+    current_input(Input),
+    
+    %%parse that input into Atoms
+    parse_line(Input, Atoms),
+    
+    %%writes out input as list - DEBUG
+    write('The input is: '),
+    %maplist(write, Atoms), nl,
+     write(Atoms), nl,
+
+    %Breaks down and tags the atoms with their respective tag
+    tag_atoms(Atoms, Tags),
+    
+    %writes out tagged input - DEBUG
+    write('The tagged input is: '),
+    %maplist(write, Input, Tags), nl.
+     write(Tags), nl,
+
+     loop_entry(Tags).
+
+%% REPEATEDLY GETTING INPUT
+loop_entry(Exit) :-
+    Exit = [],
+    read.
+loop_entry(Exit) :-
+    Exit = [take-verb,bronzekey-entity],
+    add_item_inventory(bronzekey),
+    write('bronzekey added to inventory'),nl,
+    read.
+
+loop_entry(Exit) :-
+    Exit = [take-verb,flashlight-entity],
+    add_item_inventory(flashlight),
+    write('flashlight added to inventory'),nl,
+    read.
+
+loop_entry(Exit) :-
+    Exit = [use-verb,flashlight-entity],
+    remove_item_inventory(flashlight),
+    write('flashlight has been used and dropped from inventory'),nl,
+    read.
+loop_entry(Exit) :-
+    Exit = [examine-verb,inventory-entity],
+    write('This is what is in your inventory: '),
+    inventory(Inventory),
+    write(Inventory),nl,
+    read.
+loop_entry(Exit) :-
+    Exit = [exit-unknown,program-unknown],
+    write('You have exited the game'), nl, halt.
+loop_entry(Exit) :-
+    Exit  = [no-unknown],
+    write('Exiting'),nl, !,fail.
+
+%%INVENTORY CONTAINER
+:- dynamic(inventory/1).
+inventory([]).
+
+
+
+%%ENTITIES ARE INTERACTIVE OBJECTS IN THE ROOM
+word(entity, room).
+word(entity, door).
+word(entity, bronzekey).
+word(entity, desk).
+word(entity, flashlight).
+word(entity, rock).
+word(entity, chisel).
+word(entity, picture).
+word(entity, silverkey).
+word(entity, window).
+word(entity, table).
+word(entity, drawer).
+word(entity, fireplace).
+word(entity, lamp).
+word(entity, floorboard).
+word(entity, change).
+word(entity, crowbar).
+word(entity, inventory).
+
+%%PREPOSITIONS - IN CASE USER INPUT HAS FORMAT "Use key on door"
+word(preposition, on).
+word(preposition, with).
+
+%%AVAILABLE VERBS, USED AS COMMANDS
+word(verb, take).
+word(verb, open).
+word(verb, use).
+word(verb, unlock).
+word(verb, examine).
+
+%%ARTICLES - IN CASE USER INPUT HAS FORMAT "Use the key on the door"
+word(article, the).
+
+%%AVAILABLE COMMANDS FOR INTERACTING WITH THE ENVIRONMENT
+command(take, [entity]).
+command(open, [entity]).
+command(use, [entity]).
+command(unlock, [entity]).
+command(unlock, [entity, entity]).
+command(examine, [entity]).
+
+%%ALLOWS FOR VARIATION ON USER IMPUT
+variation(take, [take, grab, grasp]).
+
+%%%%%%%%%%%%%%%%%%%%
+%%% DESCRIPTIONS %%%
+%%%%%%%%%%%%%%%%%%%%
+
+dark_room_description("The room is too dark to see anything but the desk.\n").
+
+light_room_description("You see a framed picture, a door, a small window, small table with a lamp on it, a stone fireplace, and a loose floorboard.\n").
+
+desk_description("It is made of wood.\n").
+
+picture_description("You take the framed picture of a German Shepherd in a snowy forest from the wall and turn it over. There is a silver key taped to the back.\n").
+
+door_description("It is a plain wooden door with a bronze handle. It is locked.\n").
+
+window_description("It is a window near the ceiling. No light is coming in.\n").
+
+lamp_description("A small table lamp.\n").
+
+table_description("It is an intricately carved wooden table with a drawer that has a small keyhole.\n").
+
+locked_drawer_description("It is locked.\n").
+unlocked_drawer_description("Inside there is a small crowbar and some loose change totaling $0.47.\n").
+
+fireplace_description("There are some charred logs still sitting in it. One rock stands out as a different color than the rest.\n").
+
+floorboard_description("The board is loose and you can see something shiny under it. It can be pried up with a lever of some sort.\n").
+
+default_description("Looks pretty normal.\n").
+
+%%%%%%%%%%%%%%%%%%
+%%% PROPERTIES %%%
+%%%%%%%%%%%%%%%%%%
+
+property(carriable, bronzekey).
+property(carriable, silverkey).
+property(carriable, flashlight).
+property(carriable, chisel).
+property(carriable, crowbar).
+property(carriable, change).
+
+property(container, desk).
+property(container, drawer).
+property(container, floorboard).
+property(container, rock).
+
+property(locked, door).
+property(locked, drawer).
+
+%update_container() :-
+append([],L,L).
+append([X|Y],L2,[X|L3]) :- append(Y,L2,L3).
+update_items([],[]).
+update_items([Entity|Entities], [Entity1|Entities1]) :-
+    update_entity(Entity, Entity1),
+    update_items(Entities, Entities1).
+
+add_item_inventory(Item) :-
+    valid_item(Item),
+    inventory(Inventory),
+    append([Item],Inventory, Inventory1),
+    assertz(inventory(Inventory1)),
+    retract(inventory(Inventory)),
+    write('your updated inventory is: '),
+    inventory(Inventory2),
+    write(Inventory2),nl.
+
+del(X,[X|T],T).
+del(X,[Y|T],[Y|T1]):- del(X,T,T1).
+
+remove_item_inventory(Item) :-
+    valid_item(Item),
+    inventory(Inventory),
+    member(Item, Inventory),
+    delete(Inventory, Item, Inventory1),
+    assertz(inventory(Inventory1)),
+    retract(inventory(Inventory)),
+    write('your update inventory is: '),
+    inventory(Inventory2),
+    write(Inventory2),nl.
+
+valid_item(Item) :-
+    property(carriable, Item).
+
+
+delete_one(_, [], []).
+delete_one(Term, [Term|Tail], Tail).
+delete_one(Term, [Head|Tail], [Head|Result]) :-
+  delete_one(Term, Tail, Result).
+
+
+%%%%%%%%%%%%%
+%% PARSING %%
+%%%%%%%%%%%%%
+
+read_line(S, Chars) :-
+    get_char(S, C),
+    read_line(C, S, Chars).
+ 
+read_line('\n', _, []) :- !.
+read_line(C, S, [C|Chars]) :-
+    read_line(S, Chars).
+
+parse_line(S, As) :-
+    read_line(S, Cs),
+    phrase(chars_to_list(As), Cs).
+
+chars_to_list([Atom|Atoms]) -->
+    chars_to_atom(Atom),
+    whitespace,
+    chars_to_list(Atoms).
+
+chars_to_list([Atom]) -->
+    chars_to_atom(Atom),
+    opt_whitespace.
+
+blank --> [' '].
+
+opt_whitespace --> [].
+opt_whitespace --> whitespace.
+
+whitespace --> blank, whitespace.
+
+whitespace --> blank.
+
+chars_to_atom(Atom) -->
+    chars(Chars),
+   {atom_chars(Atom, Chars)}.
+
+chars([Char|Chars]) -->
+    char(Char),
+    chars(Chars).      
+
+chars([Char]) --> char(Char).
+
+char(Char) --> [Char], {Char \= ' ', Char \= '\n'}.
+
+parse_atoms(AtomTags, Remainder, Commands) :-
+    sentence_chunk(AtomTags, Remainder, Commands).
+
+sentence_chunk(AtomTags, Remainder, [Chunk-Args|Chunks]) :-
+    command_chunk(AtomTags, AtomTags1, Chunk),
+    argument_chunk(AtomTags1, Chunk, AtomTags2, Args),
+    (conjunction_chunk(AtomTags2, Remainder0, _) ->
+         sentence_chunk(Remainder0, Remainder, Chunks);
+        Chunks = []
+    ).
+
+conjunction_chunk([Conj-conjunction|AtomTags], AtomTags, Conj-conjunction).
+
+command_chunk(AtomTags, AtomTags1, Chunk) :-
+    append(_, [Chunk0-verb|AtomTags1], AtomTags),
+    variants(Chunk, Chunks),
+    member(Chunk0, Chunks).
+
+argument_chunk(AtomTags, Chunk, AtomTags1, Args) :-
+    command(Chunk, Tags),
+    matches(AtomTags, Tags, AtomTags1, Args).
+
+%%%%%%%%%%%%%%%
+%%% MAPPING %%%
+%%%%%%%%%%%%%%%
+
+maplist(_C_2, [], []).
+maplist( C_2, [X|Xs], [Y|Ys]) :-
+   call(C_2, X, Y),
+   maplist( C_2, Xs, Ys).
+
+%%%%%%%%%%%%%%%
+%%% TAGGING %%%
+%%%%%%%%%%%%%%%
+
+matches(AtomTags, [], AtomTags, []).  
+
+matches(AtomTags, [Tag|Tags], Remainder, [Atom|Atoms]) :-
+    append(_, [Atom-Tag|AtomTags1], AtomTags),
+
+matches(AtomTags1, Tags, Remainder, Atoms).
+
+tag_atoms(Atoms, Tags) :-
+    tag_atoms(Atoms, [], Tags).
+ 
+tag_atoms([], _, []).
+
+tag_atoms([Atom|Atoms], Pre, [Atom-Tag|Tags]) :-
+    tag(Pre, Atom, Tag),
+    tag_atoms(Atoms, [Atom-Tag|Pre],Tags).
+
+tag_atoms([Atom|Atoms], Pre, [Atom-unknown|Tags]) :-
+    \+tag(Pre, Atom, _), tag_atoms(Atoms, [Atom-unknown|Pre], Tags).
+
+%%True if Tag is the tag corresponding to Word. Preceding is used
+%%whenever a rule needs to look at the history in order to tag the word.
+
+tag([_-article|_], _, entity).
+
+tag(_, Atom, Tag) :-
+    word(Tag, Atom).
+
+
+
+

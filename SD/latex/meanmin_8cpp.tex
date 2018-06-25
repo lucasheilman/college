@@ -1,0 +1,71 @@
+\hypertarget{meanmin_8cpp}{}\section{hw8/meanmin.cpp File Reference}
+\label{meanmin_8cpp}\index{hw8/meanmin.\+cpp@{hw8/meanmin.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{meanmin_8cpp_a8f1a3713024979b2b720ee7d67901395}{average\+Of} (float dat\mbox{[}$\,$\mbox{]}, int nelts, float \&min\+Val)
+\item 
+int \hyperlink{meanmin_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{meanmin_8cpp_a8f1a3713024979b2b720ee7d67901395}{}\index{meanmin.\+cpp@{meanmin.\+cpp}!average\+Of@{average\+Of}}
+\index{average\+Of@{average\+Of}!meanmin.\+cpp@{meanmin.\+cpp}}
+\subsubsection[{average\+Of(float dat[], int nelts, float \&min\+Val)}]{\setlength{\rightskip}{0pt plus 5cm}double average\+Of (
+\begin{DoxyParamCaption}
+\item[{float}]{dat\mbox{[}$\,$\mbox{]}, }
+\item[{int}]{nelts, }
+\item[{float \&}]{min\+Val}
+\end{DoxyParamCaption}
+)}\label{meanmin_8cpp_a8f1a3713024979b2b720ee7d67901395}
+Compute mean and minimum of an array 
+\begin{DoxyParams}{Parameters}
+{\em dat} & Array of values \\
+\hline
+{\em nelts} & Non-\/negative number of elements in dat \\
+\hline
+{\em min\+Val} & Assigned minimum value in dat by this function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Mean (average) of values in dat 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+10 \{
+11   \textcolor{keywordtype}{double} result = 0;
+12   minVal = dat[0];
+13   \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < nelts; ++i) \{
+14     \textcolor{keywordflow}{if} ( dat[i] < minVal ) minVal = dat[i];
+15     result += dat[i];
+16   \}
+17   result /= nelts;
+18   \textcolor{keywordflow}{return} result;
+19 \}
+\end{DoxyCode}
+\hypertarget{meanmin_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\index{meanmin.\+cpp@{meanmin.\+cpp}!main@{main}}
+\index{main@{main}!meanmin.\+cpp@{meanmin.\+cpp}}
+\subsubsection[{main()}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{meanmin_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+22 \{
+23   \textcolor{keywordtype}{float} minimum;
+24   \textcolor{keywordtype}{float} mydata[225];
+25   \textcolor{keywordtype}{int} x, y=0;
+26   \textcolor{keywordflow}{while} (cin >>  x)\{
+27     mydata[y] = x;
+28     y++;
+29   \}
+30   \textcolor{keywordtype}{double} avg;
+31 
+32   avg = \hyperlink{meanmin_8cpp_a8f1a3713024979b2b720ee7d67901395}{averageOf}(mydata, 225, minimum);
+33 
+34   cout << \textcolor{stringliteral}{"avg "} << avg << \textcolor{stringliteral}{" minimum value "} << minimum << endl;
+35 \}
+\end{DoxyCode}

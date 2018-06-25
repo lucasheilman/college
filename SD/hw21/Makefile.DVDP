@@ -1,0 +1,17 @@
+DVDdriver:  DVD.o DVDdriver.o
+	g++ -g -Wall -std=c++11 -o DVDdriver DVD.o DVDdriver.o
+
+DVD.o:  DVD.cpp DVD.h
+	g++ -g -Wall -std=c++11 -c DVD.cpp
+
+DVDdriver.o:  DVD.cpp DVD.h DVDdriver.cpp
+	g++ -g -Wall -std=c++11 -c DVDdriver.cpp
+
+DVDArrayDriverP:  DVDArrayDriverP.o DVDArrayP.o DVD.o
+	g++ -g -Wall -std=c++11 -o DVDArrayDriverP DVD.o DVDArrayP.o DVDArrayDriverP.o
+
+DVDArrayDriverP.o:  DVDArrayDriverP.cpp DVDArrayP.h DVD.h
+	g++ -g -Wall -std=c++11 -c DVDArrayDriverP.cpp
+
+DVDArrayP.o:  DVDArrayP.cpp DVDArrayP.h DVD.h
+	g++ -g -Wall -std=c++11 -c DVDArrayP.cpp

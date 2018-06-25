@@ -1,0 +1,37 @@
+\hypertarget{stddev_8cpp}{}\section{hw7/stddev.cpp File Reference}
+\label{stddev_8cpp}\index{hw7/stddev.\+cpp@{hw7/stddev.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$math.\+h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{stddev_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{stddev_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\index{stddev.\+cpp@{stddev.\+cpp}!main@{main}}
+\index{main@{main}!stddev.\+cpp@{stddev.\+cpp}}
+\subsubsection[{main()}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{stddev_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+5           \{
+6   \textcolor{keywordtype}{int} x, count =0;
+7   \textcolor{keywordtype}{int} avg;
+8   cin >> avg;
+9   \textcolor{keywordtype}{int} sum = 0;
+10   \textcolor{keywordflow}{while} (cin >> x) \{
+11     sum = sum + pow((x-avg),2);
+12     count +=1;
+13   \}
+14   \textcolor{keywordtype}{float} avg2;
+15   avg2 = sum/count;
+16   \textcolor{keywordtype}{float} \hyperlink{stddev2_8cpp_a75ac45e022bd890723a394222a9e375b}{stddev};
+17   stddev = sqrt(avg2);
+18   cout << stddev << endl;
+19 \}
+\end{DoxyCode}

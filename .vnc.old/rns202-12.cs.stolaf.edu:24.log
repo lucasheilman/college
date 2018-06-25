@@ -1,0 +1,235 @@
+
+Xvnc TigerVNC 1.7.0 - built Sep 12 2016 08:29:39
+Copyright (C) 1999-2016 TigerVNC Team and many others (see README.txt)
+See http://www.tigervnc.org for information on TigerVNC.
+Underlying X server release 11804000, The X.Org Foundation
+
+
+Wed Dec 14 00:36:02 2016
+ vncext:      VNC extension running!
+ vncext:      Listening for VNC connections on all interface(s), port 5924
+ vncext:      created VNC server for screen 0
+
+Wed Dec 14 00:36:16 2016
+ Connections: accepted: 130.71.250.247::61745
+ SConnection: Client needs protocol version 3.8
+ SConnection: Client requests security type VncAuth(2)
+
+Wed Dec 14 00:36:19 2016
+ VNCSConnST:  Server default pixel format depth 24 (32bpp) little-endian rgb888
+ VNCSConnST:  Client pixel format depth 8 (8bpp) color-map
+
+Wed Dec 14 00:36:37 2016
+ VNCSConnST:  Client pixel format depth 24 (32bpp) little-endian rgb888
+
+Wed Dec 14 02:49:00 2016
+ Connections: closed: 130.71.250.247::61745 (Clean disconnection)
+ EncodeManager: Framebuffer updates: 77582
+ EncodeManager:   CopyRect:
+ EncodeManager:     Copies: 20 rects, 5.14571 Mpixels
+ EncodeManager:             320 B (1:64322.1 ratio)
+ EncodeManager:   RRE:
+ EncodeManager:     Solid: 1.247 krects, 6.05839 Mpixels
+ EncodeManager:            24.3115 KiB (1:876.641 ratio)
+ EncodeManager:   Hextile:
+ EncodeManager:     Bitmap RLE: 19.698 krects, 89.6978 Mpixels
+ EncodeManager:                 1.10371 MiB (1:310.221 ratio)
+ EncodeManager:     Indexed RLE: 57.883 krects, 639.486 Mpixels
+ EncodeManager:                  68.0886 MiB (1:35.8372 ratio)
+ EncodeManager:     Full Colour: 182.241 krects, 6.1393 Gpixels
+ EncodeManager:                  2.46258 GiB (1:9.28809 ratio)
+ EncodeManager:   ZRLE:
+ EncodeManager:     Bitmap RLE: 1 rects, 9.216 kpixels
+ EncodeManager:                 62 B (1:148.839 ratio)
+ EncodeManager:     Indexed RLE: 39 rects, 2.35709 Mpixels
+ EncodeManager:                  43.7705 KiB (1:52.5994 ratio)
+ EncodeManager:   Total: 261.129 krects, 6.88205 Gpixels
+ EncodeManager:          2.53022 GiB (1:10.1302 ratio)
+
+Wed Dec 14 03:07:00 2016
+ Connections: accepted: 130.71.250.247::52842
+ SConnection: Client needs protocol version 3.8
+ SConnection: Client requests security type VncAuth(2)
+
+Wed Dec 14 03:07:02 2016
+ VNCSConnST:  Server default pixel format depth 24 (32bpp) little-endian rgb888
+ VNCSConnST:  Client pixel format depth 8 (8bpp) color-map
+ VNCSConnST:  Client pixel format depth 24 (32bpp) little-endian rgb888
+
+Wed Dec 14 03:08:58 2016
+ Connections: closed: 130.71.250.247::52842 (Clean disconnection)
+ EncodeManager: Framebuffer updates: 780
+ EncodeManager:   RRE:
+ EncodeManager:     Solid: 31 rects, 1.42896 Mpixels
+ EncodeManager:            578 B (1:5722.6 ratio)
+ EncodeManager:   Hextile:
+ EncodeManager:     Bitmap RLE: 126 rects, 6.14233 Mpixels
+ EncodeManager:                 28.248 KiB (1:849.437 ratio)
+ EncodeManager:     Indexed RLE: 495 rects, 9.60488 Mpixels
+ EncodeManager:                  2.80416 MiB (1:13.0682 ratio)
+ EncodeManager:     Full Colour: 1.067 krects, 43.0059 Mpixels
+ EncodeManager:                  18.4111 MiB (1:8.91129 ratio)
+ EncodeManager:   ZRLE:
+ EncodeManager:     Indexed RLE: 13 rects, 786.432 kpixels
+ EncodeManager:                  35.623 KiB (1:21.5634 ratio)
+ EncodeManager:     Full Colour: 1 rects, 40 pixels
+ EncodeManager:                  45 B (1:1.15556 ratio)
+ EncodeManager:   Total: 1.733 krects, 60.9685 Mpixels
+ EncodeManager:          21.2782 MiB (1:10.7175 ratio)
+
+Thu Dec 15 13:24:08 2016
+ Connections: accepted: 130.71.250.247::52941
+ SConnection: Client needs protocol version 3.8
+ SConnection: Client requests security type VncAuth(2)
+
+Thu Dec 15 13:24:10 2016
+ VNCSConnST:  Server default pixel format depth 24 (32bpp) little-endian rgb888
+ VNCSConnST:  Client pixel format depth 8 (8bpp) color-map
+
+Thu Dec 15 13:24:12 2016
+ VNCSConnST:  Client pixel format depth 24 (32bpp) little-endian rgb888
+
+Thu Dec 15 14:09:30 2016
+ Connections: closed: 130.71.250.247::52941 (read: Connection timed out (110))
+ EncodeManager: Framebuffer updates: 8766
+ EncodeManager:   CopyRect:
+ EncodeManager:     Copies: 2 rects, 992.445 kpixels
+ EncodeManager:             32 B (1:124056 ratio)
+ EncodeManager:   RRE:
+ EncodeManager:     Solid: 188 rects, 5.38673 Mpixels
+ EncodeManager:            3.62793 KiB (1:5152.02 ratio)
+ EncodeManager:   Hextile:
+ EncodeManager:     Bitmap RLE: 293 rects, 5.9481 Mpixels
+ EncodeManager:                 33.0303 KiB (1:703.542 ratio)
+ EncodeManager:     Indexed RLE: 4.573 krects, 36.5406 Mpixels
+ EncodeManager:                  5.26423 MiB (1:26.4889 ratio)
+ EncodeManager:     Full Colour: 11.245 krects, 351.512 Mpixels
+ EncodeManager:                  168.906 MiB (1:7.93955 ratio)
+ EncodeManager:   ZRLE:
+ EncodeManager:     Indexed RLE: 15 rects, 786.912 kpixels
+ EncodeManager:                  35.165 KiB (1:21.8582 ratio)
+ EncodeManager:   Total: 16.316 krects, 401.167 Mpixels
+ EncodeManager:          174.241 MiB (1:8.75781 ratio)
+
+Thu Dec 15 14:16:56 2016
+ Connections: accepted: 130.71.250.247::53096
+ SConnection: Client needs protocol version 3.8
+ SConnection: Client requests security type VncAuth(2)
+ VNCSConnST:  Server default pixel format depth 24 (32bpp) little-endian rgb888
+ VNCSConnST:  Client pixel format depth 8 (8bpp) color-map
+
+Thu Dec 15 14:16:58 2016
+ Connections: closed: 130.71.250.247::53096 (Clean disconnection)
+ EncodeManager: Framebuffer updates: 11
+ EncodeManager:   RRE:
+ EncodeManager:     Solid: 14 rects, 803.056 kpixels
+ EncodeManager:            238 B (1:3374.89 ratio)
+ EncodeManager:   ZRLE:
+ EncodeManager:     Bitmap RLE: 1 rects, 240 pixels
+ EncodeManager:                 37 B (1:6.81081 ratio)
+ EncodeManager:     Indexed RLE: 20 rects, 944.921 kpixels
+ EncodeManager:                  42.96 KiB (1:21.4853 ratio)
+ EncodeManager:   Total: 35 rects, 1.74822 Mpixels
+ EncodeManager:          43.2285 KiB (1:39.5029 ratio)
+
+Thu Dec 15 14:41:05 2016
+ Connections: accepted: 130.71.250.247::62529
+ SConnection: Client needs protocol version 3.8
+ SConnection: Client requests security type VncAuth(2)
+
+Thu Dec 15 14:41:07 2016
+ VNCSConnST:  Server default pixel format depth 24 (32bpp) little-endian rgb888
+ VNCSConnST:  Client pixel format depth 8 (8bpp) color-map
+ VNCSConnST:  Client pixel format depth 24 (32bpp) little-endian rgb888
+
+Thu Dec 15 16:21:52 2016
+ Connections: closed: 130.71.250.247::62529 (Clean disconnection)
+
+Thu Dec 15 16:21:53 2016
+ EncodeManager: Framebuffer updates: 4217
+ EncodeManager:   CopyRect:
+ EncodeManager:     Copies: 5 rects, 1.80341 Mpixels
+ EncodeManager:             80 B (1:90171.1 ratio)
+ EncodeManager:   RRE:
+ EncodeManager:     Solid: 220 rects, 2.58916 Mpixels
+ EncodeManager:            4.29688 KiB (1:2354.38 ratio)
+ EncodeManager:   Hextile:
+ EncodeManager:     Bitmap RLE: 280 rects, 1.39458 Mpixels
+ EncodeManager:                 14.624 KiB (1:372.733 ratio)
+ EncodeManager:     Indexed RLE: 3.158 krects, 19.4665 Mpixels
+ EncodeManager:                  6.90024 MiB (1:10.767 ratio)
+ EncodeManager:     Full Colour: 4.513 krects, 133.273 Mpixels
+ EncodeManager:                  90.1285 MiB (1:5.64138 ratio)
+ EncodeManager:   ZRLE:
+ EncodeManager:     Indexed RLE: 13 rects, 786.672 kpixels
+ EncodeManager:                  34.8037 KiB (1:22.0777 ratio)
+ EncodeManager:   Total: 8.189 krects, 159.314 Mpixels
+ EncodeManager:          97.0813 MiB (1:6.23783 ratio)
+
+Sun Dec 18 15:13:26 2016
+ Connections: accepted: 130.71.250.247::50069
+ SConnection: Client needs protocol version 3.8
+ SConnection: Client requests security type VncAuth(2)
+
+Sun Dec 18 15:13:29 2016
+ VNCSConnST:  Server default pixel format depth 24 (32bpp) little-endian rgb888
+ VNCSConnST:  Client pixel format depth 8 (8bpp) color-map
+
+Sun Dec 18 15:13:31 2016
+ VNCSConnST:  Client pixel format depth 24 (32bpp) little-endian rgb888
+
+Sun Dec 18 19:14:48 2016
+ Connections: accepted: 130.71.250.247::64625
+ SConnection: Client needs protocol version 3.8
+ SConnection: Client requests security type VncAuth(2)
+ VNCSConnST:  Server default pixel format depth 24 (32bpp) little-endian rgb888
+ VNCSConnST:  Client pixel format depth 8 (8bpp) color-map
+
+Sun Dec 18 20:23:51 2016
+ VNCSConnST:  Client pixel format depth 24 (32bpp) little-endian rgb888
+
+Sun Dec 18 21:17:56 2016
+ Connections: closed: 130.71.250.247::50069 (read: Connection timed out (110))
+ EncodeManager: Framebuffer updates: 4105
+ EncodeManager:   CopyRect:
+ EncodeManager:     Copies: 4 rects, 1.7104 Mpixels
+ EncodeManager:             64 B (1:106901 ratio)
+ EncodeManager:   RRE:
+ EncodeManager:     Solid: 192 rects, 3.11514 Mpixels
+ EncodeManager:            3.74707 KiB (1:3246.47 ratio)
+ EncodeManager:   Hextile:
+ EncodeManager:     Bitmap RLE: 173 rects, 1.55105 Mpixels
+ EncodeManager:                 13.2041 KiB (1:459.009 ratio)
+ EncodeManager:     Indexed RLE: 2.435 krects, 16.1343 Mpixels
+ EncodeManager:                  5.49469 MiB (1:11.2064 ratio)
+ EncodeManager:     Full Colour: 6.216 krects, 178.099 Mpixels
+ EncodeManager:                  98.7689 MiB (1:6.87934 ratio)
+ EncodeManager:   ZRLE:
+ EncodeManager:     Indexed RLE: 26 rects, 1.58871 Mpixels
+ EncodeManager:                  71.1123 KiB (1:21.8216 ratio)
+ EncodeManager:     Full Colour: 1 rects, 36 pixels
+ EncodeManager:                  39 B (1:1.23077 ratio)
+ EncodeManager:   Total: 9.047 krects, 202.198 Mpixels
+ EncodeManager:          104.35 MiB (1:7.34912 ratio)
+
+Sun Dec 18 23:38:14 2016
+ Connections: closed: 130.71.250.247::64625 (Clean disconnection)
+ EncodeManager: Framebuffer updates: 34201
+ EncodeManager:   RRE:
+ EncodeManager:     Solid: 1.38 krects, 11.733 Mpixels
+ EncodeManager:            26.9092 KiB (1:1616.39 ratio)
+ EncodeManager:   Hextile:
+ EncodeManager:     Bitmap RLE: 1.829 krects, 2.7605 Mpixels
+ EncodeManager:                 63.3975 KiB (1:170.427 ratio)
+ EncodeManager:     Indexed RLE: 16.931 krects, 73.056 Mpixels
+ EncodeManager:                  16.4345 MiB (1:16.9692 ratio)
+ EncodeManager:     Full Colour: 41.731 krects, 1.06577 Gpixels
+ EncodeManager:                  544.24 MiB (1:7.47112 ratio)
+ EncodeManager:   ZRLE:
+ EncodeManager:     Indexed RLE: 51 rects, 3.14266 Mpixels
+ EncodeManager:                  139.131 KiB (1:22.0627 ratio)
+ EncodeManager:     Full Colour: 2 rects, 80 pixels
+ EncodeManager:                  70 B (1:1.48571 ratio)
+ EncodeManager:   Total: 61.924 krects, 1.15646 Gpixels
+ EncodeManager:          560.898 MiB (1:7.84631 ratio)
+Warning: VNC extension does not support -reset, terminating instead. Use -noreset to prevent termination.

@@ -1,0 +1,10 @@
+def flatten(S):
+    if S == []:
+        return S
+    if type(S[0]) == type([]):
+        return flatten(S[0]) + flatten(S[1:])
+    return S[:1] + flatten(S[1:])
+
+def main():
+    print(flatten(["a","b",["c","d"],[],[[["e"]]],"f"]))
+main()

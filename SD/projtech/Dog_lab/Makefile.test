@@ -1,0 +1,35 @@
+Dog.o:	Dog.cpp
+	g++ -Wall -std=c++11 -c Dog.cpp
+
+Dog_driver.o:	Dog_driver.cpp
+	g++ -Wall -std=c++11 -c Dog_driver.cpp
+
+Dog_driver: Dog_driver.o Dog.o
+	g++ -Wall -std=c++11 -o Dog_driver Dog_driver.o Dog.o
+
+DogArrayP.o:	DogArrayP.cpp DogArrrayP.h Dog.h
+	g++ -Wall -std=c++11 -c DogArrayP.cpp
+
+DogArrayP_driver.o:	DogArrayP_driver.cpp DogArrayP.h Dog.h
+	g++ -Wall -std=c++11 -c DogArrayP_driver.cpp
+
+DogArrayP_driver: DogArrayP_driver.o DogArrayP.o Dog.o
+	g++ -Wall -std=c++11 -o DogArrayP_driver Dog.o DogArrayP_driver.o DogArrayP.o
+RedDog.o:	RedDog.cpp RedDog.h Dog.h
+	g++ -Wall -std=c++11 -c RedDog.cpp
+
+RedDog_driver.o:	RedDog_driver.cpp RedDog.h Dog.h
+	g++ -Wall -std=c++11 -c RedDog_driver.cpp
+
+RedDog_driver: RedDog_driver.o RedDog.o Dog.o
+	g++ -Wall -std=c++11 -o RedDog_driver Dog.o RedDog_driver.o RedDog.o
+OwnedDog.o:	OwnedDog.cpp OwnedDog.h Dog.h
+	g++ -Wall -std=c++11 -c OwnedDog.cpp
+
+OwnedDog_driver.o:	OwnedDog_driver.cpp OwnedDog.h Dog.h
+	g++ -Wall -std=c++11 -c OwnedDog_driver.cpp
+
+OwnedDog_driver: OwnedDog_driver.o OwnedDog.o Dog.o
+	g++ -Wall -std=c++11 -o OwnedDog_driver Dog.o OWnedDog_driver.o OwnedDog.o
+
+

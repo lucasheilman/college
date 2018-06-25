@@ -1,0 +1,8 @@
+MvectorTest: MvectorTest.o Mvector.o
+	g++ -g -Wall -std=c++11 -o MvectorTest.o MvectorTest.o Mvector.o
+
+MvectorTest.o: MvectorTest.cpp Mvecotor.h
+	g++ -g -Wall -std=c++11 -c MvectorTest.cpp
+
+Mvector.o: Mvector.cpp Mvector.h
+	g++ -g -Wall -std=c++11 -c Mvector.cpp

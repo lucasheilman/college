@@ -1,0 +1,9 @@
+faster by 2 from 1 to 4
+lower by 2000 from 2 to 6
+louder by 5 from 1 to 5
+slower by 5 from 9 to 11
+softer by 8 from 20 to 23
+higher by 1000 from 11 to 18
+louder by 6 from 14 to 19
+faster by 6 from 20 to 28 
+fill with faster by 3

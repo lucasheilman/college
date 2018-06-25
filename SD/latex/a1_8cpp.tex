@@ -1,0 +1,50 @@
+\hypertarget{a1_8cpp}{}\section{hw7/a1.cpp File Reference}
+\label{a1_8cpp}\index{hw7/a1.\+cpp@{hw7/a1.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{a1_8cpp_af5ff2c549be3293a4f50e3d022cab520}{printarray} (int arg\mbox{[}$\,$\mbox{]}, int length)
+\item 
+int \hyperlink{a1_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{a1_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\index{a1.\+cpp@{a1.\+cpp}!main@{main}}
+\index{main@{main}!a1.\+cpp@{a1.\+cpp}}
+\subsubsection[{main()}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{a1_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+10           \{
+11   \textcolor{keywordtype}{int} y, z=0, a=1;
+12   \textcolor{keywordtype}{int} arr[10];
+13   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} x=0; x<11;x++)\{
+14     y = z+a;
+15     arr[x] = y;
+16     a=z;
+17     z=y;
+18   \}
+19   \hyperlink{a1_8cpp_af5ff2c549be3293a4f50e3d022cab520}{printarray}(arr,10);
+20 \}
+\end{DoxyCode}
+\hypertarget{a1_8cpp_af5ff2c549be3293a4f50e3d022cab520}{}\index{a1.\+cpp@{a1.\+cpp}!printarray@{printarray}}
+\index{printarray@{printarray}!a1.\+cpp@{a1.\+cpp}}
+\subsubsection[{printarray(int arg[], int length)}]{\setlength{\rightskip}{0pt plus 5cm}void printarray (
+\begin{DoxyParamCaption}
+\item[{int}]{arg\mbox{[}$\,$\mbox{]}, }
+\item[{int}]{length}
+\end{DoxyParamCaption}
+)}\label{a1_8cpp_af5ff2c549be3293a4f50e3d022cab520}
+
+\begin{DoxyCode}
+4                                         \{
+5  \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} n=0; n<length; n++)
+6  cout << arg[n] << \textcolor{stringliteral}{" "};
+7  cout << \textcolor{stringliteral}{"\(\backslash\)n"};
+8 \}
+\end{DoxyCode}

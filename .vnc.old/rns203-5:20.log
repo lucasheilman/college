@@ -1,0 +1,46 @@
+
+Xvnc TigerVNC 1.8.0 - built Aug  7 2017 01:32:32
+Copyright (C) 1999-2017 TigerVNC Team and many others (see README.txt)
+See http://www.tigervnc.org for information on TigerVNC.
+Underlying X server release 11903000, The X.Org Foundation
+
+
+Tue Oct 10 20:28:29 2017
+ vncext:      VNC extension running!
+ vncext:      Listening for VNC connections on all interface(s), port 5920
+ vncext:      created VNC server for screen 0
+/usr/bin/xterm: cannot load font '-misc-fixed-medium-r-semicondensed--13-120-75-75-c-60-iso10646-1'
+
+Tue Oct 10 20:28:34 2017
+ Connections: accepted: 130.71.250.232::53374
+ SConnection: Client needs protocol version 3.8
+ SConnection: Client requests security type VncAuth(2)
+
+Tue Oct 10 20:28:40 2017
+ VNCSConnST:  Server default pixel format depth 24 (32bpp) little-endian rgb888
+ VNCSConnST:  Client pixel format depth 8 (8bpp) color-map
+ VNCSConnST:  Client pixel format depth 24 (32bpp) little-endian rgb888
+
+Tue Oct 10 21:05:46 2017
+ Connections: closed: 130.71.250.232::53374 (Clean disconnection)
+ EncodeManager: Framebuffer updates: 384
+ EncodeManager:   CopyRect:
+ EncodeManager:     Copies: 41 rects, 9.33005 Mpixels
+ EncodeManager:             656 B (1:56891.3 ratio)
+ EncodeManager:   RRE:
+ EncodeManager:     Solid: 103 rects, 102.492 kpixels
+ EncodeManager:            2.01172 KiB (1:199.614 ratio)
+ EncodeManager:   Hextile:
+ EncodeManager:     Bitmap RLE: 197 rects, 606.472 kpixels
+ EncodeManager:                 42.2158 KiB (1:56.1718 ratio)
+ EncodeManager:     Indexed RLE: 63 rects, 491.236 kpixels
+ EncodeManager:                  55.5312 KiB (1:34.5684 ratio)
+ EncodeManager:     Full Colour: 116 rects, 5.41528 Mpixels
+ EncodeManager:                  3.89013 MiB (1:5.31061 ratio)
+ EncodeManager:   ZRLE:
+ EncodeManager:     Indexed RLE: 15 rects, 786.432 kpixels
+ EncodeManager:                  27.0146 KiB (1:28.4355 ratio)
+ EncodeManager:   Total: 535 rects, 16.732 Mpixels
+ EncodeManager:          4.01456 MiB (1:15.34 ratio)
+ ComparingUpdateTracker: 8.74523 Mpixels in / 6.51594 Mpixels out
+ ComparingUpdateTracker: (1:1.34213 ratio)

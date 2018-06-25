@@ -1,0 +1,66 @@
+
+Xvnc TigerVNC 1.6.0 - built Jan  4 2016 15:11:13
+Copyright (C) 1999-2015 TigerVNC Team and many others (see README.txt)
+See http://www.tigervnc.org for information on TigerVNC.
+Underlying X server release 11704000, The X.Org Foundation
+
+
+Thu May 19 15:11:39 2016
+ vncext:      VNC extension running!
+ vncext:      Listening for VNC connections on all interface(s), port 5939
+ vncext:      created VNC server for screen 0
+
+Thu May 19 15:12:03 2016
+ Connections: accepted: 130.71.243.120::63973
+ SConnection: Client needs protocol version 3.8
+ SConnection: Client requests security type VncAuth(2)
+
+Thu May 19 15:12:10 2016
+ VNCSConnST:  Server default pixel format depth 24 (32bpp) little-endian rgb888
+ VNCSConnST:  Client pixel format depth 8 (8bpp) color-map
+
+Thu May 19 15:12:15 2016
+ VNCSConnST:  Client pixel format depth 24 (32bpp) little-endian rgb888
+
+Thu May 19 15:30:55 2016
+ PixelBuffer: Destination rect 738x36 at 352,138 exceeds framebuffer 1024x768
+ PixelBuffer: Destination rect 351x18 at 739,174 exceeds framebuffer 1024x768
+ PixelBuffer: Destination rect 738x72 at 352,192 exceeds framebuffer 1024x768
+ PixelBuffer: Destination rect 351x18 at 739,264 exceeds framebuffer 1024x768
+ PixelBuffer: Destination rect 738x342 at 352,282 exceeds framebuffer 1024x768
+
+Thu May 19 15:30:56 2016
+ PixelBuffer: Destination rect 738x36 at 352,138 exceeds framebuffer 1024x768
+ PixelBuffer: Destination rect 351x18 at 739,174 exceeds framebuffer 1024x768
+ PixelBuffer: Destination rect 738x342 at 352,192 exceeds framebuffer 1024x768
+ PixelBuffer: Destination rect 720x18 at 370,138 exceeds framebuffer 1024x768
+ PixelBuffer: Destination rect 738x234 at 352,156 exceeds framebuffer 1024x768
+ PixelBuffer: Destination rect 738x234 at 352,246 exceeds framebuffer 1024x768
+ PixelBuffer: Destination rect 720x18 at 370,228 exceeds framebuffer 1024x768
+ PixelBuffer: Destination rect 738x234 at 352,426 exceeds framebuffer 1024x768
+ PixelBuffer: Destination rect 720x18 at 370,408 exceeds framebuffer 1024x768
+ PixelBuffer: Destination rect 738x90 at 352,318 exceeds framebuffer 1024x768
+
+Thu May 19 22:41:25 2016
+ Connections: closed: 130.71.243.120::63973 (Clean disconnection)
+ EncodeManager: Framebuffer updates: 25531
+ EncodeManager:   CopyRect:
+ EncodeManager:     Copies: 1.244 krects, 103.182 Mpixels
+ EncodeManager:             19.4375 KiB (1:20734.7 ratio)
+ EncodeManager:   RRE:
+ EncodeManager:     Solid: 513 rects, 9.25916 Mpixels
+ EncodeManager:            9.95801 KiB (1:3321.73 ratio)
+ EncodeManager:   Hextile:
+ EncodeManager:     Bitmap RLE: 397 rects, 2.33172 Mpixels
+ EncodeManager:                 30.5166 KiB (1:298.623 ratio)
+ EncodeManager:     Indexed RLE: 15.024 krects, 109.593 Mpixels
+ EncodeManager:                  25.3025 MiB (1:16.5294 ratio)
+ EncodeManager:     Full Colour: 44.832 krects, 1.36252 Gpixels
+ EncodeManager:                  679.489 MiB (1:7.65006 ratio)
+ EncodeManager:   ZRLE:
+ EncodeManager:     Bitmap RLE: 3 rects, 134.144 kpixels
+ EncodeManager:                 239 B (1:561.423 ratio)
+ EncodeManager:     Indexed RLE: 35 rects, 1.98783 Mpixels
+ EncodeManager:                  54.7295 KiB (1:35.4772 ratio)
+ EncodeManager:   Total: 62.048 krects, 1.58901 Gpixels
+ EncodeManager:          704.903 MiB (1:8.58724 ratio)

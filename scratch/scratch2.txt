@@ -1,0 +1,1 @@
+QA - quality assurance: software testing - going through code to make sure that every situation the code can go through, works properly.

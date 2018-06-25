@@ -1,0 +1,165 @@
+\hypertarget{network_8cpp}{}\section{sound/network.cpp File Reference}
+\label{network_8cpp}\index{sound/network.\+cpp@{sound/network.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$sys/types.\+h$>$}\\*
+{\ttfamily \#include $<$sys/socket.\+h$>$}\\*
+{\ttfamily \#include $<$netinet/in.\+h$>$}\\*
+{\ttfamily \#include $<$arpa/inet.\+h$>$}\\*
+{\ttfamily \#include $<$fcntl.\+h$>$}\\*
+{\ttfamily \#include $<$errno.\+h$>$}\\*
+{\ttfamily \#include $<$assert.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}network.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{network_8cpp_aef89fdb77959137ef7c7d669c7e2c246}{init\+Send\+Socket} (const char $\ast$group\+Addr, int port)
+\item 
+void \hyperlink{network_8cpp_aa852ef05f595f80323f44597f8718305}{init\+Receive\+Socket} (const char $\ast$group\+Addr, int port)
+\item 
+void \hyperlink{network_8cpp_ad45031e656caa6c2f3336fd3f575ef60}{multicast} (const char $\ast$msg)
+\item 
+bool \hyperlink{network_8cpp_a826d4954b5939427a0b19ee082204fe1}{listen} (char $\ast$buffer, int buf\+Max\+Len)
+\item 
+void \hyperlink{network_8cpp_a956de99c38b2e000a5fc16d607449930}{init\+Network} (int port)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+struct sockaddr\+\_\+in send\+Addr \hyperlink{network_8cpp_a474015a436208c13c8c0f2bb78e3816a}{receive\+Addr}
+\item 
+int \hyperlink{network_8cpp_a9fc009050cbde03e8e845b933bf145cb}{send\+I\+D}
+\item 
+int \hyperlink{network_8cpp_acf91b0ea5b5467572af4498b858fec37}{receive\+I\+D}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{network_8cpp_a956de99c38b2e000a5fc16d607449930}{}\index{network.\+cpp@{network.\+cpp}!init\+Network@{init\+Network}}
+\index{init\+Network@{init\+Network}!network.\+cpp@{network.\+cpp}}
+\subsubsection[{init\+Network(int port)}]{\setlength{\rightskip}{0pt plus 5cm}void init\+Network (
+\begin{DoxyParamCaption}
+\item[{int}]{port}
+\end{DoxyParamCaption}
+)}\label{network_8cpp_a956de99c38b2e000a5fc16d607449930}
+
+\begin{DoxyCode}
+84 \{
+85   \textcolor{keyword}{const} \textcolor{keywordtype}{char} *\hyperlink{network_8cpp_ad45031e656caa6c2f3336fd3f575ef60}{multicast} = \textcolor{stringliteral}{"224.1.2.3"};
+86   \hyperlink{network_8cpp_aef89fdb77959137ef7c7d669c7e2c246}{initSendSocket}(multicast, port);
+87   \hyperlink{network_8cpp_aa852ef05f595f80323f44597f8718305}{initReceiveSocket}(multicast, port);
+88 \}
+\end{DoxyCode}
+\hypertarget{network_8cpp_aa852ef05f595f80323f44597f8718305}{}\index{network.\+cpp@{network.\+cpp}!init\+Receive\+Socket@{init\+Receive\+Socket}}
+\index{init\+Receive\+Socket@{init\+Receive\+Socket}!network.\+cpp@{network.\+cpp}}
+\subsubsection[{init\+Receive\+Socket(const char $\ast$group\+Addr, int port)}]{\setlength{\rightskip}{0pt plus 5cm}void init\+Receive\+Socket (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{group\+Addr, }
+\item[{int}]{port}
+\end{DoxyParamCaption}
+)}\label{network_8cpp_aa852ef05f595f80323f44597f8718305}
+
+\begin{DoxyCode}
+28 \{
+29   \hyperlink{network_8cpp_acf91b0ea5b5467572af4498b858fec37}{receiveID} = socket( AF\_INET, SOCK\_DGRAM, 0);
+30   assert( \hyperlink{network_8cpp_acf91b0ea5b5467572af4498b858fec37}{receiveID} >= 0 );
+31   \textcolor{keywordtype}{int} enable=1;
+32   \textcolor{keywordtype}{int} ret = setsockopt( \hyperlink{network_8cpp_acf91b0ea5b5467572af4498b858fec37}{receiveID}, SOL\_SOCKET, SO\_REUSEADDR,
+33                         &enable, \textcolor{keyword}{sizeof}(enable) );
+34   assert( 0 == ret );
+35   memset( &\hyperlink{network_8cpp_a474015a436208c13c8c0f2bb78e3816a}{receiveAddr}, 0, \textcolor{keyword}{sizeof}(\hyperlink{network_8cpp_a474015a436208c13c8c0f2bb78e3816a}{receiveAddr}) );
+36   \hyperlink{network_8cpp_a474015a436208c13c8c0f2bb78e3816a}{receiveAddr}.sin\_family = AF\_INET;
+37   \hyperlink{network_8cpp_a474015a436208c13c8c0f2bb78e3816a}{receiveAddr}.sin\_addr.s\_addr = htonl(INADDR\_ANY);
+38   \hyperlink{network_8cpp_a474015a436208c13c8c0f2bb78e3816a}{receiveAddr}.sin\_port = htons(port);
+39   ret = bind( \hyperlink{network_8cpp_acf91b0ea5b5467572af4498b858fec37}{receiveID},
+40               (\textcolor{keyword}{struct} sockaddr *) &\hyperlink{network_8cpp_a474015a436208c13c8c0f2bb78e3816a}{receiveAddr}, \textcolor{keyword}{sizeof}(\hyperlink{network_8cpp_a474015a436208c13c8c0f2bb78e3816a}{receiveAddr}));
+41   assert( 0 == ret );
+42   \textcolor{keyword}{struct }ip\_mreq mreq;
+43   mreq.imr\_multiaddr.s\_addr = inet\_addr(groupAddr);
+44   mreq.imr\_interface.s\_addr = htonl(INADDR\_ANY);
+45   ret = setsockopt( \hyperlink{network_8cpp_acf91b0ea5b5467572af4498b858fec37}{receiveID}, IPPROTO\_IP, IP\_ADD\_MEMBERSHIP,
+46                     &mreq, \textcolor{keyword}{sizeof}(mreq) );
+47   assert( 0 == ret );
+48   \textcolor{comment}{// set to be non-blocking}
+49   \textcolor{keywordtype}{int} flags = fcntl(\hyperlink{network_8cpp_acf91b0ea5b5467572af4498b858fec37}{receiveID}, F\_GETFL);
+50   flags |= O\_NONBLOCK;
+51   fcntl(\hyperlink{network_8cpp_acf91b0ea5b5467572af4498b858fec37}{receiveID}, F\_SETFL, flags);
+52 \}
+\end{DoxyCode}
+\hypertarget{network_8cpp_aef89fdb77959137ef7c7d669c7e2c246}{}\index{network.\+cpp@{network.\+cpp}!init\+Send\+Socket@{init\+Send\+Socket}}
+\index{init\+Send\+Socket@{init\+Send\+Socket}!network.\+cpp@{network.\+cpp}}
+\subsubsection[{init\+Send\+Socket(const char $\ast$group\+Addr, int port)}]{\setlength{\rightskip}{0pt plus 5cm}void init\+Send\+Socket (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{group\+Addr, }
+\item[{int}]{port}
+\end{DoxyParamCaption}
+)}\label{network_8cpp_aef89fdb77959137ef7c7d669c7e2c246}
+
+\begin{DoxyCode}
+18                                                      \{
+19   \hyperlink{network_8cpp_a9fc009050cbde03e8e845b933bf145cb}{sendID} = socket(AF\_INET, SOCK\_DGRAM, 0);
+20   assert( \hyperlink{network_8cpp_a9fc009050cbde03e8e845b933bf145cb}{sendID} >= 0 );
+21   memset(&sendAddr, 0, \textcolor{keyword}{sizeof}(sendAddr));
+22   sendAddr.sin\_family = AF\_INET;
+23   sendAddr.sin\_addr.s\_addr = inet\_addr(groupAddr);
+24   sendAddr.sin\_port = htons(port);
+25 \}
+\end{DoxyCode}
+\hypertarget{network_8cpp_a826d4954b5939427a0b19ee082204fe1}{}\index{network.\+cpp@{network.\+cpp}!listen@{listen}}
+\index{listen@{listen}!network.\+cpp@{network.\+cpp}}
+\subsubsection[{listen(char $\ast$buffer, int buf\+Max\+Len)}]{\setlength{\rightskip}{0pt plus 5cm}bool listen (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{buffer, }
+\item[{int}]{buf\+Max\+Len}
+\end{DoxyParamCaption}
+)}\label{network_8cpp_a826d4954b5939427a0b19ee082204fe1}
+
+\begin{DoxyCode}
+64 \{
+65   buffer[0] = 0;
+66   \textcolor{keywordtype}{int} addrlen = \textcolor{keyword}{sizeof}(\hyperlink{network_8cpp_a474015a436208c13c8c0f2bb78e3816a}{receiveAddr});
+67   \textcolor{keywordtype}{int} nbytes = recvfrom( \hyperlink{network_8cpp_acf91b0ea5b5467572af4498b858fec37}{receiveID}, buffer, bufMaxLen, 0,
+68                  (\textcolor{keyword}{struct} sockaddr *) &\hyperlink{network_8cpp_a474015a436208c13c8c0f2bb78e3816a}{receiveAddr},
+69                          (socklen\_t *) &addrlen);
+70   \textcolor{keywordflow}{if} ( -1 == nbytes ) \{
+71     assert( EAGAIN == errno );  \textcolor{comment}{// non-blocking}
+72     \textcolor{comment}{// cerr << "listen." << endl;}
+73     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+74   \} \textcolor{keywordflow}{else} \{
+75     assert( nbytes >= 0 );
+76     buffer[nbytes]=0;
+77     \hyperlink{network_8h_a2bf3e92f6c0f829ebb38f7b32accf2b0}{receiveMulticast}(buffer);
+78     \textcolor{comment}{// cerr << "listen: " << buffer << endl;}
+79     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+80   \}
+81 \}
+\end{DoxyCode}
+\hypertarget{network_8cpp_ad45031e656caa6c2f3336fd3f575ef60}{}\index{network.\+cpp@{network.\+cpp}!multicast@{multicast}}
+\index{multicast@{multicast}!network.\+cpp@{network.\+cpp}}
+\subsubsection[{multicast(const char $\ast$msg)}]{\setlength{\rightskip}{0pt plus 5cm}void multicast (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{msg}
+\end{DoxyParamCaption}
+)}\label{network_8cpp_ad45031e656caa6c2f3336fd3f575ef60}
+
+\begin{DoxyCode}
+55 \{
+56   \textcolor{comment}{// cerr << "multicast: " << msg << endl;}
+57   \textcolor{keywordtype}{int} nbytes = sendto( \hyperlink{network_8cpp_a9fc009050cbde03e8e845b933bf145cb}{sendID}, msg, strlen(msg), 0, 
+58                        (\textcolor{keyword}{struct} sockaddr *) &sendAddr,
+59                \textcolor{keyword}{sizeof}(sendAddr) );
+60   assert( nbytes >= 0 );
+61 \}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\hypertarget{network_8cpp_a474015a436208c13c8c0f2bb78e3816a}{}\index{network.\+cpp@{network.\+cpp}!receive\+Addr@{receive\+Addr}}
+\index{receive\+Addr@{receive\+Addr}!network.\+cpp@{network.\+cpp}}
+\subsubsection[{receive\+Addr}]{\setlength{\rightskip}{0pt plus 5cm}struct sockaddr\+\_\+in send\+Addr receive\+Addr}\label{network_8cpp_a474015a436208c13c8c0f2bb78e3816a}
+\hypertarget{network_8cpp_acf91b0ea5b5467572af4498b858fec37}{}\index{network.\+cpp@{network.\+cpp}!receive\+I\+D@{receive\+I\+D}}
+\index{receive\+I\+D@{receive\+I\+D}!network.\+cpp@{network.\+cpp}}
+\subsubsection[{receive\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}int receive\+I\+D}\label{network_8cpp_acf91b0ea5b5467572af4498b858fec37}
+\hypertarget{network_8cpp_a9fc009050cbde03e8e845b933bf145cb}{}\index{network.\+cpp@{network.\+cpp}!send\+I\+D@{send\+I\+D}}
+\index{send\+I\+D@{send\+I\+D}!network.\+cpp@{network.\+cpp}}
+\subsubsection[{send\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}int send\+I\+D}\label{network_8cpp_a9fc009050cbde03e8e845b933bf145cb}

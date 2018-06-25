@@ -1,0 +1,72 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+struct edge{
+  int begin;
+  int end;
+  edge(int b, int e){
+    begin = b;
+    end = e;
+  }
+};
+
+int main(){
+  string junk;
+  cin >> junk;
+  cin >> junk;
+  int vertice_count;
+  cin >> vertice_count;
+  int edge_count;
+  cin >> edge_count;
+  int first_vert;
+  int second_vert;
+   
+  vector <edge> edges;
+  for(int i = 0; i < edge_count; i++){
+    cin >> junk;
+    cin >> first_vert;
+    cin >> second_vert;
+      
+    edges.push_back(edge(first_vert, second_vert));
+  }
+  vector <int> subverts;
+  int n = vertice_count;
+  int nSub = 1<<n; 
+  int minverts;
+  vector <int> minsubverts;
+  vector <int> visited;
+  for(int i=0; i<nSub; i++){
+    subverts.clear();
+    for(int k=0; k<n; k++){
+      if( (1<<k) & i){
+	subverts.push_back(k);
+      } 
+    }
+    for(int j = 0; j < subverts.size(); j++){
+      for(int a = 0; a < edges.size(); a++){
+	if(j == edges[a].begin || j == edges[a].end){
+	  visited.push_back(a);
+	}
+      }
+    }
+    if(visited.size() == edges.size()){
+      if(subverts.size() < minverts){
+	minverts = subverts.size();
+	minsubverts = subverts;
+      }
+    }
+  }
+  cout << "Minumum number of vertices: " << minverts << endl;
+  cout << "Vertices chosen: [";
+  for(int i = 0; i < minsubverts.size()-1; i++){
+    cout << minsubverts[i] << ',';
+  }
+  cout << minsubverts[minsubverts.size()-1] << ']' << endl;
+        
+  return 0;
+}
+
+
+

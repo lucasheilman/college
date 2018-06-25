@@ -1,0 +1,9 @@
+#!/bin/sh
+# Example call:   insert_gn groupN/N ...
+
+for arg
+do  gutid=`basename $arg`   # discard the group
+    hadoop fs -cat /shared/gutenberg/all/$arg.txt |
+    awk '{print "'$gutid':" NR "\t" $0}' |
+    hadoop fs -put - /user/$USER/$gutid.txt_gn
+done

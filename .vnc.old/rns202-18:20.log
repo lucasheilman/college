@@ -1,0 +1,37 @@
+
+Xvnc TigerVNC 1.8.0 - built Aug  7 2017 01:32:32
+Copyright (C) 1999-2017 TigerVNC Team and many others (see README.txt)
+See http://www.tigervnc.org for information on TigerVNC.
+Underlying X server release 11903000, The X.Org Foundation
+
+
+Tue Oct 10 20:22:50 2017
+ vncext:      VNC extension running!
+ vncext:      Listening for VNC connections on all interface(s), port 5920
+ vncext:      created VNC server for screen 0
+/usr/bin/xterm: cannot load font '-misc-fixed-medium-r-semicondensed--13-120-75-75-c-60-iso10646-1'
+
+Tue Oct 10 20:22:59 2017
+ Connections: accepted: 130.71.250.232::61285
+ SConnection: Client needs protocol version 3.8
+ SConnection: Client requests security type VncAuth(2)
+
+Tue Oct 10 20:23:03 2017
+ VNCSConnST:  Server default pixel format depth 24 (32bpp) little-endian rgb888
+ VNCSConnST:  Client pixel format depth 8 (8bpp) color-map
+
+Tue Oct 10 20:23:22 2017
+ Connections: closed: 130.71.250.232::61285 (Clean disconnection)
+ EncodeManager: Framebuffer updates: 85
+ EncodeManager:   RRE:
+ EncodeManager:     Solid: 19 rects, 68.2 kpixels
+ EncodeManager:            323 B (1:211.851 ratio)
+ EncodeManager:   ZRLE:
+ EncodeManager:     Bitmap RLE: 29 rects, 31.026 kpixels
+ EncodeManager:                 2.34277 KiB (1:13.0779 ratio)
+ EncodeManager:     Indexed RLE: 53 rects, 1.18416 Mpixels
+ EncodeManager:                  32.3438 KiB (1:35.7729 ratio)
+ EncodeManager:   Total: 101 rects, 1.28339 Mpixels
+ EncodeManager:          35.002 KiB (1:35.8407 ratio)
+ ComparingUpdateTracker: 2.25519 Mpixels in / 480.036 kpixels out
+ ComparingUpdateTracker: (1:4.69795 ratio)

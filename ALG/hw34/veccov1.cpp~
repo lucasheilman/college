@@ -1,0 +1,218 @@
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include <string>
+using namespace std;
+
+/*
+  Choose smallest adjacency list not yet visited
+  set cover at Largest count uncovered neighbor
+  set nbrs to covered
+  set cover to visited
+  set adlist num to visited?
+  continue to next smallest adlist
+
+  Afterwards, erase selected from adList in all locations and run again
+  without those values or edges
+*/
+
+
+struct edge{
+  int a;
+  int b;
+  edge(int s, int t){
+    a = s;
+    b = t;
+  }
+};
+
+vector< vector <int> >  makeAdList(vector <edge> edges, int verts){
+  //init adlist
+  vector< vector <int> > adList;
+  for(int init = 0; init < verts; init++){
+    vector <int> columns;
+    adList.push_back(columns);
+  }
+  //make adjacency list
+  for(int y = 0; y < edges.size(); y++){
+    bool check1 = true;
+    bool check2 = true;
+    int checker;
+    for(checker = 0; checker < adList[edges[y].a].size(); ++checker){
+      if(adList[edges[y].a][checker] == edges[y].b){
+	check1 = false;
+      }
+    }
+    for(checker = 0; checker < adList[edges[y].b].size(); ++checker){
+      if(adList[edges[y].b][checker] == edges[y].a){
+	check2 = false;
+      }
+    }
+    if(check1) adList[edges[y].a].push_back(edges[y].b);
+    if(check2) adList[edges[y].b].push_back(edges[y].a);
+  }
+
+  // Cout adjacency list
+  cout << "Adjacency list: " << endl;
+  for(int checkrow = 0; checkrow < adList.size(); checkrow++){
+    cout << checkrow << ": ";
+    for(int checkcolumn = 0; checkcolumn < adList[checkrow].size(); checkcolumn++){
+      cout << adList[checkrow][checkcolumn] << " ";
+    }
+    cout << endl;
+  }
+  cout << endl;
+  return adList;
+}
+
+void dispAd(vector< vector <int> > adList){
+  cout << "Adjacency list: " << endl;
+  for(int checkrow = 0; checkrow < adList.size(); checkrow++){
+    cout << checkrow << ": ";
+    for(int checkcolumn = 0; checkcolumn < adList[checkrow].size(); checkcolumn++){
+      cout << adList[checkrow][checkcolumn] << " ";
+    }
+    cout << endl;
+  }
+  cout << endl;
+}
+
+bool notInSelect(vector<int> selected, int bestNbr){
+  bool check = true;
+  for(int i = 0; i < selected.size(); ++i){
+    if(bestNbr == selected[i]){
+      check = false;
+    }
+  }
+  return check;
+}
+
+vector <int> cover(vector< vector <int> >  adList, vector <bool> visited, int vertice_count){
+  vector <int> selected;
+  vector < vector<int> > origAd;
+  origAd = adList;
+  for(int prime = 0; prime < vertice_count; ++prime){
+    int bestNbr = 0; // Neighbor with most uncovered nbrs
+    int bestNbrSize = 0; // size of best nbr
+    int latestSize = 0;     // Size check for each nbr
+
+    int curZone = 0; // current adList zone
+    int czSize = 0; // current zone size for check
+    for(int x = 0; x < adList.size(); ++x){
+      if((adList[x].size() < czSize || czSize == 0) && ! visited[x] && adList[x].size() != 0){
+	curZone = x;
+	czSize = adList[x].size();
+      }
+    }
+    //cout << "zone: " << curZone << endl;
+    if(adList[curZone].size() > 0){
+      bestNbrSize = adList[curZone].size();
+      bestNbr = curZone;
+    }
+    for(int nbr = 0; nbr < adList[curZone].size(); ++nbr){
+      for(int nbrNbr = 0; nbrNbr < adList[adList[curZone][nbr]].size(); ++nbrNbr){
+	++latestSize;
+      }
+      //cout << "size " << latestSize << endl;
+      if(latestSize > bestNbrSize){
+	bestNbrSize = latestSize;
+	bestNbr = adList[curZone][nbr];
+      }
+      latestSize = 0;
+    }
+    //cout << "best nbr: " << bestNbr << endl;
+
+    if(bestNbrSize != 0 && ! visited[bestNbr] && notInSelect(selected, bestNbr)){
+      selected.push_back(bestNbr);
+      visited[bestNbr] = true;
+      for(int cov = 0; cov < adList.size(); ++cov){
+	//cout << "cov: " << cov <<endl;
+	for(int del = 0; del < adList[cov].size(); ++del){
+	  //cout << "del: " << del << endl;
+	  if(adList[cov][del] == bestNbr){
+	    //cout << "deleted: " << adList[cov][del] << " " << endl;//adList[adList[bestNbr][cov]][del] << " " << endl;
+	    adList[cov].erase(adList[cov].begin() + del);
+	    break;
+	  }
+	}
+	//cout << endl;
+      }
+      //dispAd(adList);
+    }
+    //visited[curZone] = true;
+  }
+  // for(int visit = 0; visit < visited.size(); ++visit){
+  //      cout << visited[visit] <<" ";
+  // }
+  // cout <<endl;
+
+
+  cout << "Vertices needed to cover: " << selected.size() << endl;
+  cout << "Graph cover: ";
+  for(int disp = 0; disp < selected.size(); ++disp){
+    cout << selected[disp] << " ";
+  }
+  cout << endl << endl;
+
+  cout << "Max independent set: " << vertice_count - selected.size() << endl;
+  return selected;
+}
+
+
+int main(){
+  ifstream f("test2.txt");
+  string junk;
+  f >> junk;
+  f >> junk;
+  int vertice_count;
+  f >> vertice_count;
+  int edge_count;
+  f >> edge_count;
+  int first_vert;
+  int second_vert;
+  vector <edge> edges;
+  for(int i = 0; i < edge_count; i++){
+    f >> junk; //Only use for files using e for edge
+    f >> first_vert;
+    f >> second_vert;
+    edge newEdge = edge(first_vert, second_vert);
+    edges.push_back(newEdge);
+  }
+  cout << "The edges are: " << endl;
+  for(int x = 0; x < edges.size(); x++){
+    cout << edges[x].a << " " << edges[x].b << endl;
+  }
+  cout << endl;
+
+  vector< vector <int> >  adList;
+  adList = makeAdList(edges, vertice_count);
+  vector <bool> visited(vertice_count, false);
+  //vector <int> otherSet = {2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47,  49, 50, 51, 52, 53, 54, 56, 57, 59, 60, 61, 62, 63, 64, 65, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 80, 81, 82, 83, 84, 85, 87, 88, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 121, 122, 124, 125, 126, 127, 128};
+  vector <int> coverSet;
+  coverSet = cover(adList, visited, vertice_count);
+  //cout << coverSet.size() <<endl;
+  bool check = true;
+  int iter;
+
+  for(int ej = 0; ej < edges.size(); ++ej){
+    iter = 0;
+    for(int select = 0; select < coverSet.size(); ++select){
+      if(coverSet[select] != edges[ej].a && coverSet[select] != edges[ej].b){
+	++iter;
+      }
+    }
+    if(iter == coverSet.size()){
+      check = false;
+      cout << "False edges: " << edges[ej].a << " " << edges[ej].b << endl;
+    }
+
+  }
+
+  cout <<endl;
+  cout << "All edges covered: ";
+  if(check == true) cout << "True";
+  else cout << "False";
+  cout <<endl << endl;
+
+  return 0;
+}

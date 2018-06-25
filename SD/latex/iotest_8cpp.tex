@@ -1,0 +1,36 @@
+\hypertarget{iotest_8cpp}{}\section{hw4/iotest.cpp File Reference}
+\label{iotest_8cpp}\index{hw4/iotest.\+cpp@{hw4/iotest.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{iotest_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{iotest_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\index{iotest.\+cpp@{iotest.\+cpp}!main@{main}}
+\index{main@{main}!iotest.\+cpp@{iotest.\+cpp}}
+\subsubsection[{main()}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{iotest_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+6 \{
+7   \textcolor{keywordtype}{string} name;
+8   \textcolor{keywordtype}{float} shoesize;
+9   \textcolor{keywordtype}{float} favnum;
+10   cout << \textcolor{stringliteral}{"Enter your name: "};
+11   getline (cin, name);
+12   cout << \textcolor{stringliteral}{"Enter your shoesize: "};
+13   cin >> shoesize;
+14   cout << \textcolor{stringliteral}{"Enter your favorite number: "};
+15   cin >> favnum;
+16   \textcolor{keywordtype}{float} avg = (shoesize + favnum)/2;
+17   cout << \textcolor{stringliteral}{"The average of your shoesize and your favorite number is: "} << avg << endl;
+18   \textcolor{keywordflow}{return} 0;
+19 \}
+\end{DoxyCode}

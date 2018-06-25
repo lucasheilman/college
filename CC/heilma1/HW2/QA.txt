@@ -1,0 +1,22 @@
+Q: How are you?
+A: Good
+Q: What are you doing?
+A: Nothing
+Q: What's 2+2?
+A: 4
+Q: What's the meaning of life?
+A: Good question
+Q: Who are you?
+A: I'm you but better
+Q: What's your favorite color?
+A: Blue
+Q: What's your favorite food?
+A: Cheese
+Q: What's your favorite sport?
+A: Tennis
+Q: How old are you?
+A: 3
+Q: Where are you from?
+A: Minnesota
+Q: Remind me your name
+A: Lucas

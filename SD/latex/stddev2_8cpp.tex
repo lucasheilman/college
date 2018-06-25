@@ -1,0 +1,75 @@
+\hypertarget{stddev2_8cpp}{}\section{hw8/stddev2.cpp File Reference}
+\label{stddev2_8cpp}\index{hw8/stddev2.\+cpp@{hw8/stddev2.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$math.\+h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{stddev2_8cpp_a75ac45e022bd890723a394222a9e375b}{stddev} (float dat\mbox{[}$\,$\mbox{]}, int nelts, float \&min\+Val, float avg)
+\item 
+int \hyperlink{stddev2_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{stddev2_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\index{stddev2.\+cpp@{stddev2.\+cpp}!main@{main}}
+\index{main@{main}!stddev2.\+cpp@{stddev2.\+cpp}}
+\subsubsection[{main()}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{stddev2_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+23 \{
+24   \textcolor{keywordtype}{float} minimum;
+25   \textcolor{keywordtype}{float} mydata[224];
+26   \textcolor{keywordtype}{int} x, y=0;
+27   \textcolor{keywordtype}{float} avg;
+28   cin >> avg;
+29   \textcolor{keywordflow}{while} (cin >>  x)\{
+30     mydata[y] = x;
+31     y++;
+32   \}
+33   \textcolor{keywordtype}{double} dev;
+34 
+35   dev = \hyperlink{stddev2_8cpp_a75ac45e022bd890723a394222a9e375b}{stddev}(mydata, 224, minimum, avg);
+36 
+37   cout << \textcolor{stringliteral}{"dev "} << dev << \textcolor{stringliteral}{" minimum value "} << minimum << endl;
+38 \}
+\end{DoxyCode}
+\hypertarget{stddev2_8cpp_a75ac45e022bd890723a394222a9e375b}{}\index{stddev2.\+cpp@{stddev2.\+cpp}!stddev@{stddev}}
+\index{stddev@{stddev}!stddev2.\+cpp@{stddev2.\+cpp}}
+\subsubsection[{stddev(float dat[], int nelts, float \&min\+Val, float avg)}]{\setlength{\rightskip}{0pt plus 5cm}double stddev (
+\begin{DoxyParamCaption}
+\item[{float}]{dat\mbox{[}$\,$\mbox{]}, }
+\item[{int}]{nelts, }
+\item[{float \&}]{min\+Val, }
+\item[{float}]{avg}
+\end{DoxyParamCaption}
+)}\label{stddev2_8cpp_a75ac45e022bd890723a394222a9e375b}
+Compute stddev and minimum of an array 
+\begin{DoxyParams}{Parameters}
+{\em dat} & Array of values \\
+\hline
+{\em nelts} & Non-\/negative number of elements in dat \\
+\hline
+{\em min\+Val} & Assigned minimum value in dat by this function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+stddev of values in dat 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+11 \{
+12   \textcolor{keywordtype}{double} result = 0;
+13   minVal = dat[0];
+14   \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < nelts; ++i) \{
+15     \textcolor{keywordflow}{if} ( dat[i] < minVal ) minVal = dat[i];
+16     result += pow((dat[i]-avg),2);
+17   \}
+18   result /= nelts;
+19   \textcolor{keywordflow}{return} result;
+20 \}
+\end{DoxyCode}

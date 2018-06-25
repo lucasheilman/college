@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.cvs; singleton:=true
+Bundle-Name: %pluginName
+Bundle-Version: 1.4.300.v20160915-0852
+Archiver-Version: Plexus Archiver
+Bundle-Localization: plugin
+Built-By: mockbuild
+Bundle-ManifestVersion: 2
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: %providerName
+Created-By: Apache Maven
+Build-Jdk: 1.8.0_111
+

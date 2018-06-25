@@ -1,0 +1,8 @@
+#ifndef _POLY_H_
+#define _POLY_H_
+
+class Poly : public Mvector{
+ public:
+  float operator() (float x);
+};
+#endif

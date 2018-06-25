@@ -1,0 +1,80 @@
+\hypertarget{reverse_8cpp}{}\section{reverse.\+cpp File Reference}
+\label{reverse_8cpp}\index{reverse.\+cpp@{reverse.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{reverse_8cpp_a40fda41e49e9f72a5a4c9d296ad7cd46}{stringlength} (char s\mbox{[}$\,$\mbox{]})
+\item 
+int \hyperlink{reverse_8cpp_a8e1bb1a26008e4796fe72e5905deac2f}{reverse} (char str\mbox{[}$\,$\mbox{]}, int len)
+\item 
+int \hyperlink{reverse_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{reverse_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\index{reverse.\+cpp@{reverse.\+cpp}!main@{main}}
+\index{main@{main}!reverse.\+cpp@{reverse.\+cpp}}
+\subsubsection[{main()}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{reverse_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+25 \{
+26   \textcolor{keywordtype}{char} str[20] = \textcolor{stringliteral}{"supercalif"};
+27   \textcolor{keywordtype}{int} len = \hyperlink{reverse_8cpp_a40fda41e49e9f72a5a4c9d296ad7cd46}{stringlength}(str);
+28   \hyperlink{reverse_8cpp_a8e1bb1a26008e4796fe72e5905deac2f}{reverse}(str,len);
+29   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} x = 0; x<len; x++)\{
+30     cout << str[x];
+31   \}
+32   \textcolor{keywordflow}{return} 0;
+33 \}
+\end{DoxyCode}
+\hypertarget{reverse_8cpp_a8e1bb1a26008e4796fe72e5905deac2f}{}\index{reverse.\+cpp@{reverse.\+cpp}!reverse@{reverse}}
+\index{reverse@{reverse}!reverse.\+cpp@{reverse.\+cpp}}
+\subsubsection[{reverse(char str[], int len)}]{\setlength{\rightskip}{0pt plus 5cm}int reverse (
+\begin{DoxyParamCaption}
+\item[{char}]{str\mbox{[}$\,$\mbox{]}, }
+\item[{int}]{len}
+\end{DoxyParamCaption}
+)}\label{reverse_8cpp_a8e1bb1a26008e4796fe72e5905deac2f}
+
+\begin{DoxyCode}
+15                                \{
+16   \textcolor{keywordtype}{int} y;
+17   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} x = 0; x < len/2; x++)\{
+18     y = str[len-x-1];
+19     str[len-x-1] = str[x];
+20     str[x] = y;
+21   \}
+22   \textcolor{keywordflow}{return} 0;
+23 \}
+\end{DoxyCode}
+\hypertarget{reverse_8cpp_a40fda41e49e9f72a5a4c9d296ad7cd46}{}\index{reverse.\+cpp@{reverse.\+cpp}!stringlength@{stringlength}}
+\index{stringlength@{stringlength}!reverse.\+cpp@{reverse.\+cpp}}
+\subsubsection[{stringlength(char s[])}]{\setlength{\rightskip}{0pt plus 5cm}int stringlength (
+\begin{DoxyParamCaption}
+\item[{char}]{s\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{reverse_8cpp_a40fda41e49e9f72a5a4c9d296ad7cd46}
+Reverse elements in a string 
+\begin{DoxyParams}{Parameters}
+{\em s} & C-\/style string (null-\/terminated array of char) \\
+\hline
+{\em y} & holds the switched character in the string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of (non-\/null) characters in s 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+9 \{
+10   \textcolor{keywordtype}{int} i = 0;
+11   \textcolor{keywordflow}{while} (s[i] != \textcolor{charliteral}{'\(\backslash\)0'})
+12     ++i;
+13   \textcolor{keywordflow}{return} i;
+14 \}
+\end{DoxyCode}

@@ -1,0 +1,35 @@
+heilma1@thing4:~/PDC/lab8$ time ./trap_tbb2
+With n = 1048576 trapezoids, our estimate of the integral from 0 to 3.14159 is 2
+
+real	0m0.033s
+user	0m0.070s
+sys	0m0.019s
+
+It ran correctly.
+
+heilma1@thing4:~/PDC/lab8$ time ./trap_tbb3
+With n = 1048576 trapezoids, our estimate of the integral from 0 to 3.14159 is 2
+
+real	0m0.050s
+user	0m0.058s
+sys	0m0.032s
+
+The user time was faster and it used more system time, meaning it used more of the system
+
+heilma1@thing4:~/PDC/lab8/sieve$ time ./sieve 100 4
+25 primes are less than or equal to 100
+
+real	0m0.005s
+user	0m0.005s
+sys	0m0.000s
+
+It looks like it take none of the system time, strange. Very small amount of run time
+
+heilma1@thing4:~/PDC/lab8/sieve$ time ./sieve 100 4
+25 primes are less than or equal to 100
+
+real	0m0.009s
+user	0m0.000s
+sys	0m0.011s
+
+It used more system time, which in turn made the user time non-existent.

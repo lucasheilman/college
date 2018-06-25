@@ -1,0 +1,17 @@
+#ifndef _MVECTOR_H_
+#define _MVECTOR_H_
+
+class Mvector{
+  int len;
+ public:
+  float *arr;
+  Mvector(int length = 5);
+  int len();
+  ~Mvector();
+  Mvector& operator= (const Mvector& mvec);
+  float& operator[] (int index);
+  Mvector operator* (float val);
+  Mvector operator* (const Mvector &vec);
+  Mvector operator+ (const Mvector &vec);
+};
+#endif

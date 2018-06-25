@@ -1,0 +1,200 @@
+point(X,Y) :- integer(X), integer(Y).
+    
+diff(point(X11,Y11),point(X12,Y12)) :- X11 \= X12.
+diff(point(X11,Y11),point(X12,Y12)) :- Y11 \= Y12.
+    
+segment(point(X1,Y1),point(X2,Y2)) :-
+				   diff(point(X1,Y1),point(X2,Y2)).
+
+segment_length(PointE,PointF,PointG,PointH,Length) :- Length is sqrt((PointE - PointF) * (PointE - PointF) + (PointG - PointH) * (PointG - PointH)).
+    
+corner(segment(point(X13,Y13),point(X14,Y14)),segment(point(X15,Y15),point(X16,Y16))) :-
+										      X13 == X15,
+										      Y13 == Y15.
+corner(segment(point(X13,Y13),point(X14,Y14)),segment(point(X15,Y15),point(X16,Y16))) :-
+										      X13 == X16,
+										      Y13 == Y16.
+corner(segment(point(X13,Y13),point(X14,Y14)),segment(point(X15,Y15),point(X16,Y16))) :-
+										      X14 == X15,
+										      Y14 == Y15.    
+corner(segment(point(X13,Y13),point(X14,Y14)),segment(point(X15,Y15),point(X16,Y16))) :-
+										      X14 == X16,
+										      Y14 == Y16.
+
+slope(PointA, PointB, PointC, PointD, Slope) :- Slope is (PointC-PointD)/(PointA-PointB).
+
+flip_opposite(A_slope, Flipopposite) :- Flipopposite is -(1/A_slope).
+    
+rightangle(segment(point(X13,Y13),point(X14,Y14)),segment(point(X15,Y15),point(X16,Y16))) :-
+											  corner(segment(point(X13,Y13),point(X14,Y14)),segment(point(X15,Y15),point(X16,Y16))),
+											   flip_opposite(slope(X15,X16,Y15,Y16),Flipopposite),
+											   slope(X13,X14,Y13,Y14,Slope),
+											   Slope == Flipopposite.											   
+
+triangle(point(X3,Y3),point(X4,Y4),point(X5,Y5)) :-
+						 diff(point(X3,Y3),point(X4,Y4)),
+						 diff(point(X4,Y4),point(X5,Y5)),
+						 diff(point(X3,Y3),point(X5,Y5)).
+
+right_triangle(point(X17,Y17),point(X18,Y18),point(X19,Y19)) :-
+							    triangle(point(X17,Y17),point(X18,Y18),point(X19,Y19)),
+							    rightangle(segment(point(X17,Y17),point(X18,Y18)),segment(point(X17,Y17),point(X19,Y19))).
+
+right_triangle(point(X17,Y17),point(X18,Y18),point(X19,Y19)) :-
+							    triangle(point(X17,Y17),point(X18,Y18),point(X19,Y19)),
+							    rightangle(segment(point(X18,Y18),point(X19,Y19)),segment(point(X18,Y18),point(X17,Y17))).
+
+right_triangle(point(X17,Y17),point(X18,Y18),point(X19,Y19)) :-
+							    triangle(point(X17,Y17),point(X18,Y18),point(X19,Y19)),
+							    rightangle(segment(point(X19,Y19),point(X18,Y18)),segment(point(X19,Y19),point(X17,Y17))).
+
+equilateral_triangle(point(X20,Y20),point(X21,Y21),point(X22,Y22)) :-
+								   triangle(point(X20,Y20),point(X21,Y21),point(X22,Y22)),
+								   segment_length(X20,X21,Y20,Y21,Length1),
+								   segment_length(X20,X22,Y20,Y22,Length2),
+								   segment_length(X21,X22,Y21,Y22,Length3),
+								   Length1 == Length2,
+								   Length1 == Length3,
+								   Length2 == Length3.
+
+isosceles_triangle(point(X23,Y23),point(X24,Y24),point(X25,Y25)) :-
+								   triangle(point(X23,Y23),point(X24,Y24),point(X25,Y25)),
+								   segment_length(X23,X24,Y23,Y24,Length4),
+								   segment_length(X20,X22,Y20,Y22,Length5),
+								   segment_length(X21,X22,Y21,Y22,Length6),
+								   Length4 == Length5.
+
+isosceles_triangle(point(X23,Y23),point(X24,Y24),point(X25,Y25)) :-
+								   triangle(point(X23,Y23),point(X24,Y24),point(X25,Y25)),
+								   segment_length(X23,X24,Y23,Y24,Length4),
+								   segment_length(X20,X22,Y20,Y22,Length5),
+								   segment_length(X21,X22,Y21,Y22,Length6),
+								   Length4 == Length6.
+
+isosceles_triangle(point(X23,Y23),point(X24,Y24),point(X25,Y25)) :-
+								   triangle(point(X23,Y23),point(X24,Y24),point(X25,Y25)),
+								   segment_length(X23,X24,Y23,Y24,Length4),
+								   segment_length(X20,X22,Y20,Y22,Length5),
+								   segment_length(X21,X22,Y21,Y22,Length6),
+								   Length5 == Length6.
+								   
+quadrilateral(point(X6,Y6),point(X7,Y7),point(X8,Y8),point(X9,Y9)) :-
+								   diff(point(X6,Y6),point(X7,Y7)),
+						 		   diff(point(X6,Y6),point(X8,Y8)),
+						 		   diff(point(X6,Y6),point(X9,Y9)),
+								   diff(point(X7,Y7),point(X8,Y8)),
+								   diff(point(X7,Y7),point(X9,Y9)),
+								   diff(point(X8,Y8),point(X9,Y9)).
+
+rectangle(point(X26,Y26),point(X27,Y27),point(X28,Y28),point(X29,Y29)) :-
+								       quadrilateral(point(X26,Y26),point(X27,Y27),point(X28,Y28),point(X29,Y29)),
+								       rightangle(segment(point(X26,Y26),point(X27,Y27)),segment(point(X26,Y26),point(X28,Y28))),
+								       rightangle(segment(point(X27,Y27),point(X26,Y26)),segment(point(X27,Y27),point(X29,Y29))),
+								       rightangle(segment(point(X28,Y28),point(X26,Y26)),segment(point(X28,Y28),point(X29,Y29))),
+								       rightangle(segment(point(X29,Y29),point(X28,Y28)),segment(point(X29,Y29),point(X27,Y27))).
+
+rectangle(point(X26,Y26),point(X27,Y27),point(X28,Y28),point(X29,Y29)) :-
+								       quadrilateral(point(X26,Y26),point(X27,Y27),point(X28,Y28),point(X29,Y29)),
+								       rightangle(segment(point(X26,Y26),point(X29,Y29)),segment(point(X26,Y26),point(X27,Y27))),
+								       rightangle(segment(point(X27,Y27),point(X26,Y26)),segment(point(X27,Y27),point(X28,Y28))),
+								       rightangle(segment(point(X28,Y28),point(X27,Y27)),segment(point(X28,Y28),point(X29,Y29))),
+								       rightangle(segment(point(X29,Y29),point(X28,Y28)),segment(point(X29,Y29),point(X26,Y26))).
+
+rectangle(point(X26,Y26),point(X27,Y27),point(X28,Y28),point(X29,Y29)) :-
+								       quadrilateral(point(X26,Y26),point(X27,Y27),point(X28,Y28),point(X29,Y29)),
+								       rightangle(segment(point(X26,Y26),point(X28,Y28)),segment(point(X26,Y26),point(X29,Y29))),
+								       rightangle(segment(point(X27,Y27),point(X29,Y29)),segment(point(X27,Y27),point(X28,Y28))),
+								       rightangle(segment(point(X28,Y28),point(X26,Y26)),segment(point(X28,Y28),point(X27,Y27))),
+								       rightangle(segment(point(X29,Y29),point(X26,Y26)),segment(point(X29,Y29),point(X27,Y27))).
+
+regular_rectangle(point(X26,Y26),point(X27,Y27),point(X28,Y28),point(X29,Y29)) :-
+									       rectangle(point(X26,Y26),point(X27,Y27),point(X28,Y28),point(X29,Y29)),
+									       slope(X26,X27,Y26,Y27,Slope7),
+									       slope(X29,X28,Y29,Y28,Slope8),
+									       slope7 == 0,
+									       slope8 == 0.
+
+regular_rectangle(point(X26,Y26),point(X27,Y27),point(X28,Y28),point(X29,Y29)) :-
+									       rectangle(point(X26,Y26),point(X27,Y27),point(X28,Y28),point(X29,Y29)),
+									       slope(X26,X28,Y26,Y28,Slope7),
+									       slope(X29,X27,Y29,Y27,Slope8),
+									       slope7 == 0,
+									       slope8 == 0.
+
+regular_rectangle(point(X26,Y26),point(X27,Y27),point(X28,Y28),point(X29,Y29)) :-
+									       rectangle(point(X26,Y26),point(X27,Y27),point(X28,Y28),point(X29,Y29)),
+									       slope(X26,X29,Y26,Y29,Slope7),
+									       slope(X27,X28,Y27,Y28,Slope8),
+									       slope7 == 0,
+									       slope8 == 0.
+
+regular_rectangle(point(X26,Y26),point(X27,Y27),point(X28,Y28),point(X29,Y29)) :-
+									       rectangle(point(X26,Y26),point(X27,Y27),point(X28,Y28),point(X29,Y29)),
+									       slope(X26,X27,Y26,Y27,Slope7),
+									       slope(X29,X28,Y29,Y28,Slope8),
+									       slope7 == 0,
+									       slope8 == 0.
+
+regular_rectangle(point(X26,Y26),point(X27,Y27),point(X28,Y28),point(X29,Y29)) :-
+									       rectangle(point(X26,Y26),point(X27,Y27),point(X28,Y28),point(X29,Y29)),
+									       slope(X26,X28,Y26,Y28,Slope7),
+									       slope(X29,X27,Y29,Y27,Slope8),
+									       slope7 == 0,
+									       slope8 == 0.
+
+regular_rectangle(point(X26,Y26),point(X27,Y27),point(X28,Y28),point(X29,Y29)) :-
+									       rectangle(point(X26,Y26),point(X27,Y27),point(X28,Y28),point(X29,Y29)),
+									       slope(X26,X29,Y26,Y29,Slope7),
+									       slope(X28,X27,Y28,Y27,Slope8),
+									       slope7 == 0,
+									       slope8 == 0.
+
+square(point(X30,Y30),point(X31,Y31),point(X32,Y32),point(X33,Y33)) :-
+								   rectangle(point(X30,Y30),point(X31,Y31),point(X32,Y32),point(X33,Y33)),
+								   segment_length(X23,X24,Y23,Y24,Length7),
+								   segment_length(X20,X22,Y20,Y22,Length8),
+								   segment_length(X21,X22,Y21,Y22,Length9),
+								   segment_length(X21,X22,Y21,Y22,Length10),
+								   Length7 == Length8,
+								   Length7 == Length9,
+								   Length7 == Length10.
+
+square(point(X30,Y30),point(X31,Y31),point(X32,Y32),point(X33,Y33)) :-
+								   regular_rectangle(point(X30,Y30),point(X31,Y31),point(X32,Y32),point(X33,Y33)),
+								   segment_length(X23,X24,Y23,Y24,Length7),
+								   segment_length(X20,X22,Y20,Y22,Length8),
+								   segment_length(X21,X22,Y21,Y22,Length9),
+								   segment_length(X21,X22,Y21,Y22,Length10),
+								   Length7 == Length8,
+								   Length7 == Length9,
+								   Length7 == Length10.
+
+parallelogram(point(X34,Y34),point(X35,Y35),point(X36,Y36),point(X37,Y37)) :-
+									   quadrilateral(point(X34,Y34),point(X35,Y35),point(X36,Y36),point(X37,Y37)),
+									  slope(X34,X35,Y34,Y35,Slope9),
+									  slope(X35,X37,Y35,Y37,Slope10),
+									  slope(X34,X35,Y34,Y35,Slope11),
+									  slope(X36,X37,Y36,Y37,Slope12),
+							    		  Slope9 == Slope10,
+									  Slope11 == Slope12.
+
+parallelogram(point(X34,Y34),point(X35,Y35),point(X36,Y36),point(X37,Y37)) :-
+									   quadrilateral(point(X34,Y34),point(X35,Y35),point(X36,Y36),point(X37,Y37)),
+									  slope(X34,X35,Y34,Y35,Slope9),
+									  slope(X36,X37,Y36,Y37,Slope10),
+									  slope(X34,X37,Y34,Y37,Slope11),
+									  slope(X36,X35,Y36,Y35,Slope12),
+							    		  Slope9 == Slope10,
+									  Slope11 == Slope12.
+
+parallelogram(point(X34,Y34),point(X35,Y35),point(X36,Y36),point(X37,Y37)) :-
+									   quadrilateral(point(X34,Y34),point(X35,Y35),point(X36,Y36),point(X37,Y37)),
+									  slope(X34,X37,Y34,Y37,Slope9),
+									  slope(X35,X36,Y35,Y36,Slope10),
+									  slope(X34,X36,Y34,Y36,Slope11),
+									  slope(X35,X37,Y35,Y37,Slope12),
+							    		  Slope9 == Slope10,
+									  Slope11 == Slope12.
+
+regular_parallelogram(point(X38,Y38),point(X39,Y39),point(X40,Y40),point(X41,Y41)) :-
+										   regular_rectangle(point(X38,Y38),point(X39,Y39),point(X40,Y40),point(X41,Y41)).

@@ -1,0 +1,412 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?artifactRepository version='1.1.0'?>
+<repository name='/usr/share/eclipse/droplets/eclipse-pde' type='org.eclipse.equinox.p2.artifact.repository.simpleRepository' version='1.0.0'>
+  <properties size='1'>
+    <property name='p2.timestamp' value='1505680337541'/>
+  </properties>
+  <mappings size='3'>
+    <rule filter='(&amp; (classifier=osgi.bundle))' output='${repoUrl}/plugins/${id}_${version}.jar'/>
+    <rule filter='(&amp; (classifier=binary))' output='${repoUrl}/binary/${id}_${version}'/>
+    <rule filter='(&amp; (classifier=org.eclipse.update.feature))' output='${repoUrl}/features/${id}_${version}.jar'/>
+  </mappings>
+  <artifacts size='38'>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.pde' version='3.12.1.v20160915-0852'>
+      <properties size='3'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/usr/share/eclipse/droplets/eclipse-pde/eclipse/features/org.eclipse.pde_3.12.1.v20160915-0852/'/>
+        <property name='file.name' value='/usr/share/eclipse/droplets/eclipse-pde/eclipse/features/org.eclipse.pde_3.12.1.v20160915-0852'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.pde.ui' version='3.9.1.v20160915-0852'>
+      <properties size='2'>
+        <property name='artifact.size' value='4844720'/>
+        <property name='download.size' value='4844720'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.ui_3.9.1.v20160915-0852.jar'/>
+        <property name='file.name' value='/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.ui_3.9.1.v20160915-0852.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.pde.api.tools.ee.j2se15' version='1.0.200.v20160915-0852'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.api.tools.ee.j2se15_1.0.200.v20160915-0852/'/>
+        <property name='file.name' value='/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.api.tools.ee.j2se15_1.0.200.v20160915-0852'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.pde.ua.core' version='1.0.500.v20160915-0852'>
+      <properties size='2'>
+        <property name='artifact.size' value='99401'/>
+        <property name='download.size' value='99401'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.ua.core_1.0.500.v20160915-0852.jar'/>
+        <property name='file.name' value='/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.ua.core_1.0.500.v20160915-0852.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.pde.ui.templates' version='3.6.0.v20160915-0852'>
+      <properties size='2'>
+        <property name='artifact.size' value='533739'/>
+        <property name='download.size' value='533739'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.ui.templates_3.6.0.v20160915-0852.jar'/>
+        <property name='file.name' value='/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.ui.templates_3.6.0.v20160915-0852.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.pde.ds.core' version='1.1.0.v20160915-0852'>
+      <properties size='2'>
+        <property name='artifact.size' value='50215'/>
+        <property name='download.size' value='50215'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.ds.core_1.1.0.v20160915-0852.jar'/>
+        <property name='file.name' value='/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.ds.core_1.1.0.v20160915-0852.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.pde.api.tools.ee.javase18' version='1.0.0.v20160915-0852'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.api.tools.ee.javase18_1.0.0.v20160915-0852/'/>
+        <property name='file.name' value='/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.api.tools.ee.javase18_1.0.0.v20160915-0852'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.pde.api.tools.ui' version='1.1.0.v20160915-0852'>
+      <properties size='2'>
+        <property name='artifact.size' value='489830'/>
+        <property name='download.size' value='489830'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.api.tools.ui_1.1.0.v20160915-0852.jar'/>
+        <property name='file.name' value='/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.api.tools.ui_1.1.0.v20160915-0852.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.pde.runtime' version='3.5.0.v20160915-0852'>
+      <properties size='2'>
+        <property name='artifact.size' value='154287'/>
+        <property name='download.size' value='154287'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.runtime_3.5.0.v20160915-0852.jar'/>
+        <property name='file.name' value='/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.runtime_3.5.0.v20160915-0852.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.pde.api.tools.ee.osgiminimum10' version='1.0.200.v20160915-0852'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.api.tools.ee.osgiminimum10_1.0.200.v20160915-0852/'/>
+        <property name='file.name' value='/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.api.tools.ee.osgiminimum10_1.0.200.v20160915-0852'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.pde.api.tools.ee.jre11' version='1.0.200.v20160915-0852'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.api.tools.ee.jre11_1.0.200.v20160915-0852/'/>
+        <property name='file.name' value='/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.api.tools.ee.jre11_1.0.200.v20160915-0852'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.pde.doc.user' version='3.12.1.v20160915-0852'>
+      <properties size='2'>
+        <property name='artifact.size' value='6440950'/>
+        <property name='download.size' value='6440950'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.doc.user_3.12.1.v20160915-0852.jar'/>
+        <property name='file.name' value='/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.doc.user_3.12.1.v20160915-0852.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.pde.api.tools.ee.j2se12' version='1.0.200.v20160915-0852'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.api.tools.ee.j2se12_1.0.200.v20160915-0852/'/>
+        <property name='file.name' value='/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.api.tools.ee.j2se12_1.0.200.v20160915-0852'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.pde.api.tools.ee.feature' version='1.0.1.v20160915-0852'>
+      <properties size='3'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/usr/share/eclipse/droplets/eclipse-pde/eclipse/features/org.eclipse.pde.api.tools.ee.feature_1.0.1.v20160915-0852/'/>
+        <property name='file.name' value='/usr/share/eclipse/droplets/eclipse-pde/eclipse/features/org.eclipse.pde.api.tools.ee.feature_1.0.1.v20160915-0852'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.pde.api.tools.ee.osgiminimum11' version='1.0.200.v20160915-0852'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.api.tools.ee.osgiminimum11_1.0.200.v20160915-0852/'/>
+        <property name='file.name' value='/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.api.tools.ee.osgiminimum11_1.0.200.v20160915-0852'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.hamcrest.core' version='1.3.0.v201303031735'>
+      <properties size='2'>
+        <property name='artifact.size' value='45646'/>
+        <property name='download.size' value='45646'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.hamcrest.core_1.3.0.v201303031735.jar'/>
+        <property name='file.name' value='/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.hamcrest.core_1.3.0.v201303031735.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.objectweb.asm' version='5.0.4'>
+      <properties size='2'>
+        <property name='artifact.size' value='53391'/>
+        <property name='download.size' value='53391'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.objectweb.asm_5.0.4.jar'/>
+        <property name='file.name' value='/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.objectweb.asm_5.0.4.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.objectweb.asm.tree' version='5.0.4'>
+      <properties size='2'>
+        <property name='artifact.size' value='29176'/>
+        <property name='download.size' value='29176'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.objectweb.asm.tree_5.0.4.jar'/>
+        <property name='file.name' value='/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.objectweb.asm.tree_5.0.4.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.pde.launching' version='3.6.400.v20160915-0852'>
+      <properties size='2'>
+        <property name='artifact.size' value='117493'/>
+        <property name='download.size' value='117493'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.launching_3.6.400.v20160915-0852.jar'/>
+        <property name='file.name' value='/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.launching_3.6.400.v20160915-0852.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.pde.api.tools.ee.javase16' version='1.0.200.v20160915-0852'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.api.tools.ee.javase16_1.0.200.v20160915-0852/'/>
+        <property name='file.name' value='/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.api.tools.ee.javase16_1.0.200.v20160915-0852'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.pde.api.tools.ee.javase17' version='1.0.100.v20160915-0852'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.api.tools.ee.javase17_1.0.100.v20160915-0852/'/>
+        <property name='file.name' value='/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.api.tools.ee.javase17_1.0.100.v20160915-0852'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.ui.views.log' version='1.2.1.v20160915-0852'>
+      <properties size='2'>
+        <property name='artifact.size' value='139030'/>
+        <property name='download.size' value='139030'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.ui.views.log_1.2.1.v20160915-0852.jar'/>
+        <property name='file.name' value='/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.ui.views.log_1.2.1.v20160915-0852.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.pde.core' version='3.11.0.v20160915-0852'>
+      <properties size='2'>
+        <property name='artifact.size' value='1247818'/>
+        <property name='download.size' value='1247818'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.core_3.11.0.v20160915-0852.jar'/>
+        <property name='file.name' value='/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.core_3.11.0.v20160915-0852.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.pde.junit.runtime' version='3.5.0.v20160915-0852'>
+      <properties size='2'>
+        <property name='artifact.size' value='14611'/>
+        <property name='download.size' value='14611'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.junit.runtime_3.5.0.v20160915-0852.jar'/>
+        <property name='file.name' value='/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.junit.runtime_3.5.0.v20160915-0852.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.pde.ds.ui' version='1.1.0.v20160915-0852'>
+      <properties size='2'>
+        <property name='artifact.size' value='195060'/>
+        <property name='download.size' value='195060'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.ds.ui_1.1.0.v20160915-0852.jar'/>
+        <property name='file.name' value='/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.ds.ui_1.1.0.v20160915-0852.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.pde.api.tools.ee.cdcfoundation10' version='1.0.200.v20160915-0852'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.api.tools.ee.cdcfoundation10_1.0.200.v20160915-0852/'/>
+        <property name='file.name' value='/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.api.tools.ee.cdcfoundation10_1.0.200.v20160915-0852'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.pde.build' version='3.9.200.v20160915-0852'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.build_3.9.200.v20160915-0852/'/>
+        <property name='file.name' value='/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.build_3.9.200.v20160915-0852'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.pde' version='3.12.1.v20160915-0852'>
+      <properties size='2'>
+        <property name='artifact.size' value='61831'/>
+        <property name='download.size' value='61831'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde_3.12.1.v20160915-0852.jar'/>
+        <property name='file.name' value='/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde_3.12.1.v20160915-0852.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.pde.api.tools.ee.cdcfoundation11' version='1.0.200.v20160915-0852'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.api.tools.ee.cdcfoundation11_1.0.200.v20160915-0852/'/>
+        <property name='file.name' value='/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.api.tools.ee.cdcfoundation11_1.0.200.v20160915-0852'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.pde.api.tools.ee.j2se13' version='1.0.200.v20160915-0852'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.api.tools.ee.j2se13_1.0.200.v20160915-0852/'/>
+        <property name='file.name' value='/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.api.tools.ee.j2se13_1.0.200.v20160915-0852'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.pde.api.tools.ee.j2se14' version='1.0.200.v20160915-0852'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.api.tools.ee.j2se14_1.0.200.v20160915-0852/'/>
+        <property name='file.name' value='/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.api.tools.ee.j2se14_1.0.200.v20160915-0852'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.pde.api.tools.annotations' version='1.0.100.v20160915-0852'>
+      <properties size='2'>
+        <property name='artifact.size' value='5263'/>
+        <property name='download.size' value='5263'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.api.tools.annotations_1.0.100.v20160915-0852.jar'/>
+        <property name='file.name' value='/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.api.tools.annotations_1.0.100.v20160915-0852.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.junit' version='4.12.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='321997'/>
+        <property name='download.size' value='321997'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.junit_4.12.0.jar'/>
+        <property name='file.name' value='/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.junit_4.12.0.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.ui.trace' version='1.0.400.v20160915-0852'>
+      <properties size='2'>
+        <property name='artifact.size' value='63798'/>
+        <property name='download.size' value='63798'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.ui.trace_1.0.400.v20160915-0852.jar'/>
+        <property name='file.name' value='/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.ui.trace_1.0.400.v20160915-0852.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.pde.ua.ui' version='1.1.0.v20160915-0852'>
+      <properties size='2'>
+        <property name='artifact.size' value='444724'/>
+        <property name='download.size' value='444724'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.ua.ui_1.1.0.v20160915-0852.jar'/>
+        <property name='file.name' value='/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.ua.ui_1.1.0.v20160915-0852.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.pde.ds.annotations' version='1.0.0.v20160915-0852'>
+      <properties size='2'>
+        <property name='artifact.size' value='89845'/>
+        <property name='download.size' value='89845'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.ds.annotations_1.0.0.v20160915-0852.jar'/>
+        <property name='file.name' value='/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.ds.annotations_1.0.0.v20160915-0852.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.pde.api.tools' version='1.1.1.v20160915-0852'>
+      <properties size='2'>
+        <property name='artifact.size' value='876827'/>
+        <property name='download.size' value='876827'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.api.tools_1.1.1.v20160915-0852.jar'/>
+        <property name='file.name' value='/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.api.tools_1.1.1.v20160915-0852.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.pde.api.tools.ee.osgiminimum12' version='1.0.300.v20160915-0852'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.api.tools.ee.osgiminimum12_1.0.300.v20160915-0852/'/>
+        <property name='file.name' value='/usr/share/eclipse/droplets/eclipse-pde/eclipse/plugins/org.eclipse.pde.api.tools.ee.osgiminimum12_1.0.300.v20160915-0852'/>
+      </repositoryProperties>
+    </artifact>
+  </artifacts>
+</repository>

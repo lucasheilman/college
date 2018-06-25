@@ -1,0 +1,32 @@
+\hypertarget{trunc_8cpp}{}\section{sound/trunc.cpp File Reference}
+\label{trunc_8cpp}\index{sound/trunc.\+cpp@{sound/trunc.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{trunc_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{trunc_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\index{trunc.\+cpp@{trunc.\+cpp}!main@{main}}
+\index{main@{main}!trunc.\+cpp@{trunc.\+cpp}}
+\subsubsection[{main()}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{trunc_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+5 \{
+6   \textcolor{keywordtype}{int} x = 1;
+7   \textcolor{keywordtype}{signed} \textcolor{keywordtype}{short} val1, val2;
+8   \textcolor{keywordflow}{while} ( cin >> val1 >> val2 ) \{
+9     ++x;
+10     \textcolor{keywordflow}{if} (x > 100000)
+11       cout << val1 << \textcolor{stringliteral}{" "} << val2 << \textcolor{stringliteral}{" "};
+12   \}
+13   cout << endl;
+14   \textcolor{keywordflow}{return} 0;
+15 \}
+\end{DoxyCode}

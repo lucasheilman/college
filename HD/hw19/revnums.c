@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main(){
+  int times;
+  printf("Enter a non-negative integer: ");
+  scanf("%d",&times);
+  float arr[times];
+  int i;
+  printf("Enter %d floating point values: \n",times);
+  for (i=0;i<times;i++){
+    printf("%s","");
+    scanf("%f",&arr[i]);
+  }
+  printf("%s","In reverse order, your input is: \n");
+  int a;
+  for (a=times-1;a>=0;a=a-1){
+    printf("%f\n",arr[a]);
+  }
+  return 0;
+}

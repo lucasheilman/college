@@ -1,0 +1,45 @@
+(scan&parse "let z = 5 in let x = 3 in let y = -(x,1) in let x = 4 in -(z,-(x,y))")
+(vop (let-exp (var-exp z) (const-exp 5) (let-exp (var-exp x) (const-exp 3) (let-exp (var-exp y) (diff-exp (var-exp x) (const-exp 1)) (let-exp (var-exp x) (const-exp 4) (diff-exp (var-exp x) (diff-exp (var-exp x) (var-exp y))))))))
+(vo (let-exp (var-exp z) (const-exp 5) (let-exp (var-exp x) (const-exp 3) (let-exp (var-exp y) (const-exp (diff-exp (var-exp x) (const-exp 1))) (let-exp (var-exp x) (const-exp 4) (diff-exp (var-exp x) (const-exp (diff-exp (var-exp x) (var-exp y)))))))) ie)
+    val1 --> (vo (const-exp 5) ie)
+        5
+    (vo (let-exp (var-exp x) (const-exp 3) (let-exp (var-exp y) (diff-exp (var-exp x) (const-exp 1)) (let-exp (var-exp x) (const-exp 4) (diff-exp (var-exp x) (diff-exp (var-exp x) (var-exp y)))))) (extend-env z (num-val 5) ie))
+        val2 --> (vo (const-exp 3) (extend-env z (num-val 5) ie))
+            3
+        (vo (let-exp (var-exp y) (diff-exp (var-exp x) (const-exp 1)) (let-exp (var-exp x) (const-exp 4) (diff-exp (var-exp x) (diff-exp (var-exp x) (var-exp y))))) (extend-env x (num-val 3) (extend-env z (num-val 5) ie)))
+            val3 --> (vo (diff-exp (var-exp x) (const-exp 1)) (extend-env x (num-val 3) (extend-env z (num-val 5) ie)))
+                val31 --> (vo (var-exp x) (extend-env x (num-val 3) (extend-env z (num-val 5) ie)))
+                    (apply-env (extend-env x (num-val 3) (extend-env z (num-val 5) ie)) x)
+                    (num-val 3)
+                val32 --> (vo (const-exp 1) (extend-env x (num-val 3) (extend-env z (num-val 5) ie)))
+                    (num-val 1)
+                num31 --> (expval --> num (num-val 3))
+                    3
+                num32 --> (expval --> num (num-val 1))
+                    1
+                (num-val (- num31 num32)) = (num-val (- 3 1)) = (num-val 2)
+                (vo (let-exp (var-exp x) (const-exp 4) (diff-exp (var-exp x) (diff-exp (var-exp x) (var-exp y)))) (extend-env y (num-val 2) (extend-env x (num-val 3) (extend-env z (num-val 5) ie))))
+                    val4 --> (vo (const-exp 4) (extend-env y (num-val 2) (extend-env x (num-val 3) (extend-env z (num-val 5) ie))))
+                        4
+                    (vo (diff-exp (var-exp x) (diff-exp (var-exp x) (var-exp y))) (extend-env x (num-val 4)(extend-env y (num-val 2) (extend-env x (num-val 3) (extend-env z (num-val 5) ie)))))
+                        val5 --> (vo (diff-exp (var-exp x) (const-exp 1)) (extend-env x (num-val 3) (extend-env z (num-val 5) ie)))
+                            val51 --> (vo (var-exp z) (extend-env x (num-val 4) (extend-env y (num-val 2) (extend-env x (num-val 3) (extend-env z (num-val 5) ie)))))
+                                (apply-env (extend-env x (num-val 4) (extend-env y (num-val 2) (extend-env x (num-val 3) (extend-env z (num-val 5) ie)))) z)
+                                (num-val 5)
+                            val52 --> (vo (diff-exp (var-exp x) (var-exp y)) (extend-env x (num-val 4)(extend-env y (num-val 2) (extend-env x (num-val 3) (extend-env z (num-val 5) ie)))))
+                                val521 --> (vo (diff-exp (var-exp x) (const-exp y)) (extend-env x (num-val 4)(extend-env y (num-val 2) (extend-env x (num-val 3) (extend-env z (num-val 5) ie)))))
+                                    val5211 --> (vo (var-exp x) (extend-env x (num-val 4)(extend-env y (num-val 2) (extend-env x (num-val 3) (extend-env z (num-val 5) ie)))))
+                                        (apply-env (extend-env x (num-val 4)(extend-env y (num-val 2) (extend-env x (num-val 3) (extend-env z (num-val 5) ie))))) x)
+                                        (num-val 4)
+                                    val5212 --> (vo (var-exp y) (extend-env x (num-val 4)(extend-env y (num-val 2) (extend-env x (num-val 3) (extend-env z (num-val 5) ie))))))
+                                        (num-val 2)
+                                    num5211 --> (expval --> num (num-val 4))
+                                        4
+                                    num5211 --> (expval --> num (num-val 2))
+                                        2
+                                (num-val (- num5211 num5211)) = (num-val (- 4 2)) = (num-val 2)
+                            num51 --> (expval --> num (num-val 5))
+                                5
+                            num52 --> (expval --> num (num-val 2))
+                                2
+                            (num-val (- num51 num52)) = (num-val (- 5 2)) = (num-val 3)

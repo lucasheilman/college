@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+char * doublestring(const char * str){
+    int len;
+    for (len = 0;str[len]!='\0';len++){}
+    if(len==0){
+        return 0;
+    }
+    else{
+        char * newstr = new char[len*2];
+        for(int i = 0;i<len;i++){
+            newstr[i]=str[i];
+            newstr[i+len]=str[i];
+        }
+        return newstr;
+    }
+}
+int main(){
+  cout << doublestring("hello") << " " << doublestring("") << endl;
+}

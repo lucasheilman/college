@@ -1,0 +1,31 @@
+\hypertarget{avg_8cpp}{}\section{hw7/avg.cpp File Reference}
+\label{avg_8cpp}\index{hw7/avg.\+cpp@{hw7/avg.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{avg_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{avg_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\index{avg.\+cpp@{avg.\+cpp}!main@{main}}
+\index{main@{main}!avg.\+cpp@{avg.\+cpp}}
+\subsubsection[{main()}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{avg_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+4           \{
+5   \textcolor{keywordtype}{int} x, count = 0, sum = 0;
+6   \textcolor{keywordflow}{while} ( cin >> x ) \{
+7     sum = sum + x;
+8     count += 1;
+9   \}
+10   \textcolor{keywordtype}{float} avg;
+11   avg = sum/count;
+12   cout << avg << endl;
+13 \}
+\end{DoxyCode}

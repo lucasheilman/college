@@ -1,0 +1,15 @@
+-startup
+plugins/org.eclipse.equinox.launcher_1.3.200.v20160915-0852.jar
+--launcher.library
+plugins/org.eclipse.equinox.launcher.gtk.linux.x86_64_1.1.400.v20160915-0852
+-showsplash
+org.eclipse.platform
+--launcher.defaultAction
+openFile
+--launcher.appendVmargs
+-configuration
+../../../home/users/heilma1/.eclipse/org.eclipse.platform_793567567_linux_gtk_x86_64/configuration
+-vmargs
+-Dosgi.requiredJavaVersion=1.8
+-Xms40m
+-Xmx512m

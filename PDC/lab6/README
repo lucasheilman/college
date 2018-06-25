@@ -1,0 +1,28 @@
+rns202-12.cs.stolaf.edu% bin/sieve 100 4
+25 primes are less than or equal to 100
+rns202-12.cs.stolaf.edu% bin/sieve 10000 4
+1229 primes are less than or equal to 10000
+rns202-12.cs.stolaf.edu% bin/sieve 100000000 4
+5761455 primes are less than or equal to 100000000
+rns202-12.cs.stolaf.edu% bin/sieve 1000000000000000000 4
+<range> Must be an integer greater than or equal to 2.sieve <prime max> <thread count>
+<prime max> is upper bound on value of primes found.
+<thread count> is the number of threads to use.
+rns202-12.cs.stolaf.edu% bin/sieve 10000000000000 4
+65997083 primes are less than or equal to 1316134912
+
+rns202-12.cs.stolaf.edu% pwd
+/home/users/heilma1/PDC/lab6/omprimes2
+rns202-12.cs.stolaf.edu% time bin/sieve 1000000000 4
+50847534 primes are less than or equal to 1000000000
+26.001u 1.058s 0:07.00 386.4%	0+0k 0+0io 0pf+0w
+rns202-12.cs.stolaf.edu% cd ..
+rns202-12.cs.stolaf.edu% cd omprimes1
+rns202-12.cs.stolaf.edu% time bin/sieve 1000000000 4
+50847534 primes are less than or equal to 1000000000
+11.337u 0.852s 0:12.19 99.9%	0+0k 0+0io 0pf+0w
+rns202-12.cs.stolaf.edu% 
+
+The primes ran faster on the link machines, probably because there are more total cores
+
+omprimes3 ran more than 4 times faster than omprimes2

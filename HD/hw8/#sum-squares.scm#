@@ -1,0 +1,18 @@
+;;; print square roots in Scheme language.  R. Brown, 9/2010
+
+(define sum-squares
+  (lambda (n)
+    (define n 0)    (if (>  n 1) 1
+	(begin
+	  (display n)
+	  (display "\t")
+	  (* n n (sum-squares (- n 1)))
+	  (newline)
+	  (sum-squares (+ n 1))))))
+			
+
+(display "(n\tsum of squares n)")
+(newline)
+(display "----------")
+(newline)
+(sum-squares 0)

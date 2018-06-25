@@ -1,0 +1,197 @@
+\hypertarget{classDog}{}\section{Dog Class Reference}
+\label{classDog}\index{Dog@{Dog}}
+
+
+{\ttfamily \#include $<$Dog.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDog_a849ca73c5b2e87a758e5544872d33abd}{Dog} (const char $\ast$n, int a)
+\item 
+\hyperlink{classDog_a16e01978bb90b2989ee3da3e87071b1b}{Dog} ()
+\item 
+\hyperlink{classDog_a52127b82e04a96c5966052f5b38bdfdb}{Dog} (const \hyperlink{classDog}{Dog} \&dog)
+\item 
+\hyperlink{classDog_aeacf410641eab28eabea6bc5269eb4ef}{$\sim$\+Dog} ()
+\item 
+\hyperlink{classDog}{Dog} \& \hyperlink{classDog_a333528bafc1505d2f4a5e68b9f4195db}{operator=} (const \hyperlink{classDog}{Dog} \&dog)
+\item 
+void \hyperlink{classDog_af9034303a41074e132f093e5d75c6074}{display} (ostream \&ostr) const 
+\item 
+const char $\ast$ \hyperlink{classDog_a4c645a2892c0f2d0fbbd5d580c3586ea}{get\+\_\+name} (void) const 
+\item 
+int \hyperlink{classDog_a36666d8ce622714d77853556edb6c3c1}{get\+\_\+age} (void) const 
+\item 
+void \hyperlink{classDog_a1565c21895d74e5f3ab1e024ef27f6a7}{set\+\_\+name} (const char $\ast$new\+\_\+name)
+\item 
+void \hyperlink{classDog_adbf57a09358f044cbb95df7af6d5816b}{birthday} (void)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{classDog_ae88239590f01f57d6b01d338a0e48378}{helper} (const char $\ast$s)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{classDog_a9f014dbeb42821cdb23f08eefa161c0a}{name}
+\item 
+int \hyperlink{classDog_a06f3f35c8fe0c80824156dcf9562b1cd}{age}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classDog_a849ca73c5b2e87a758e5544872d33abd}{}\index{Dog@{Dog}!Dog@{Dog}}
+\index{Dog@{Dog}!Dog@{Dog}}
+\subsubsection[{Dog(const char $\ast$n, int a)}]{\setlength{\rightskip}{0pt plus 5cm}Dog\+::\+Dog (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{n, }
+\item[{int}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classDog_a849ca73c5b2e87a758e5544872d33abd}
+
+\begin{DoxyCode}
+18 \{ \hyperlink{classDog_a06f3f35c8fe0c80824156dcf9562b1cd}{age} = a;  \hyperlink{classDog_a9f014dbeb42821cdb23f08eefa161c0a}{name} = \hyperlink{classDog_ae88239590f01f57d6b01d338a0e48378}{helper}(n); \}
+\end{DoxyCode}
+\hypertarget{classDog_a16e01978bb90b2989ee3da3e87071b1b}{}\index{Dog@{Dog}!Dog@{Dog}}
+\index{Dog@{Dog}!Dog@{Dog}}
+\subsubsection[{Dog()}]{\setlength{\rightskip}{0pt plus 5cm}Dog\+::\+Dog (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classDog_a16e01978bb90b2989ee3da3e87071b1b}
+
+\begin{DoxyCode}
+19 \{ \hyperlink{classDog_a06f3f35c8fe0c80824156dcf9562b1cd}{age} = 0;  \hyperlink{classDog_a9f014dbeb42821cdb23f08eefa161c0a}{name} = \hyperlink{classDog_ae88239590f01f57d6b01d338a0e48378}{helper}(\textcolor{stringliteral}{""}); \}
+\end{DoxyCode}
+\hypertarget{classDog_a52127b82e04a96c5966052f5b38bdfdb}{}\index{Dog@{Dog}!Dog@{Dog}}
+\index{Dog@{Dog}!Dog@{Dog}}
+\subsubsection[{Dog(const Dog \&dog)}]{\setlength{\rightskip}{0pt plus 5cm}Dog\+::\+Dog (
+\begin{DoxyParamCaption}
+\item[{const {\bf Dog} \&}]{dog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classDog_a52127b82e04a96c5966052f5b38bdfdb}
+
+\begin{DoxyCode}
+20 \{ \hyperlink{classDog_a06f3f35c8fe0c80824156dcf9562b1cd}{age} = dog.\hyperlink{classDog_a06f3f35c8fe0c80824156dcf9562b1cd}{age};  \hyperlink{classDog_a9f014dbeb42821cdb23f08eefa161c0a}{name} = \hyperlink{classDog_ae88239590f01f57d6b01d338a0e48378}{helper}(dog.\hyperlink{classDog_a9f014dbeb42821cdb23f08eefa161c0a}{name}); \}
+\end{DoxyCode}
+\hypertarget{classDog_aeacf410641eab28eabea6bc5269eb4ef}{}\index{Dog@{Dog}!````~Dog@{$\sim$\+Dog}}
+\index{````~Dog@{$\sim$\+Dog}!Dog@{Dog}}
+\subsubsection[{$\sim$\+Dog()}]{\setlength{\rightskip}{0pt plus 5cm}Dog\+::$\sim$\+Dog (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classDog_aeacf410641eab28eabea6bc5269eb4ef}
+
+\begin{DoxyCode}
+18           \{
+19   \textcolor{comment}{//cout << "~Dog() called" << endl;}
+20   \textcolor{keywordflow}{if} (\hyperlink{classDog_a9f014dbeb42821cdb23f08eefa161c0a}{name} != 0)
+21     \textcolor{keyword}{delete} [] \hyperlink{classDog_a9f014dbeb42821cdb23f08eefa161c0a}{name};
+22   \hyperlink{classDog_a9f014dbeb42821cdb23f08eefa161c0a}{name} = 0;
+23 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classDog_adbf57a09358f044cbb95df7af6d5816b}{}\index{Dog@{Dog}!birthday@{birthday}}
+\index{birthday@{birthday}!Dog@{Dog}}
+\subsubsection[{birthday(void)}]{\setlength{\rightskip}{0pt plus 5cm}void Dog\+::birthday (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classDog_adbf57a09358f044cbb95df7af6d5816b}
+
+\begin{DoxyCode}
+31 \{ \hyperlink{classDog_a06f3f35c8fe0c80824156dcf9562b1cd}{age}++; \}
+\end{DoxyCode}
+\hypertarget{classDog_af9034303a41074e132f093e5d75c6074}{}\index{Dog@{Dog}!display@{display}}
+\index{display@{display}!Dog@{Dog}}
+\subsubsection[{display(ostream \&ostr) const }]{\setlength{\rightskip}{0pt plus 5cm}void Dog\+::display (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{ostr}
+\end{DoxyParamCaption}
+) const}\label{classDog_af9034303a41074e132f093e5d75c6074}
+\hypertarget{classDog_a36666d8ce622714d77853556edb6c3c1}{}\index{Dog@{Dog}!get\+\_\+age@{get\+\_\+age}}
+\index{get\+\_\+age@{get\+\_\+age}!Dog@{Dog}}
+\subsubsection[{get\+\_\+age(void) const }]{\setlength{\rightskip}{0pt plus 5cm}int Dog\+::get\+\_\+age (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classDog_a36666d8ce622714d77853556edb6c3c1}
+
+\begin{DoxyCode}
+28 \{ \textcolor{keywordflow}{return} \hyperlink{classDog_a06f3f35c8fe0c80824156dcf9562b1cd}{age}; \}
+\end{DoxyCode}
+\hypertarget{classDog_a4c645a2892c0f2d0fbbd5d580c3586ea}{}\index{Dog@{Dog}!get\+\_\+name@{get\+\_\+name}}
+\index{get\+\_\+name@{get\+\_\+name}!Dog@{Dog}}
+\subsubsection[{get\+\_\+name(void) const }]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ Dog\+::get\+\_\+name (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classDog_a4c645a2892c0f2d0fbbd5d580c3586ea}
+
+\begin{DoxyCode}
+27 \{ \textcolor{keywordflow}{return} \hyperlink{classDog_a9f014dbeb42821cdb23f08eefa161c0a}{name}; \}
+\end{DoxyCode}
+\hypertarget{classDog_ae88239590f01f57d6b01d338a0e48378}{}\index{Dog@{Dog}!helper@{helper}}
+\index{helper@{helper}!Dog@{Dog}}
+\subsubsection[{helper(const char $\ast$s)}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ Dog\+::helper (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{classDog_ae88239590f01f57d6b01d338a0e48378}
+
+\begin{DoxyCode}
+11                                   \{
+12   \textcolor{keywordtype}{char} *copy = \textcolor{keyword}{new} \textcolor{keywordtype}{char}[strlen(str) + 1];
+13   strcpy(copy, str);
+14   \textcolor{keywordflow}{return} copy;
+15 \}
+\end{DoxyCode}
+\hypertarget{classDog_a333528bafc1505d2f4a5e68b9f4195db}{}\index{Dog@{Dog}!operator=@{operator=}}
+\index{operator=@{operator=}!Dog@{Dog}}
+\subsubsection[{operator=(const Dog \&dog)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Dog} \& Dog\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Dog} \&}]{dog}
+\end{DoxyParamCaption}
+)}\label{classDog_a333528bafc1505d2f4a5e68b9f4195db}
+
+\begin{DoxyCode}
+26                                   \{
+27   \textcolor{keyword}{delete} [] \hyperlink{classDog_a9f014dbeb42821cdb23f08eefa161c0a}{name};
+28   \hyperlink{classDog_a9f014dbeb42821cdb23f08eefa161c0a}{name} = \hyperlink{classDog_ae88239590f01f57d6b01d338a0e48378}{helper}(dog.\hyperlink{classDog_a9f014dbeb42821cdb23f08eefa161c0a}{name});
+29   \hyperlink{classDog_a06f3f35c8fe0c80824156dcf9562b1cd}{age} = dog.\hyperlink{classDog_a06f3f35c8fe0c80824156dcf9562b1cd}{age};
+30   \textcolor{keywordflow}{return} *\textcolor{keyword}{this};
+31 \}
+\end{DoxyCode}
+\hypertarget{classDog_a1565c21895d74e5f3ab1e024ef27f6a7}{}\index{Dog@{Dog}!set\+\_\+name@{set\+\_\+name}}
+\index{set\+\_\+name@{set\+\_\+name}!Dog@{Dog}}
+\subsubsection[{set\+\_\+name(const char $\ast$new\+\_\+name)}]{\setlength{\rightskip}{0pt plus 5cm}void Dog\+::set\+\_\+name (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{new\+\_\+name}
+\end{DoxyParamCaption}
+)}\label{classDog_a1565c21895d74e5f3ab1e024ef27f6a7}
+
+\begin{DoxyCode}
+34                                        \{
+35   \textcolor{keyword}{delete} [] \hyperlink{classDog_a9f014dbeb42821cdb23f08eefa161c0a}{name};
+36   \hyperlink{classDog_a9f014dbeb42821cdb23f08eefa161c0a}{name} = \hyperlink{classDog_ae88239590f01f57d6b01d338a0e48378}{helper}(new\_name);
+37 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classDog_a06f3f35c8fe0c80824156dcf9562b1cd}{}\index{Dog@{Dog}!age@{age}}
+\index{age@{age}!Dog@{Dog}}
+\subsubsection[{age}]{\setlength{\rightskip}{0pt plus 5cm}int Dog\+::age\hspace{0.3cm}{\ttfamily [protected]}}\label{classDog_a06f3f35c8fe0c80824156dcf9562b1cd}
+\hypertarget{classDog_a9f014dbeb42821cdb23f08eefa161c0a}{}\index{Dog@{Dog}!name@{name}}
+\index{name@{name}!Dog@{Dog}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ Dog\+::name\hspace{0.3cm}{\ttfamily [protected]}}\label{classDog_a9f014dbeb42821cdb23f08eefa161c0a}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+hw1/\hyperlink{Dog_8h}{Dog.\+h}\item 
+hw1/\hyperlink{Dog_8cpp}{Dog.\+cpp}\end{DoxyCompactItemize}

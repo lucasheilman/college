@@ -1,0 +1,82 @@
+\hypertarget{reverb1_8cpp}{}\section{sound/reverb1.cpp File Reference}
+\label{reverb1_8cpp}\index{sound/reverb1.\+cpp@{sound/reverb1.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{reverb1_8cpp_a11ec8ee1f25b4a610480498f9e15b151}{quieter} (signed short val\mbox{[}$\,$\mbox{]}, signed short val2\mbox{[}$\,$\mbox{]}, signed short val3\mbox{[}$\,$\mbox{]})
+\item 
+int \hyperlink{reverb1_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{reverb1_8cpp_ad67e07841d1233e596e6f822a3c81f6b}{datalen} = 3453884/4
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{reverb1_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\index{reverb1.\+cpp@{reverb1.\+cpp}!main@{main}}
+\index{main@{main}!reverb1.\+cpp@{reverb1.\+cpp}}
+\subsubsection[{main()}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{reverb1_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+27 \{
+28   \textcolor{keywordtype}{signed} \textcolor{keywordtype}{short} val[\hyperlink{reverb1_8cpp_ad67e07841d1233e596e6f822a3c81f6b}{datalen}+100];  \textcolor{comment}{// make an array to hold the data}
+29   \textcolor{keywordtype}{signed} \textcolor{keywordtype}{short} val2[\hyperlink{reverb1_8cpp_ad67e07841d1233e596e6f822a3c81f6b}{datalen}+100];
+30   \textcolor{keywordtype}{signed} \textcolor{keywordtype}{short} val3[\hyperlink{reverb1_8cpp_ad67e07841d1233e596e6f822a3c81f6b}{datalen}+200];
+31 
+32   cin.read( (\textcolor{keywordtype}{char} *)val, 2*\hyperlink{reverb1_8cpp_ad67e07841d1233e596e6f822a3c81f6b}{datalen}); \textcolor{comment}{// read the data into the array}
+33   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < (\hyperlink{reverb1_8cpp_ad67e07841d1233e596e6f822a3c81f6b}{datalen}+100); i++)\{
+34     val2[i] = val[i];
+35   \}
+36   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < (\hyperlink{reverb1_8cpp_ad67e07841d1233e596e6f822a3c81f6b}{datalen}+200); i++)\{
+37     val3[i] = val[i];
+38   \}
+39 
+40   \hyperlink{reverb1_8cpp_a11ec8ee1f25b4a610480498f9e15b151}{quieter}(val,val2,val3);  \textcolor{comment}{// modify the array elements}
+41 
+42   cout.write( (\textcolor{keywordtype}{char} *)val, 2*(\hyperlink{reverb1_8cpp_ad67e07841d1233e596e6f822a3c81f6b}{datalen}+200) ); \textcolor{comment}{// write the data back out}
+43   \textcolor{keywordflow}{return} 0;
+44 \}
+\end{DoxyCode}
+\hypertarget{reverb1_8cpp_a11ec8ee1f25b4a610480498f9e15b151}{}\index{reverb1.\+cpp@{reverb1.\+cpp}!quieter@{quieter}}
+\index{quieter@{quieter}!reverb1.\+cpp@{reverb1.\+cpp}}
+\subsubsection[{quieter(signed short val[], signed short val2[], signed short val3[])}]{\setlength{\rightskip}{0pt plus 5cm}void quieter (
+\begin{DoxyParamCaption}
+\item[{signed short}]{val\mbox{[}$\,$\mbox{]}, }
+\item[{signed short}]{val2\mbox{[}$\,$\mbox{]}, }
+\item[{signed short}]{val3\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{reverb1_8cpp_a11ec8ee1f25b4a610480498f9e15b151}
+
+\begin{DoxyCode}
+7 \{
+8 
+9   \textcolor{keywordflow}{for}( \textcolor{keywordtype}{int} i = 100; i < \hyperlink{reverb1_8cpp_ad67e07841d1233e596e6f822a3c81f6b}{datalen}; ++i )\{
+10     val[i+100] = val[i];
+11   \}
+12   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 100; ++i)\{
+13     val[i] = 0;
+14   \}
+15   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 200; i < \hyperlink{reverb1_8cpp_ad67e07841d1233e596e6f822a3c81f6b}{datalen}; ++i)\{
+16     val3[i+200] = val[i];
+17   \}
+18   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 200; i++)\{
+19     val3[i] = 0;
+20   \}
+21   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \hyperlink{reverb1_8cpp_ad67e07841d1233e596e6f822a3c81f6b}{datalen}; ++i)\{
+22     val[i] = val[i]+val2[i]+val3[i];
+23   \}
+24 \}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\hypertarget{reverb1_8cpp_ad67e07841d1233e596e6f822a3c81f6b}{}\index{reverb1.\+cpp@{reverb1.\+cpp}!datalen@{datalen}}
+\index{datalen@{datalen}!reverb1.\+cpp@{reverb1.\+cpp}}
+\subsubsection[{datalen}]{\setlength{\rightskip}{0pt plus 5cm}int datalen = 3453884/4}\label{reverb1_8cpp_ad67e07841d1233e596e6f822a3c81f6b}

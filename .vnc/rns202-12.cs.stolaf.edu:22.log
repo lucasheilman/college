@@ -1,0 +1,11 @@
+
+Xvnc TigerVNC 1.8.0 - built Dec  1 2017 23:21:52
+Copyright (C) 1999-2017 TigerVNC Team and many others (see README.txt)
+See http://www.tigervnc.org for information on TigerVNC.
+Underlying X server release 11903000, The X.Org Foundation
+
+
+Sun Mar  4 14:31:35 2018
+ vncext:      VNC extension running!
+ vncext:      Listening for VNC connections on all interface(s), port 5922
+ vncext:      created VNC server for screen 0

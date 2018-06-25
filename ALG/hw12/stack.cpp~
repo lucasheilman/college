@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+class Stack{
+  private int pointer = 0;
+  
+  Stack(int i){
+    int size = i;
+    int a[i];
+  }
+  
+  int push(int i){
+    a[pointer] = i;
+    cout << i << " is in spot " << pointer << endl;
+    pointer = pointer+1;
+  }
+
+  void pop(){
+    a[pointer-1] = NULL;
+    cout << "removed last val" << endl;
+    pointer = pointer - 1;
+  }
+}
+
+int main(){
+  st = Stack(5);
+  st.push(3);
+  st.push(4);
+  st.pop();
+}
+  

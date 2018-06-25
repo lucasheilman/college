@@ -1,0 +1,33 @@
+\hypertarget{octaveup_8cpp}{}\section{sound/octaveup.cpp File Reference}
+\label{octaveup_8cpp}\index{sound/octaveup.\+cpp@{sound/octaveup.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{octaveup_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{octaveup_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\index{octaveup.\+cpp@{octaveup.\+cpp}!main@{main}}
+\index{main@{main}!octaveup.\+cpp@{octaveup.\+cpp}}
+\subsubsection[{main()}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{octaveup_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+5 \{
+6   \textcolor{keywordtype}{int} x = 0;
+7   \textcolor{keywordtype}{signed} \textcolor{keywordtype}{short} val1, val2;
+8   \textcolor{keywordflow}{while} ( cin >> val1 >> val2 ) \{
+9     ++x;
+10     \textcolor{keywordflow}{if} (x%2 ==0)\{
+11       cout << val1 << \textcolor{stringliteral}{" "} << val2 << \textcolor{stringliteral}{" "};
+12     \}
+13   \}
+14   cout << endl;
+15   \textcolor{keywordflow}{return} 0;
+16 \}
+\end{DoxyCode}

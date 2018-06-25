@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int* flatten(int** deeplist, int len, int len2){
+  int* ptr = new int[len];
+  int counter = 0;
+  for (int i=0; i < len; i++){
+    for (int j=0; j < len2; j++){
+      if (deeplist[i][j]!=0){
+        ptr[counter]=deeplist[i][j];
+        counter++;
+      }
+    }
+  }
+  return ptr;
+}
+
+int main(){
+  int first[] = {0, 1, 1};
+  int second[] = {4, 5, 3};
+  int third[3];
+  int** deeplist = new int*[3];
+  deeplist[0]=first;
+  deeplist[1]=second;
+  deeplist[2]=third;
+  int* flat = flatten(deeplist,3,3);
+  for (int i=0; i < 5;i++){
+      cout << flat[i] << endl;
+  }
+  return 0;
+}

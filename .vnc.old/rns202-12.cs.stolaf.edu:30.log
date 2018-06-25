@@ -1,0 +1,47 @@
+
+Xvnc TigerVNC 1.6.0 - built Jun  2 2016 07:21:55
+Copyright (C) 1999-2015 TigerVNC Team and many others (see README.txt)
+See http://www.tigervnc.org for information on TigerVNC.
+Underlying X server release 11803000, The X.Org Foundation
+
+
+Sun Sep 25 15:38:10 2016
+ vncext:      VNC extension running!
+ vncext:      Listening for VNC connections on all interface(s), port 5930
+ vncext:      created VNC server for screen 0
+
+Sun Sep 25 15:38:46 2016
+ Connections: accepted: 130.71.250.247::64349
+ SConnection: Client needs protocol version 3.8
+ SConnection: Client requests security type VncAuth(2)
+
+Sun Sep 25 15:38:50 2016
+ VNCSConnST:  Server default pixel format depth 24 (32bpp) little-endian rgb888
+ VNCSConnST:  Client pixel format depth 8 (8bpp) color-map
+
+Sun Sep 25 15:41:27 2016
+ VNCSConnST:  Client pixel format depth 24 (32bpp) little-endian rgb888
+
+Mon Sep 26 02:43:04 2016
+ Connections: closed: 130.71.250.247::64349 (Clean disconnection)
+ EncodeManager: Framebuffer updates: 25949
+ EncodeManager:   CopyRect:
+ EncodeManager:     Copies: 2 rects, 678.216 kpixels
+ EncodeManager:             32 B (1:21195 ratio)
+ EncodeManager:   RRE:
+ EncodeManager:     Solid: 1.011 krects, 12.2645 Mpixels
+ EncodeManager:            19.6758 KiB (1:2431.05 ratio)
+ EncodeManager:   Hextile:
+ EncodeManager:     Bitmap RLE: 1.443 krects, 714.699 kpixels
+ EncodeManager:                 38.5674 KiB (1:72.8259 ratio)
+ EncodeManager:     Indexed RLE: 18.409 krects, 63.9511 Mpixels
+ EncodeManager:                  26.7834 MiB (1:9.11628 ratio)
+ EncodeManager:     Full Colour: 25.196 krects, 431.573 Mpixels
+ EncodeManager:                  300.992 MiB (1:5.47061 ratio)
+ EncodeManager:   ZRLE:
+ EncodeManager:     Bitmap RLE: 33 rects, 390.95 kpixels
+ EncodeManager:                 1.21191 KiB (1:315.347 ratio)
+ EncodeManager:     Indexed RLE: 255 rects, 5.68824 Mpixels
+ EncodeManager:                  175.946 KiB (1:31.5887 ratio)
+ EncodeManager:   Total: 46.349 krects, 515.26 Mpixels
+ EncodeManager:          328.005 MiB (1:5.93489 ratio)

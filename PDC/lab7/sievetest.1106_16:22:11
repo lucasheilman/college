@@ -1,0 +1,136 @@
+========== stl 1000000 1 ==========
+/usr/bin/time: cannot run bin/sieve: No such file or directory
+Command exited with non-zero status 127
+real 0.00
+user 0.00
+sys 0.00
+/usr/bin/time: cannot run bin/sieve: No such file or directory
+Command exited with non-zero status 127
+real 0.00
+user 0.00
+sys 0.00
+/usr/bin/time: cannot run bin/sieve: No such file or directory
+Command exited with non-zero status 127
+real 0.00
+user 0.00
+sys 0.00
+
+========== stl 1000000 4 ==========
+/usr/bin/time: cannot run bin/sieve: No such file or directory
+Command exited with non-zero status 127
+real 0.00
+user 0.00
+sys 0.00
+/usr/bin/time: cannot run bin/sieve: No such file or directory
+Command exited with non-zero status 127
+real 0.00
+user 0.00
+sys 0.00
+/usr/bin/time: cannot run bin/sieve: No such file or directory
+Command exited with non-zero status 127
+real 0.00
+user 0.00
+sys 0.00
+
+========== stl 1000000 16 ==========
+/usr/bin/time: cannot run bin/sieve: No such file or directory
+Command exited with non-zero status 127
+real 0.00
+user 0.00
+sys 0.00
+/usr/bin/time: cannot run bin/sieve: No such file or directory
+Command exited with non-zero status 127
+real 0.00
+user 0.00
+sys 0.00
+/usr/bin/time: cannot run bin/sieve: No such file or directory
+Command exited with non-zero status 127
+real 0.00
+user 0.00
+sys 0.00
+
+========== stl 1000000 32 ==========
+/usr/bin/time: cannot run bin/sieve: No such file or directory
+Command exited with non-zero status 127
+real 0.00
+user 0.00
+sys 0.00
+/usr/bin/time: cannot run bin/sieve: No such file or directory
+Command exited with non-zero status 127
+real 0.00
+user 0.00
+sys 0.00
+/usr/bin/time: cannot run bin/sieve: No such file or directory
+Command exited with non-zero status 127
+real 0.00
+user 0.00
+sys 0.00
+
+========== stl 100000000 1 ==========
+/usr/bin/time: cannot run bin/sieve: No such file or directory
+Command exited with non-zero status 127
+real 0.00
+user 0.00
+sys 0.00
+/usr/bin/time: cannot run bin/sieve: No such file or directory
+Command exited with non-zero status 127
+real 0.00
+user 0.00
+sys 0.00
+/usr/bin/time: cannot run bin/sieve: No such file or directory
+Command exited with non-zero status 127
+real 0.00
+user 0.00
+sys 0.00
+
+========== stl 100000000 4 ==========
+/usr/bin/time: cannot run bin/sieve: No such file or directory
+Command exited with non-zero status 127
+real 0.00
+user 0.00
+sys 0.00
+/usr/bin/time: cannot run bin/sieve: No such file or directory
+Command exited with non-zero status 127
+real 0.00
+user 0.00
+sys 0.00
+/usr/bin/time: cannot run bin/sieve: No such file or directory
+Command exited with non-zero status 127
+real 0.00
+user 0.00
+sys 0.00
+
+========== stl 100000000 16 ==========
+/usr/bin/time: cannot run bin/sieve: No such file or directory
+Command exited with non-zero status 127
+real 0.00
+user 0.00
+sys 0.00
+/usr/bin/time: cannot run bin/sieve: No such file or directory
+Command exited with non-zero status 127
+real 0.00
+user 0.00
+sys 0.00
+/usr/bin/time: cannot run bin/sieve: No such file or directory
+Command exited with non-zero status 127
+real 0.00
+user 0.00
+sys 0.00
+
+========== stl 100000000 32 ==========
+/usr/bin/time: cannot run bin/sieve: No such file or directory
+Command exited with non-zero status 127
+real 0.00
+user 0.00
+sys 0.00
+/usr/bin/time: cannot run bin/sieve: No such file or directory
+Command exited with non-zero status 127
+real 0.00
+user 0.00
+sys 0.00
+/usr/bin/time: cannot run bin/sieve: No such file or directory
+Command exited with non-zero status 127
+real 0.00
+user 0.00
+sys 0.00
+

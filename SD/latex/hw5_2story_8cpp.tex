@@ -1,0 +1,77 @@
+\hypertarget{hw5_2story_8cpp}{}\section{hw5/story.cpp File Reference}
+\label{hw5_2story_8cpp}\index{hw5/story.\+cpp@{hw5/story.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{hw5_2story_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{hw5_2story_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\index{hw5/story.\+cpp@{hw5/story.\+cpp}!main@{main}}
+\index{main@{main}!hw5/story.\+cpp@{hw5/story.\+cpp}}
+\subsubsection[{main()}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{hw5_2story_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+5 \{
+6   cout << \textcolor{stringliteral}{"Story\(\backslash\)nYou're walking in the woods. There's no one around, and your phone is dead. Out of the
+       corner of your eye you spot him, Shia LaBeouf. He's following you about 30 feet back. He gets down on all
+       fours and breaks into a sprint. He's gaining on you. Shia LaBeouf. What are you looking for?\(\backslash\)nPlease choose one
+       of the options:\(\backslash\)n1) your car\(\backslash\)n2) your house\(\backslash\)n Your response: "};
+7   \textcolor{keywordtype}{int} response;
+8   cin >> response;
+9   \textcolor{keywordflow}{if} (response == 1)
+10     \{
+11       cout << \textcolor{stringliteral}{"You look for your car, but you're all turned around. He's almost upon you now, and you can
+       see there's blood on his face! My god, there's blood everywhere! Running for your life from Shia LaBeouf He's
+       brandishing a knife, it's Shia LaBeouf. Lurking in the shadows Hollywood superstar Shia LaBeouf. Living in
+       the woods, Shia LaBeouf. Killing for sport, Shia LaBeouf. Eating all the bodies. Actual cannibal Shia
+       LaBeouf. Now it's dark and you seem to have lost him, but you're hopelessly lost yourself. Stranded with a
+       murderer. What do you creep silently through?\(\backslash\)nPlease choose one of the options:\(\backslash\)n1) the bushes\(\backslash\)n2) the underbrush
+      \(\backslash\)n Your response: "};
+12       cin >> response;
+13       \textcolor{keywordflow}{if} (response == 2)
+14     \{
+15       cout << \textcolor{stringliteral}{"You creep silently through the underbrush. A-ha! What's in the distance?\(\backslash\)nPlease choose one
+       of the options:\(\backslash\)n1) a small cottage\(\backslash\)n2) a lighthouse\(\backslash\)n Your response: "};
+16       cin >> response;
+17       \textcolor{keywordflow}{if} (response == 1)
+18         \{
+19           cout << \textcolor{stringliteral}{"In the distance, a small cottage with a light on. Hope! You move stealthily toward it,
+       but your leg! AH! It's caught in a bear trap! Gnawing off your leg, quiet, quiet. Limping toward the cottage,
+       quiet quiet. Now you're on the doorstep, sitting inside, Shia LaBeouf. Sharpening an ax, Shia LaBeouf. But
+       he doesn't hear you enter, Shia LaBeouf. You're sneaking up behind him. Strangeling superstar Shia LaBeouf.
+       Fighting for your life with Shia LaBeouf, wrestling a knife from Shia LaBeouf, stab it in his kidney. Safe
+       at last from Shia LaBeouf. You limp into the dark woods, blood oozing from your stump leg. But you have won.
+       You have beaten Shia LaBeouf. Wait! He isn't dead! Shia Surprise! There's a gun to your head, and death in
+       his eyes. But what can you do?\(\backslash\)nPlease choose one of the options:\(\backslash\)n1) Karate\(\backslash\)n2) Jiu Jitsu\(\backslash\)nYour response: "};
+20           cin >> response;
+21           \textcolor{keywordflow}{if} (response == 2)
+22         \{
+23           cout << \textcolor{stringliteral}{"But you can do Jiu Jitsu. Body slam superstar Shia LaBeouf. Legendary fight with Shia
+       LaBeouf. Normal Tuesday night for Shia LaBeouf. You try to swing an axe at Shia LaBeouf, but blood is draining
+       fast from your stump leg. He's dodging every swipe, he parries to the left. You counter to the right, you
+       catch him in the neck. You're chopping off his head now. You have just decapitated Shia LaBeouf. His head
+       topples to the floor, expressionless. You fall to your knees and catch your breath. You're finally safe from
+       Shia LaBeouf.\(\backslash\)nCongratulations, you have made it safely back to Danika the sloth.\(\backslash\)n
+      https://www.youtube.com/watch?v=o0u4M6vppCI"} << endl;
+24           \textcolor{keywordflow}{return} 0;
+25         \}
+26           cout << \textcolor{stringliteral}{"You don't know Karate! So you died"} << endl;
+27           \textcolor{keywordflow}{return} 0;
+28         \}
+29       cout << \textcolor{stringliteral}{"The lighthouse blinded you! So you died"} << endl;
+30       \textcolor{keywordflow}{return} 0;
+31     \}
+32       cout << \textcolor{stringliteral}{"The bushes are poisonous! So you died"} << endl;
+33       \textcolor{keywordflow}{return} 0;
+34     \}
+35   cout << \textcolor{stringliteral}{"Your house is nowhere near you! So you died"} << endl;
+36   \textcolor{keywordflow}{return} 0;
+37 \}
+\end{DoxyCode}

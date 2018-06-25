@@ -1,0 +1,12 @@
+Only in /home/lucas/pp3-mkpatch/work/linux-4.14.37: .11415.d
+Only in /home/lucas/pp3-mkpatch/work/linux-4.14.37: .13334.d
+Files dist/linux-4.14.37/arch/x86/entry/syscalls/syscall_32.tbl and /home/lucas/pp3-mkpatch/work/linux-4.14.37/arch/x86/entry/syscalls/syscall_32.tbl differ
+Files dist/linux-4.14.37/arch/x86/entry/syscalls/syscall_64.tbl and /home/lucas/pp3-mkpatch/work/linux-4.14.37/arch/x86/entry/syscalls/syscall_64.tbl differ
+Only in /home/lucas/pp3-mkpatch/work/linux-4.14.37/certs: signing_key.pem
+Only in /home/lucas/pp3-mkpatch/work/linux-4.14.37/certs: signing_key.x509
+Only in /home/lucas/pp3-mkpatch/work/linux-4.14.37/certs: x509.genkey
+Only in /home/lucas/pp3-mkpatch/work/linux-4.14.37: .config
+Only in /home/lucas/pp3-mkpatch/work/linux-4.14.37: first.config
+Files dist/linux-4.14.37/include/linux/sched.h and /home/lucas/pp3-mkpatch/work/linux-4.14.37/include/linux/sched.h differ
+Files dist/linux-4.14.37/kernel/fork.c and /home/lucas/pp3-mkpatch/work/linux-4.14.37/kernel/fork.c differ
+Files dist/linux-4.14.37/kernel/sys.c and /home/lucas/pp3-mkpatch/work/linux-4.14.37/kernel/sys.c differ

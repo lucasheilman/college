@@ -1,0 +1,86 @@
+
+Xvnc TigerVNC 1.8.0 - built Aug  7 2017 01:32:32
+Copyright (C) 1999-2017 TigerVNC Team and many others (see README.txt)
+See http://www.tigervnc.org for information on TigerVNC.
+Underlying X server release 11903000, The X.Org Foundation
+
+
+Wed Oct 11 13:21:05 2017
+ vncext:      VNC extension running!
+ vncext:      Listening for VNC connections on all interface(s), port 5920
+ vncext:      created VNC server for screen 0
+/usr/bin/xterm: cannot load font '-misc-fixed-medium-r-semicondensed--13-120-75-75-c-60-iso10646-1'
+
+Wed Oct 11 13:21:11 2017
+ Connections: accepted: 130.71.250.232::51792
+ SConnection: Client needs protocol version 3.8
+ SConnection: Client requests security type VncAuth(2)
+
+Wed Oct 11 13:21:16 2017
+ VNCSConnST:  Server default pixel format depth 24 (32bpp) little-endian rgb888
+ VNCSConnST:  Client pixel format depth 8 (8bpp) color-map
+ VNCSConnST:  Client pixel format depth 24 (32bpp) little-endian rgb888
+
+Wed Oct 11 13:22:57 2017
+ Connections: closed: 130.71.250.232::51792 (Clean disconnection)
+ EncodeManager: Framebuffer updates: 93
+ EncodeManager:   RRE:
+ EncodeManager:     Solid: 21 rects, 67.174 kpixels
+ EncodeManager:            420 B (1:640.352 ratio)
+ EncodeManager:   Hextile:
+ EncodeManager:     Bitmap RLE: 42 rects, 101.52 kpixels
+ EncodeManager:                 12.666 KiB (1:31.348 ratio)
+ EncodeManager:     Indexed RLE: 19 rects, 382.352 kpixels
+ EncodeManager:                  21.0986 KiB (1:70.8001 ratio)
+ EncodeManager:     Full Colour: 28 rects, 738.848 kpixels
+ EncodeManager:                  365.312 KiB (1:7.90135 ratio)
+ EncodeManager:   ZRLE:
+ EncodeManager:     Indexed RLE: 15 rects, 786.432 kpixels
+ EncodeManager:                  27.0254 KiB (1:28.4242 ratio)
+ EncodeManager:   Total: 125 rects, 2.07633 Mpixels
+ EncodeManager:          426.512 KiB (1:13.6177 ratio)
+ ComparingUpdateTracker: 1.57973 Mpixels in / 878.364 kpixels out
+ ComparingUpdateTracker: (1:1.79849 ratio)
+
+Wed Oct 11 13:28:20 2017
+ Connections: accepted: 130.71.250.232::51814
+ SConnection: Client needs protocol version 3.8
+ SConnection: Client requests security type VncAuth(2)
+
+Wed Oct 11 13:28:24 2017
+ VNCSConnST:  Server default pixel format depth 24 (32bpp) little-endian rgb888
+ VNCSConnST:  Client pixel format depth 8 (8bpp) color-map
+
+Wed Oct 11 13:30:28 2017
+ VNCSConnST:  Client pixel format depth 24 (32bpp) little-endian rgb888
+
+Wed Oct 11 13:33:49 2017
+ Connections: closed: 130.71.250.232::51814 (Clean disconnection)
+ EncodeManager: Framebuffer updates: 534
+ EncodeManager:   CopyRect:
+ EncodeManager:     Copies: 39 rects, 2.59726 Mpixels
+ EncodeManager:             624 B (1:4332.78 ratio)
+ EncodeManager:   RRE:
+ EncodeManager:     Solid: 111 rects, 958.108 kpixels
+ EncodeManager:            2.03906 KiB (1:675.355 ratio)
+ EncodeManager:   Hextile:
+ EncodeManager:     Bitmap RLE: 169 rects, 172.19 kpixels
+ EncodeManager:                 22.9727 KiB (1:29.3652 ratio)
+ EncodeManager:     Indexed RLE: 320 rects, 3.7479 Mpixels
+ EncodeManager:                  1.47677 MiB (1:9.68385 ratio)
+ EncodeManager:     Full Colour: 222 rects, 5.9357 Mpixels
+ EncodeManager:                  4.00318 MiB (1:5.65686 ratio)
+ EncodeManager:   ZRLE:
+ EncodeManager:     Bitmap RLE: 48 rects, 532.904 kpixels
+ EncodeManager:                 4.57324 KiB (1:113.918 ratio)
+ EncodeManager:     Indexed RLE: 37 rects, 1.1091 Mpixels
+ EncodeManager:                  37.6738 KiB (1:28.7612 ratio)
+ EncodeManager:     Full Colour: 1 rects, 240 pixels
+ EncodeManager:                  138 B (1:1.82609 ratio)
+ EncodeManager:   Total: 947 rects, 15.0534 Mpixels
+ EncodeManager:          5.54636 MiB (1:7.77004 ratio)
+ ComparingUpdateTracker: 25.7382 Mpixels in / 12.1926 Mpixels out
+ ComparingUpdateTracker: (1:2.11097 ratio)
+XIO:  fatal IO error 11 (Resource temporarily unavailable) on X server ":20"
+      after 138 requests (138 known processed) with 0 events remaining.
+/usr/bin/xterm: fatal IO error 11 (Resource temporarily unavailable) or KillClient on X server ":20"

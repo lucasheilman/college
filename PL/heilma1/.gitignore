@@ -1,0 +1,11 @@
+test2/
+ms-audio/
+project-ms-audio/*.cpp~
+project-ms-audio/*.mp3
+project-ms-audio/*.sh~
+project-ms-audio/*.wav
+project-ms-audio/*.txt~
+project-ms-audio/manipulate
+project-ms-audio/manipulate.cpp
+project-ms-audio/manipulate_audio
+project-ms-audio/edited/*

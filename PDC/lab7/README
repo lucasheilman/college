@@ -1,0 +1,29 @@
+heilma1@thing4:~/PDC/lab7$ time bin/sieve 100 4
+25 primes are less than or equal to 100
+
+real	0m0.004s
+user	0m0.000s
+sys	0m0.004s
+heilma1@thing4:~/PDC/lab7$ time bin/sieve 100 4
+25 primes are less than or equal to 100
+
+real	0m0.004s
+user	0m0.000s
+sys	0m0.008s
+heilma1@thing4:~/PDC/lab7$ time bin/sieve 100 4
+25 primes are less than or equal to 100
+
+real	0m0.004s
+user	0m0.000s
+sys	0m0.004s
+heilma1@thing4:~/PDC/lab7$ time bin/sieve 100 4
+25 primes are less than or equal to 100
+
+real	0m0.004s
+user	0m0.004s
+sys	0m0.000s
+
+
+When running sievetest.1106_16:23:29 the times seem faster
+
+When running the sieve test for the precalculated primes it runs much faster

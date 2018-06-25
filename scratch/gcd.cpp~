@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+int gcd(int A, int B) {
+    // Do not write main() function.
+    // Do not read input, instead use the arguments to the function.
+    // Do not print the output, instead return values as specified
+    // Still have a doubt. Checkout www.interviewbit.com/pages/sample_codes/ for more details
+    int gcd = 1;
+    if(A < B){
+        for(int i = 0; i < A; i++){
+            if((A%i == 0) && (B%i == 0)){
+                cout << "gcd is: " << gcd << endl;
+                gcd = i;
+            }
+        }
+    }
+    else{
+        for(int i = 0; i < B; i++){
+            if(A%i == 0 && B%i == 0){
+                gcd = i;
+            }
+        }
+    }
+    return gcd;
+}
+
+int main(){
+  int A = 6;
+  int B = 9;
+  cout << gcd(A,B) << endl;
+}

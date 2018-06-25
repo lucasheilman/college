@@ -1,0 +1,49 @@
+
+Xvnc TigerVNC 1.6.0 - built Jun  2 2016 07:21:55
+Copyright (C) 1999-2015 TigerVNC Team and many others (see README.txt)
+See http://www.tigervnc.org for information on TigerVNC.
+Underlying X server release 11803000, The X.Org Foundation
+
+
+Tue Sep 27 21:12:31 2016
+ vncext:      VNC extension running!
+ vncext:      Listening for VNC connections on all interface(s), port 5931
+ vncext:      created VNC server for screen 0
+
+Tue Sep 27 21:12:39 2016
+ Connections: accepted: 130.71.250.247::60523
+ SConnection: Client needs protocol version 3.8
+ SConnection: Client requests security type VncAuth(2)
+
+Tue Sep 27 21:12:44 2016
+ VNCSConnST:  Server default pixel format depth 24 (32bpp) little-endian rgb888
+ VNCSConnST:  Client pixel format depth 8 (8bpp) color-map
+
+Tue Sep 27 21:13:30 2016
+ VNCSConnST:  Client pixel format depth 24 (32bpp) little-endian rgb888
+
+Tue Sep 27 23:28:17 2016
+ Connections: closed: 130.71.250.247::60523 (Clean disconnection)
+ EncodeManager: Framebuffer updates: 15104
+ EncodeManager:   CopyRect:
+ EncodeManager:     Copies: 1 rects, 476.768 kpixels
+ EncodeManager:             16 B (1:119193 ratio)
+ EncodeManager:   RRE:
+ EncodeManager:     Solid: 588 rects, 3.55405 Mpixels
+ EncodeManager:            11.4287 KiB (1:1003.29 ratio)
+ EncodeManager:   Hextile:
+ EncodeManager:     Bitmap RLE: 719 rects, 876.248 kpixels
+ EncodeManager:                 23.3545 KiB (1:146.921 ratio)
+ EncodeManager:     Indexed RLE: 10.21 krects, 37.7908 Mpixels
+ EncodeManager:                  11.2773 MiB (1:12.7936 ratio)
+ EncodeManager:     Full Colour: 17.357 krects, 346.946 Mpixels
+ EncodeManager:                  186.462 MiB (1:7.09897 ratio)
+ EncodeManager:   ZRLE:
+ EncodeManager:     Bitmap RLE: 3 rects, 25.088 kpixels
+ EncodeManager:                 125 B (1:200.992 ratio)
+ EncodeManager:     Indexed RLE: 110 rects, 5.23978 Mpixels
+ EncodeManager:                  146.903 KiB (1:34.841 ratio)
+ EncodeManager:     Full Colour: 1 rects, 50.752 kpixels
+ EncodeManager:                  6.89453 KiB (1:7.19037 ratio)
+ EncodeManager:   Total: 28.989 krects, 394.959 Mpixels
+ EncodeManager:          197.924 MiB (1:7.52514 ratio)

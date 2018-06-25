@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+int main(){
+  int arr[9] = {9,8,7,6,5,4,3,2,1};
+  int arraySize = 9;
+  int temp;
+  for(int i = 0; i < arraySize; i++){
+    for(int j = 1; j < arraySize-1; j++){
+      if(arr[j] < arr[i]){
+	//swap them
+	temp = arr[i];
+	arr[i] = arr[j];
+	arr[j] = temp;
+      }
+    }
+  }
+  for(int i = 0;i<arraySize;i++){
+    cout << arr[i] <<  endl;
+  }
+}

@@ -1,0 +1,44 @@
+
+Xvnc TigerVNC 1.6.0 - built Jun  2 2016 07:21:55
+Copyright (C) 1999-2015 TigerVNC Team and many others (see README.txt)
+See http://www.tigervnc.org for information on TigerVNC.
+Underlying X server release 11803000, The X.Org Foundation
+
+
+Mon Sep 19 22:47:27 2016
+ vncext:      VNC extension running!
+ vncext:      Listening for VNC connections on all interface(s), port 5927
+ vncext:      created VNC server for screen 0
+
+Mon Sep 19 22:47:49 2016
+ Connections: accepted: 130.71.250.247::63145
+ SConnection: Client needs protocol version 3.8
+ SConnection: Client requests security type VncAuth(2)
+
+Mon Sep 19 22:47:53 2016
+ VNCSConnST:  Server default pixel format depth 24 (32bpp) little-endian rgb888
+ VNCSConnST:  Client pixel format depth 8 (8bpp) color-map
+
+Mon Sep 19 22:48:34 2016
+ VNCSConnST:  Client pixel format depth 24 (32bpp) little-endian rgb888
+
+Mon Sep 19 22:54:08 2016
+ Connections: closed: 130.71.250.247::63145 (Clean disconnection)
+ EncodeManager: Framebuffer updates: 570
+ EncodeManager:   RRE:
+ EncodeManager:     Solid: 32 rects, 830.443 kpixels
+ EncodeManager:            595 B (1:1529.27 ratio)
+ EncodeManager:   Hextile:
+ EncodeManager:     Bitmap RLE: 49 rects, 16.905 kpixels
+ EncodeManager:                 1.24023 KiB (1:53.7071 ratio)
+ EncodeManager:     Indexed RLE: 270 rects, 922.895 kpixels
+ EncodeManager:                  229.886 KiB (1:15.6957 ratio)
+ EncodeManager:     Full Colour: 569 rects, 15.7746 Mpixels
+ EncodeManager:                  16.3172 MiB (1:3.68826 ratio)
+ EncodeManager:   ZRLE:
+ EncodeManager:     Bitmap RLE: 1 rects, 6.144 kpixels
+ EncodeManager:                 56 B (1:109.929 ratio)
+ EncodeManager:     Indexed RLE: 57 rects, 3.227 Mpixels
+ EncodeManager:                  84.8369 KiB (1:37.154 ratio)
+ EncodeManager:   Total: 978 rects, 20.778 Mpixels
+ EncodeManager:          16.6264 MiB (1:4.0732 ratio)

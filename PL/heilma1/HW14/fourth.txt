@@ -1,0 +1,48 @@
+    (vo *** (extend-env x (num-val 1) cm) cm) <-- cm cm cm
+        val1 --> (vo zero?-exp (var-exp x) cm cm cm)
+            val11 --> (vo (var-exp x) cm cm cm)
+                (apply-env cm cm cm x)
+                (num-val 1)
+            num11 --> (exp-val -> num (num-val 1))
+                1
+    (if (zero? 1))
+        (bool-val #f)
+        (if (expval --> bool-val 1 (#f)
+    (vo exp3 cm cm cm)
+    (vo diff-exp ... ) cm cm cm)
+        val1 --> (vo (c-e (var-exp f)(diff-exp (var-exp x) (const-exp 1))) cm cm cm))
+            proccc --> (exp-val --> proc (vo (var-exp f) cm cm cm))
+                (exp-val --> proc (apply-env cm cm cm f))
+                (exp-val --> proc (apply-env cm cm f))
+                (exp-val --> proc (apply-env cm f))
+                (x *** cm)
+                (procedure x **  cm)
+            arggg --> (vo (diff-exp (var-exp x) (const-exp 1) cm cm cm)
+                valll1 --> ...
+                    (num-val 1)
+                (num-val (- num15 num25)) = (num-val 2)
+                    valll2 --> ...
+                        (num-val 1)
+                    nummlll1 --> ...
+                        1
+                    numllll2 --> ...
+                        1
+                    num-val (- numlll1 numlll2)) = ... = (num-val 0)
+                 (apply-procedure (proccc arggg))
+                     (apply-procedure (procedure x *** cm) (num-val 0))
+             (vo *** (extend-env x (num-val 0 cm cm cm) cm cm cm)
+                 val1 --> (vo exp1 cm cm cm cm)
+                     (vo zero?-exp (var-exp x) cm cm cm cm)
+                     valllll --> (vo (var-exp x) cm cm cm cm)
+                         (apply-enc cm cm cm cm x)
+                         (num-val 0)
+                     numlllll --> (exp-val --> num (num-val 0))
+                         0
+         (vo exp2 cm cm cm cm)
+     (vo (const-exp 0) cm cm cm cm)
+          (num-val 0)
+val1 --> (num-val 2)
+val2 --> (num-val -2)
+num14 --> 2
+num24 --> -2
+(num-val (- num14 num24)) = (num-val 4)

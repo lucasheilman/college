@@ -1,0 +1,52 @@
+#include <iostream>
+#include <vector> 
+#include <stdlib.h> 
+using namespace std; 
+
+struct container
+{
+  int max; 
+  int actual; 
+public:
+  container(int m, int a){
+    max = m; 
+    actual = a; 
+  }
+};
+
+void pour (container &source, container &target){
+  target.actual = target.actual + source.actual;
+  if(target.actual > target.max){
+    source.actual = target.actual - target.max;
+    target.actual = target.max;
+  }
+  else{
+    source.actual = 0; 
+  }
+}
+int main(){
+  container container10(10,0); 
+  container container7(7,7); 
+  container container4(4,4);
+  vector <container> vec; 
+  vec.push_back(container10); 
+  vec.push_back(container7);
+  vec.push_back(container4);
+  int counter = 0; 
+  int v1, v2; 
+  while(vec[1].actual != 2 or vec[2].actual != 2){
+    v1 = rand() % 3; 
+    v2 = rand() % 3; 
+    if(v1 != v2){
+      pour(vec[v1],vec[v2]); 
+      counter += 1; 
+    }
+    if(vec[1].actual == 2 or vec[2].actual == 2){
+      for (int i = 0; i <3; i++){
+	cout << vec[i].max << " " << vec[i].actual << endl; 	
+      }
+      break; 
+    }
+  }
+  cout << "Counter: " << counter << endl; 
+}

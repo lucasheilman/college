@@ -1,0 +1,57 @@
+\hypertarget{trunc1_8cpp}{}\section{sound/trunc1.cpp File Reference}
+\label{trunc1_8cpp}\index{sound/trunc1.\+cpp@{sound/trunc1.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{trunc1_8cpp_a4d64e4da631fa0bb08496e33aae0bc84}{trunc} (signed short val\mbox{[}$\,$\mbox{]})
+\item 
+int \hyperlink{trunc1_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{trunc1_8cpp_ad67e07841d1233e596e6f822a3c81f6b}{datalen} = 3453884
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{trunc1_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\index{trunc1.\+cpp@{trunc1.\+cpp}!main@{main}}
+\index{main@{main}!trunc1.\+cpp@{trunc1.\+cpp}}
+\subsubsection[{main()}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{trunc1_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+13 \{
+14   \textcolor{keywordtype}{signed} \textcolor{keywordtype}{short} val[\hyperlink{trunc1_8cpp_ad67e07841d1233e596e6f822a3c81f6b}{datalen}];  \textcolor{comment}{// make an array to hold the data}
+15   cin.read( (\textcolor{keywordtype}{char} *)val, 2*\hyperlink{trunc1_8cpp_ad67e07841d1233e596e6f822a3c81f6b}{datalen}); \textcolor{comment}{// read the data into the array}
+16 
+17   \hyperlink{trunc1_8cpp_a4d64e4da631fa0bb08496e33aae0bc84}{trunc}(val);  \textcolor{comment}{// modify the array elements}
+18 
+19   cout.write( (\textcolor{keywordtype}{char} *)val, 2*(\hyperlink{trunc1_8cpp_ad67e07841d1233e596e6f822a3c81f6b}{datalen}-44000) ); \textcolor{comment}{// write the data back out}
+20   \textcolor{keywordflow}{return} 0;
+21 \}
+\end{DoxyCode}
+\hypertarget{trunc1_8cpp_a4d64e4da631fa0bb08496e33aae0bc84}{}\index{trunc1.\+cpp@{trunc1.\+cpp}!trunc@{trunc}}
+\index{trunc@{trunc}!trunc1.\+cpp@{trunc1.\+cpp}}
+\subsubsection[{trunc(signed short val[])}]{\setlength{\rightskip}{0pt plus 5cm}void trunc (
+\begin{DoxyParamCaption}
+\item[{signed short}]{val\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{trunc1_8cpp_a4d64e4da631fa0bb08496e33aae0bc84}
+
+\begin{DoxyCode}
+7 \{
+8   \textcolor{keywordflow}{for}( \textcolor{keywordtype}{int} i = 44000; i < \hyperlink{trunc1_8cpp_ad67e07841d1233e596e6f822a3c81f6b}{datalen}; ++i )
+9     val[i-44000] =val[i];
+10 \}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\hypertarget{trunc1_8cpp_ad67e07841d1233e596e6f822a3c81f6b}{}\index{trunc1.\+cpp@{trunc1.\+cpp}!datalen@{datalen}}
+\index{datalen@{datalen}!trunc1.\+cpp@{trunc1.\+cpp}}
+\subsubsection[{datalen}]{\setlength{\rightskip}{0pt plus 5cm}int datalen = 3453884}\label{trunc1_8cpp_ad67e07841d1233e596e6f822a3c81f6b}
